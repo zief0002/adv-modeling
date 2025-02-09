@@ -85,7 +85,7 @@ format:
     mainfont: 'Atkinson Hyperlegible'
     fontsize: '13pt'
     linestretch: '1.5em'
-    linkcolor: '#8b4f66'
+    linkcolor: '#c10088'
     toc: false
     toc-title: "On This Page"
 editor: source

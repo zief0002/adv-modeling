@@ -61,7 +61,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-d3043699f4f525e226433170f63674df.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e60addeb220d0977b5380ccbb3d38457.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2e4e9f827c3bcfc7db574ff9d156d66d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -184,12 +184,20 @@ div.csl-indent {
 </header>
 
 
-<p><img src="figs/banner.png" class="cover" alt=""></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figs/banner.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Decorative image"></p>
+</figure>
+</div>
+</div>
+</div>
 <section id="front-matter" class="level1 unnumbered">
 <h1 class="unnumbered">Front Matter</h1>
-<p>The content in this “book”, as the title suggests, is related to statistical modeling and computation. More specifically, the content focuses on using the General Linear Model (GLM) to provide statistical evidence that can help answer substantive questions in the educational and social sciences. It is a book intended for applied practitioners in the educational or social sciences. The statistical content is hopefully presented in a manner that these domain scientists will find useful, including practical suggestions for analysis and the presentation of results intended to help researchers clearly communicate the results of a data analysis.</p>
-<p>While the content is not overly mathematical in nature, the reader will need a solid understanding of the principles in algebra for maximum benefit. The burden of calculation that typically accompanied statistical work in previous generations is now primarily carried out in a scientific computing environment. As <span class="citation" data-cites="thisted2">Thisted &amp; Velleman (<a href="#ref-thisted2" role="doc-biblioref">1992</a>)</span> point out, “computational advances have changed the face of statistical practice by transforming what we do and by challenging how we think about scientific problems.” To support and help facilitate the use of scientific computing, examples using the R computer language will be used throughout this work.</p>
-<p>The organization of content is consistent with the sequence this content is taught in EPsy 8251, the first of two applied statistics courses that form the foundational sequence for many graduate students in the educational and social sciences at the University of Minnesota. This course require that students have taken a previous statistics course at either the undergraduate or graduate level. Because of that, many introductory ideas are assumed.</p>
+<p>The content in this “book”, as the title suggests, is related to advanced statistical modeling and reproducibility. More specifically, the content focuses on expanding the General Linear Model (GLM) to provide statistical evidence that can help answer substantive questions in the educational and social sciences. It also includes computing content for leveling-up educational scientists’ reproducibility of analyses.</p>
+<p>While it is a book intended for applied practitioners in the educational or social sciences, and the statistical content is hopefully presented in a manner that these domain scientists will find useful, it does require a good <a href="https://zief0002.github.io/modeling/">foundation in regression analysis using the GLM</a>. Moreover, since the content is somewhat mathematical in nature, the reader will need a solid understanding of algebra for maximum benefit. The burden of calculation that typically accompanied statistical work in previous generations is now primarily carried out in a scientific computing environment. As <span class="citation" data-cites="thisted2">Thisted &amp; Velleman (<a href="#ref-thisted2" role="doc-biblioref">1992</a>)</span> point out, “computational advances have changed the face of statistical practice by transforming what we do and by challenging how we think about scientific problems.” To support and help facilitate the use of scientific computing, examples using the R computer language will be used throughout this work.</p>
+<p>The organization of content is consistent with the sequence this content is taught in EPsy 8252, the second of two applied statistics courses that form the foundational sequence for many graduate students in the educational and social sciences at the University of Minnesota. This course require that students have taken a previous statistics course at the graduate level focusing on the GLM.</p>
 <!-- ```{r} -->
 <!-- #| echo: false -->
 <!-- #| out-width: "100%" -->
@@ -199,7 +207,7 @@ div.csl-indent {
 <p><br></p>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<p>This book refers to and uses several data sets throughout the text. Each of these data sets and their codebooks are available online at the book’s github repository, <a href="https://github.com/zief0002/modeling/" class="uri">https://github.com/zief0002/modeling/</a>.</p>
+<p>This book refers to and uses several data sets throughout the text. Each of these data sets and their codebooks are available online at the book’s github repository, <a href="https://github.com/zief0002/adv-modeling/" class="uri">https://github.com/zief0002/adv-modeling/</a>.</p>
 <p><br></p>
 </section>
 <section id="acknowledgments" class="level2">
@@ -209,15 +217,12 @@ div.csl-indent {
 </section>
 <section id="colophon" class="level2">
 <h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
-<p>Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a></p>
-<p>Icon and note ideas and prototypes by <a href="http://desiree.rbind.io/">Desirée De Leon</a>.</p>
 <p>The book is typeset using <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Atkinson Hyperlegible</a>. The color palette was generated using <a href="https://coolors.co/">coolors.co</a>.</p>
-<p><strong>Statistical Computing</strong></p>
+<p>Icon and note ideas and prototypes by <a href="http://desiree.rbind.io/">Desirée De Leon</a>.</p>
+<p><strong>Artwork</strong></p>
 <ul>
-<li>Laptop icon made by <a href="https://www.flaticon.com/authors/tomas-knop">Tomas Knop</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></li>
-<li>Directory icon made by <a href="https://www.flaticon.com/authors/darius-dan">Darius Dan</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></li>
-<li>Brain icon made by <a href="https://www.flaticon.com/authors/aranagraphics">Aranagraphics</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></li>
-<li>Internet icon made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></li>
+<li>Hedgehog banner by Alison Hill and Allison Horst, for RStudio.</li>
+<li>Data science and statistics artwork by <a href="https://allisonhorst.com/">@allison_horst</a></li>
 </ul>
 <p><br></p>
 </section>

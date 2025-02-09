@@ -1,4 +1,13 @@
-<img src="figs/banner.png" class="cover" alt=""/>
+
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+#| fig-alt: "Decorative image"
+#| out-width: "80%"
+
+knitr::include_graphics("figs/banner.png")
+```
 
 
 # Front Matter {.unnumbered}
@@ -10,11 +19,12 @@
 source("scripts/_common.R")
 ```
 
-The content in this "book", as the title suggests, is related to statistical modeling and computation. More specifically, the content focuses on using the General Linear Model (GLM) to provide statistical evidence that can help answer substantive questions in the educational and social sciences. It is a book intended for applied practitioners in the educational or social sciences. The statistical content is hopefully presented in a manner that these domain scientists will find useful, including practical suggestions for analysis and the presentation of results intended to help researchers clearly communicate the results of a data analysis.
+The content in this "book", as the title suggests, is related to advanced statistical modeling and reproducibility. More specifically, the content focuses on expanding the General Linear Model (GLM) to provide statistical evidence that can help answer substantive questions in the educational and social sciences. It also includes computing content for leveling-up educational scientists' reproducibility of analyses.
 
-While the content is not overly mathematical in nature, the reader will need a solid understanding of the principles in algebra for maximum benefit. The burden of calculation that typically accompanied statistical work in previous generations is now primarily carried out in a scientific computing environment. As @thisted2 point out, "computational advances have changed the face of statistical practice by transforming what we do and by challenging how we think about scientific problems." To support and help facilitate the use of scientific computing, examples using the R computer language will be used throughout this work. 
 
-The organization of content is consistent with the sequence this content is taught in EPsy 8251, the first of two applied statistics courses that form the foundational sequence for many graduate students in the educational and social sciences at the University of Minnesota. This course require that students have taken a previous statistics course at either the undergraduate or graduate level. Because of that, many introductory ideas are assumed. 
+While it is a book intended for applied practitioners in the educational or social sciences, and the statistical content is hopefully presented in a manner that these domain scientists will find useful, it does require a good [foundation in regression analysis using the GLM](https://zief0002.github.io/modeling/). Moreover, since the content is somewhat mathematical in nature, the reader will need a solid understanding of algebra for maximum benefit. The burden of calculation that typically accompanied statistical work in previous generations is now primarily carried out in a scientific computing environment. As @thisted2 point out, "computational advances have changed the face of statistical practice by transforming what we do and by challenging how we think about scientific problems." To support and help facilitate the use of scientific computing, examples using the R computer language will be used throughout this work. 
+
+The organization of content is consistent with the sequence this content is taught in EPsy 8252, the second of two applied statistics courses that form the foundational sequence for many graduate students in the educational and social sciences at the University of Minnesota. This course require that students have taken a previous statistics course at the graduate level focusing on the GLM. 
 
 
 <!-- ```{r} -->
@@ -29,7 +39,7 @@ The organization of content is consistent with the sequence this content is taug
 
 ## Resources
 
-This book refers to and uses several data sets throughout the text. Each of these data sets and their codebooks are available online at the book's github repository, <https://github.com/zief0002/modeling/>. 
+This book refers to and uses several data sets throughout the text. Each of these data sets and their codebooks are available online at the book's github repository, <https://github.com/zief0002/adv-modeling/>. 
 
 
 
@@ -45,18 +55,15 @@ Many thanks to all the students in my courses who have been through previous ite
 
 ## Colophon
 
-Artwork by [&commat;allison_horst](https://twitter.com/allison_horst)
+The book is typeset using [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible). The color palette was generated using [coolors.co](https://coolors.co/).
 
 Icon and note ideas and prototypes by [Desirée De Leon](http://desiree.rbind.io/).
 
-The book is typeset using [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible). The color palette was generated using [coolors.co](https://coolors.co/).
+**Artwork**
 
-**Statistical Computing**
+- Hedgehog banner by Alison Hill and Allison Horst, for RStudio. 
+- Data science and statistics artwork by [&commat;allison_horst](https://allisonhorst.com/)
 
-- Laptop icon made by [Tomas Knop](https://www.flaticon.com/authors/tomas-knop) from [www.flaticon.com](https://www.flaticon.com/)
-- Directory icon made by [Darius Dan](https://www.flaticon.com/authors/darius-dan) from [www.flaticon.com](https://www.flaticon.com/)
-- Brain icon made by [Aranagraphics](https://www.flaticon.com/authors/aranagraphics) from [www.flaticon.com](https://www.flaticon.com/)
-- Internet icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
 
 <br />
 
