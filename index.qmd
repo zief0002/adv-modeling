@@ -1,0 +1,72 @@
+<img src="figs/banner.png" class="cover" alt=""/>
+
+
+# Front Matter {.unnumbered}
+
+```{r}
+#| include: false
+#| echo: false
+
+source("scripts/_common.R")
+```
+
+The content in this "book", as the title suggests, is related to statistical modeling and computation. More specifically, the content focuses on using the General Linear Model (GLM) to provide statistical evidence that can help answer substantive questions in the educational and social sciences. It is a book intended for applied practitioners in the educational or social sciences. The statistical content is hopefully presented in a manner that these domain scientists will find useful, including practical suggestions for analysis and the presentation of results intended to help researchers clearly communicate the results of a data analysis.
+
+While the content is not overly mathematical in nature, the reader will need a solid understanding of the principles in algebra for maximum benefit. The burden of calculation that typically accompanied statistical work in previous generations is now primarily carried out in a scientific computing environment. As @thisted2 point out, "computational advances have changed the face of statistical practice by transforming what we do and by challenging how we think about scientific problems." To support and help facilitate the use of scientific computing, examples using the R computer language will be used throughout this work. 
+
+The organization of content is consistent with the sequence this content is taught in EPsy 8251, the first of two applied statistics courses that form the foundational sequence for many graduate students in the educational and social sciences at the University of Minnesota. This course require that students have taken a previous statistics course at either the undergraduate or graduate level. Because of that, many introductory ideas are assumed. 
+
+
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| out-width: "100%" -->
+<!-- #| fig-alt: "The units are (1) Introduction to statistical computing, (2) Introduction to regression, (3) Regression inference, (4), Multiple regression, (5) Categorical predictors, and (6) Interaction effects." -->
+<!-- knitr::include_graphics("figs/00-00-all-units.png") -->
+<!-- ``` -->
+
+<br />
+
+
+## Resources
+
+This book refers to and uses several data sets throughout the text. Each of these data sets and their codebooks are available online at the book's github repository, <https://github.com/zief0002/modeling/>. 
+
+
+
+<br />
+
+
+## Acknowledgments
+
+Many thanks to all the students in my courses who have been through previous iterations of this material. Your feedback has been invaluable, and you are the world's greatest copyeditors. In particular, I would like to thank the following students who have gone above and beyond in the feedback they have provided: Jonathan Brown, Pablo Vivas Corrales, Amaniel Mrutu, Corissa Rohloff, and Mireya Smith.
+
+<br />
+
+
+## Colophon
+
+Artwork by [&commat;allison_horst](https://twitter.com/allison_horst)
+
+Icon and note ideas and prototypes by [Desirée De Leon](http://desiree.rbind.io/).
+
+The book is typeset using [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible). The color palette was generated using [coolors.co](https://coolors.co/).
+
+**Statistical Computing**
+
+- Laptop icon made by [Tomas Knop](https://www.flaticon.com/authors/tomas-knop) from [www.flaticon.com](https://www.flaticon.com/)
+- Directory icon made by [Darius Dan](https://www.flaticon.com/authors/darius-dan) from [www.flaticon.com](https://www.flaticon.com/)
+- Brain icon made by [Aranagraphics](https://www.flaticon.com/authors/aranagraphics) from [www.flaticon.com](https://www.flaticon.com/)
+- Internet icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/)
+
+<br />
+
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License" class="center-image" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+*Note:* If you want to contribute to this, create a Pull Request or [send me an email](mailto: zief0002@umn.edu).) Also, feel free to offer criticism, suggestion, and feedback. You can either [open an issue](https://github.com/zief0002/modeling/issues) on the book's github page or [send me an email](mailto: zief0002@umn.edu) directly.
+
+
+## References
+

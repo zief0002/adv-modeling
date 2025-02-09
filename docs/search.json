@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Advanced Modeling and Reproducibility for Educational Scientists",
+    "section": "",
+    "text": "Front Matter\nThe content in this “book”, as the title suggests, is related to statistical modeling and computation. More specifically, the content focuses on using the General Linear Model (GLM) to provide statistical evidence that can help answer substantive questions in the educational and social sciences. It is a book intended for applied practitioners in the educational or social sciences. The statistical content is hopefully presented in a manner that these domain scientists will find useful, including practical suggestions for analysis and the presentation of results intended to help researchers clearly communicate the results of a data analysis.\nWhile the content is not overly mathematical in nature, the reader will need a solid understanding of the principles in algebra for maximum benefit. The burden of calculation that typically accompanied statistical work in previous generations is now primarily carried out in a scientific computing environment. As Thisted & Velleman (1992) point out, “computational advances have changed the face of statistical practice by transforming what we do and by challenging how we think about scientific problems.” To support and help facilitate the use of scientific computing, examples using the R computer language will be used throughout this work.\nThe organization of content is consistent with the sequence this content is taught in EPsy 8251, the first of two applied statistics courses that form the foundational sequence for many graduate students in the educational and social sciences at the University of Minnesota. This course require that students have taken a previous statistics course at either the undergraduate or graduate level. Because of that, many introductory ideas are assumed.",
+    "crumbs": [
+      "Front Matter"
+    ]
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "Advanced Modeling and Reproducibility for Educational Scientists",
+    "section": "Resources",
+    "text": "Resources\nThis book refers to and uses several data sets throughout the text. Each of these data sets and their codebooks are available online at the book’s github repository, https://github.com/zief0002/modeling/.",
+    "crumbs": [
+      "Front Matter"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "Advanced Modeling and Reproducibility for Educational Scientists",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nMany thanks to all the students in my courses who have been through previous iterations of this material. Your feedback has been invaluable, and you are the world’s greatest copyeditors. In particular, I would like to thank the following students who have gone above and beyond in the feedback they have provided: Jonathan Brown, Pablo Vivas Corrales, Amaniel Mrutu, Corissa Rohloff, and Mireya Smith.",
+    "crumbs": [
+      "Front Matter"
+    ]
+  },
+  {
+    "objectID": "index.html#colophon",
+    "href": "index.html#colophon",
+    "title": "Advanced Modeling and Reproducibility for Educational Scientists",
+    "section": "Colophon",
+    "text": "Colophon\nArtwork by @allison_horst\nIcon and note ideas and prototypes by Desirée De Leon.\nThe book is typeset using Atkinson Hyperlegible. The color palette was generated using coolors.co.\nStatistical Computing\n\nLaptop icon made by Tomas Knop from www.flaticon.com\nDirectory icon made by Darius Dan from www.flaticon.com\nBrain icon made by Aranagraphics from www.flaticon.com\nInternet icon made by Freepik from www.flaticon.com",
+    "crumbs": [
+      "Front Matter"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Advanced Modeling and Reproducibility for Educational Scientists",
+    "section": "License",
+    "text": "License\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.\nNote: If you want to contribute to this, create a Pull Request or send me an email.) Also, feel free to offer criticism, suggestion, and feedback. You can either open an issue on the book’s github page or send me an email directly.",
+    "crumbs": [
+      "Front Matter"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Advanced Modeling and Reproducibility for Educational Scientists",
+    "section": "References",
+    "text": "References\n\n\n\n\nThisted, R. A., & Velleman, P. F. (1992). Computers and modern statistics. In D. C. Hoaglin & D. S. Moore (Eds.), Perspectives on contemporary statistics, MAA notes no. 21 (pp. 41–53). Mathematical Association of America.",
+    "crumbs": [
+      "Front Matter"
+    ]
+  }
+]
