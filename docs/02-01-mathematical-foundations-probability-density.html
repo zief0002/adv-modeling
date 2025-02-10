@@ -84,6 +84,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./02-03-likelihood-framework-for-evidence.html" rel="next">
 <link href="./02-00-likelihood.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -251,6 +252,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mathematical Foundations: Probability Density</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-03-likelihood-framework-for-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Likelihood: A Framework for Evidence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-04-likelihood-framework-for-estimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Likelihood: A Framework for Estimation</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -307,7 +320,7 @@ S = \{HH,~HT,~TH,~TT\}
 <p>The probability of a head and a tail (assuming order doesn’t matter) is:</p>
 <p><span class="math display">\[
 p(HT~\mathrm{or}~TH) = \frac{2}{4} = 0.5
-\]</span> This falls apart when we move to continuous distributions. For example, consider finding the probability of a zero occurring in the standard normal distribution given in <a href="#fig-01" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>. The sample space includes every outcome possible and is:</p>
+\]</span> This falls apart when we move to continuous distributions. For example, consider finding the probability of a zero occurring in the standard normal distribution given in <a href="02-03-likelihood-framework-for-evidence.html#fig-01" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>. The sample space includes every outcome possible and is:</p>
 <p><span class="math display">\[
 S = \{-\infty, ~ +\infty\}
 \]</span> so the probability of zero (which occurs once in that sample space) is:</p>
@@ -333,7 +346,7 @@ p(-2 \leq x \leq 2) = 0.95
 <section id="probability-density" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="probability-density"><span class="header-section-number">5.1.1</span> Probability Density</h3>
 <p>In a continuous distribution we also need to account be able to talk about the fact that some outcomes are more likely than other outcomes. For example, in our standard normal distribution outcomes near zero are more probable than outcomes near 1, which are more probable than outcomes near 2, etc. Since we can’t use probability to do this (remember the probability of each outcome is the same, namely 0), we use something called <em>probability density</em>. This is akin to a relative probability, so outcomes with a higher probability density are more likely than outcomes with a lower probability density.</p>
-<p>The mapping of all the outcomes to their probability densities is called a <em>probability density function</em> (PDF). Thus the equation or “bell-shaped” curve describing the standard normal distribution in <a href="#fig-01" class="quarto-xref">Figure&nbsp;<span>5.1</span></a> is technically a PDF Here are some laws governing PDFs:</p>
+<p>The mapping of all the outcomes to their probability densities is called a <em>probability density function</em> (PDF). Thus the equation or “bell-shaped” curve describing the standard normal distribution in <a href="02-03-likelihood-framework-for-evidence.html#fig-01" class="quarto-xref">Figure&nbsp;<span>6.1</span></a> is technically a PDF Here are some laws governing PDFs:</p>
 <ul>
 <li>Probability densities are always positive.</li>
 <li>The probability of an outcome <em>x</em> between <em>a</em> and <em>b</em> equals the integral (area under the curve) between <em>a</em> and <em>b</em> of the probability density function. That is:</li>
@@ -2868,6 +2881,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./02-03-likelihood-framework-for-evidence.html" class="pagination-link" aria-label="Likelihood: A Framework for Evidence">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Likelihood: A Framework for Evidence</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb53" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Mathematical Foundations: Probability Density</span></span>
