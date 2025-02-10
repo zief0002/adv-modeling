@@ -1,0 +1,5 @@
+# Likelihood
+
+Many of the advanced statistical methods use estimation and testing methods based on likelihood. In this section we introduce likelihood for testing and estimating model parameters. To understand likelihood, you need to have some knowledge of probability density and logarithms. For this reason, we begin this section by introducing these two foundational ideas.
+
+
