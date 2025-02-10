@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Likelihood – Advanced Modeling and Reproducibility for Educational Scientists</title>
+<title>Modeling Nonlinearity – Advanced Modeling and Reproducibility for Educational Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02-01-mathematical-foundations-probability-density.html" rel="next">
-<link href="./01-05-creating-tables.html" rel="prev">
+<link href="./03-01-polynomial-effects.html" rel="next">
+<link href="./02-04-likelihood-framework-for-estimation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-00-likelihood.html">Likelihood</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-00-modeling-nonlinearity.html">Modeling Nonlinearity</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -188,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./02-00-likelihood.html" class="sidebar-item-text sidebar-link active">
+            <a href="./02-00-likelihood.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Likelihood</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./03-00-modeling-nonlinearity.html" class="sidebar-item-text sidebar-link">
+            <a href="./03-00-modeling-nonlinearity.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Modeling Nonlinearity</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Likelihood</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Quarto Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Modeling Nonlinearity</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Quarto Code</button></div></div>
 </div>
 
 
@@ -266,7 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Many of the advanced statistical methods use estimation and testing methods based on likelihood. In this section we introduce likelihood for testing and estimating model parameters. To understand likelihood, you need to have some knowledge of probability density and logarithms. For this reason, we begin this section by introducing these two foundational ideas.</p>
+<p>Many relationships in the educational sciences are nonlinear. In this section, you will be introduced to several methods for modeling nonlinear relationships. Specifically, you will learn how to add a polynomial effect and also how to use logarithms to transform nonlinear relationships into linear relationships. Each of these is useful, depending on the specific type of nonlinearity inherent in the relationship.</p>
+<p>Additionally, you will learn about using information criteria to evaluate models instead of <em>p</em>-values. Information criteria have many advantages over <em>p</em>-values when evaluating statistical models, including quantifying the uncertainty in selecting one model over another.</p>
 
 
 <!-- -->
@@ -743,20 +744,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01-05-creating-tables.html" class="pagination-link" aria-label="Creating Tables with gt">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating Tables with gt</span></span>
+      <a href="./02-04-likelihood-framework-for-estimation.html" class="pagination-link" aria-label="Likelihood: A Framework for Estimation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Likelihood: A Framework for Estimation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-01-mathematical-foundations-probability-density.html" class="pagination-link" aria-label="Mathematical Foundations: Probability Density">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Mathematical Foundations: Probability Density</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-01-polynomial-effects.html" class="pagination-link" aria-label="Polynomial Effects">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Polynomial Effects</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Likelihood</span></span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Modeling Nonlinearity</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Many of the advanced statistical methods use estimation and testing methods based on likelihood. In this section we introduce likelihood for testing and estimating model parameters. To understand likelihood, you need to have some knowledge of probability density and logarithms. For this reason, we begin this section by introducing these two foundational ideas.</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Many relationships in the educational sciences are nonlinear. In this section, you will be introduced to several methods for modeling nonlinear relationships. Specifically, you will learn how to add a polynomial effect and also how to use logarithms to transform nonlinear relationships into linear relationships. Each of these is useful, depending on the specific type of nonlinearity inherent in the relationship.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Additionally, you will learn about using information criteria to evaluate models instead of *p*-values. Information criteria have many advantages over *p*-values when evaluating statistical models, including quantifying the uncertainty in selecting one model over another.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

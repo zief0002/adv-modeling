@@ -31,10 +31,10 @@ book:
         - 02-03-likelihood-framework-for-evidence.qmd
         - 02-04-likelihood-framework-for-estimation.qmd
     #     - 02-05-standardized-regression.qmd
-    # - part: 03-00-regression-inference.qmd
-    #   chapters:
-    #     - 03-01-coefficient-level-inference.qmd
-    #     - 03-02-model-level-inference.qmd
+    - part: 03-00-modeling-nonlinearity.qmd
+      chapters:
+        - 03-01-polynomial-effects.qmd
+        - 03-02-information-criteria-and-model-selection.qmd
     #     - 03-03-model-assumptions.qmd
     # - part: 04-00-multiple-regression.qmd
     #   chapters:
@@ -85,7 +85,7 @@ format:
       toggle: true
       caption: "Quarto Code"
     highlight-style: "a11y-dark"
-    df-print: paged
+    # df-print: paged
     mainfont: 'Atkinson Hyperlegible'
     fontsize: '13pt'
     linestretch: '1.5em'

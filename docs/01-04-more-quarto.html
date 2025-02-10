@@ -94,7 +94,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-d3043699f4f525e226433170f63674df.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-11063fe4bfa95aef3b72acd866d61082.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7c121de436c7c20b050f1da4c0bef0bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -122,8 +122,6 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<link href="site_libs/pagedtable/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable/js/pagedtable.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -266,6 +264,29 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./03-00-modeling-nonlinearity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonlinearity</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-01-polynomial-effects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Polynomial Effects</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-02-information-criteria-and-model-selection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Information Criteria and Model Selection</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -355,7 +376,7 @@ window.Quarto = {
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">   geom_density()</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-density-knowledge-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plot showing a a unimodal distribution of news knowledge.">
+<div id="fig-density-knowledge-2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plot showing a a unimodal distribution of news knowledge." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-density-knowledge-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="01-04-more-quarto_files/figure-html/fig-density-knowledge-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Density plot showing a a unimodal distribution of news knowledge.">
@@ -382,7 +403,7 @@ Figure&nbsp;3.1: Density plot showing the distribution of news knowledge.
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">   geom_point()</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-density-knowledge-3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plot showing a a unimodal distribution of news knowledge.">
+<div id="fig-density-knowledge-3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plot showing a a unimodal distribution of news knowledge." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-density-knowledge-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="01-04-more-quarto_files/figure-html/fig-density-knowledge-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" alt="Density plot showing a a unimodal distribution of news knowledge.">
@@ -411,30 +432,29 @@ Figure&nbsp;3.2: Density plot showing the distribution of news knowledge.
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print output</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>lm1coef</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["term"],"name":[1],"type":["chr"],"align":["left"]},{"label":["estimate"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["std.error"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["statistic"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["p.value"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"39.6845434","3":"5.20203862","4":"7.628652","5":"1.558760e-11"},{"1":"news","2":"0.3271158","3":"0.08994213","4":"3.636958","5":"4.421004e-04"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)   39.7      5.20        7.63 1.56e-11
+2 news           0.327    0.0899      3.64 4.42e- 4</code></pre>
 </div>
 </div>
 <p>A tibble/data frame is a combination of rows and columns. We can access different parts of the tibble by indexing the row and column that we want. For example, to access the slope standard error, which is in the 2nd row and 3rd column, we could use:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>lm1coef[<span class="dv">2</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["std.error"],"name":[1],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.08994213"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>lm1coef[<span class="dv">2</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  std.error
+      &lt;dbl&gt;
+1    0.0899</code></pre>
 </div>
 </div>
 <p>Unfortunately, this also comes out as a labelled tibble. If we just want the SE value we double index this. Thus to get the value of the slope SE, we use:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE number only</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>lm1coef[[<span class="dv">2</span>, <span class="dv">3</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE number only</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>lm1coef[[<span class="dv">2</span>, <span class="dv">3</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.08994213</code></pre>
 </div>
@@ -718,15 +738,15 @@ bibliography: "assets/my-bibliography.bib"
 ---</code></pre>
 <p>You can also use an inline code chunk that calls the <code>Sys.Date()</code> function. This function returns your computer’s idea of the current date in the <code>YYYY-MM-DD</code> format (ISO 8601 standard). If you want to be hyper specific, you can use <code>Sys.time()</code> to return the date and time in the format: <code>YYYY-MM-DD HH-MM:SS Time Zone</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return date</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return date</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2025-02-10"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return time</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Return time</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2025-02-10 08:08:31 CST"</code></pre>
+<pre><code>[1] "2025-02-10 08:40:28 CST"</code></pre>
 </div>
 </div>
 <p>Here is an example of the YAML in the <code>date:</code> key to use <code>Sys.Date()</code> to auto-populate the date.</p>
@@ -1257,591 +1277,591 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb27" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># More Quarto</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"scripts/_common.R"</span>)</span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
-<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data</span></span>
-<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>pew <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/zief0002/fluffy-ants/main/data/pew.csv"</span>)</span>
-<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>lm<span class="fl">.1</span> <span class="ot">=</span> <span class="fu">lm</span>(knowledge <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> news, <span class="at">data =</span> pew)</span>
-<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>lm1coef <span class="ot">=</span> <span class="fu">tidy</span>(lm<span class="fl">.1</span>)</span>
-<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>This document contains some additional instruction for EPsy 8252. Note that I might add to this as students hit me with questions over the course of the semester.</span>
-<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code Chunks for Figures</span></span>
-<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>Code chunks can be used to do anything you can do in R. For example we can fit regression models, create plots, compute summary measures, or mutate dummy variables into our data. For figures, there are a bunch of chunk options that are useful.</span>
-<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>To label code chunks that include figures, we will append <span class="in">`fig-`</span> to the label name. For example, we can use <span class="in">`#| label: fig-density-knowledge`</span> to label a code chunk where we are creating a density plot of the news knowledge variable. </span>
-<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>We can add a caption using the <span class="in">`#| fig-cap:`</span> chunk option. It is also a good idea to also include the <span class="in">`#| fig-alt:`</span> chunk option with figures. This provides alternative text for screenreaders (which is required under the new federal accessability laws). Below is an example of this:</span>
-<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a><span class="in">title: "My First Quarto Document"</span></span>
-<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Hello World"</span></span>
-<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Andy and Iggy"</span></span>
-<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a><span class="in">date: today</span></span>
-<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a><span class="in"># Code Chunk</span></span>
-<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-density-knowledge</span></span>
-<span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Here is your figure caption."</span></span>
-<span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-alt: "Here is alternative text for screenreaders."</span></span>
-<span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = pew, aes(x = knowledge)) +</span></span>
-<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a><span class="in">   geom_density()</span></span>
-<span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-56"><a href="#cb27-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-57"><a href="#cb27-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-58"><a href="#cb27-58" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb27-59"><a href="#cb27-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-60"><a href="#cb27-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-61"><a href="#cb27-61" aria-hidden="true" tabindex="-1"></a>Notice that by labeling this chunk with <span class="in">`fig-`</span>, the figure is numbered in the document. This allows the figure to also be cross-referenced. You can do this by using the "at" symbol (\@) along with the figure's label name. For example, to cross-reference to the density plot we created, we could use something like:</span>
-<span id="cb27-62"><a href="#cb27-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-63"><a href="#cb27-63" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-65"><a href="#cb27-65" aria-hidden="true" tabindex="-1"></a><span class="in">title: "My First Quarto Document"</span></span>
-<span id="cb27-66"><a href="#cb27-66" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Hello World"</span></span>
-<span id="cb27-67"><a href="#cb27-67" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Andy and Iggy"</span></span>
-<span id="cb27-68"><a href="#cb27-68" aria-hidden="true" tabindex="-1"></a><span class="in">date: today</span></span>
-<span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-71"><a href="#cb27-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-72"><a href="#cb27-72" aria-hidden="true" tabindex="-1"></a><span class="in"># Code Chunk</span></span>
-<span id="cb27-73"><a href="#cb27-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-74"><a href="#cb27-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-75"><a href="#cb27-75" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-density-knowledge</span></span>
-<span id="cb27-76"><a href="#cb27-76" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Here is your figure caption."</span></span>
-<span id="cb27-77"><a href="#cb27-77" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-alt: "Here is alternative text for screenreaders."</span></span>
-<span id="cb27-78"><a href="#cb27-78" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = pew, aes(x = knowledge)) +</span></span>
-<span id="cb27-79"><a href="#cb27-79" aria-hidden="true" tabindex="-1"></a><span class="in">   geom_density()</span></span>
-<span id="cb27-80"><a href="#cb27-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-81"><a href="#cb27-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-82"><a href="#cb27-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-83"><a href="#cb27-83" aria-hidden="true" tabindex="-1"></a><span class="in">The distribution of news knowledge is unimodal (see @fig-density-knowledge).</span></span>
-<span id="cb27-84"><a href="#cb27-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-85"><a href="#cb27-85" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb27-86"><a href="#cb27-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-87"><a href="#cb27-87" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-88"><a href="#cb27-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-89"><a href="#cb27-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-90"><a href="#cb27-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### Figure Size</span></span>
-<span id="cb27-91"><a href="#cb27-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-92"><a href="#cb27-92" aria-hidden="true" tabindex="-1"></a>There are a couple other chunk options for figures that help set the aspect ratio and size of the figure in your document. The aspect ratio is the ratio of a figure's width to its height. We set this using the <span class="in">`#| fig-width:`</span> and <span class="in">`#| fig-height:`</span> chunk options. (The default value for both is 6; thus the figure appears square.) Below we change these so that the figure appears wider than it is tall.</span>
-<span id="cb27-93"><a href="#cb27-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-96"><a href="#cb27-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-97"><a href="#cb27-97" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: fenced</span></span>
-<span id="cb27-98"><a href="#cb27-98" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-density-knowledge-2</span></span>
-<span id="cb27-99"><a href="#cb27-99" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Density plot showing the distribution of news knowledge."</span></span>
-<span id="cb27-100"><a href="#cb27-100" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Density plot showing a a unimodal distribution of news knowledge."</span></span>
-<span id="cb27-101"><a href="#cb27-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 9</span></span>
-<span id="cb27-102"><a href="#cb27-102" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
-<span id="cb27-103"><a href="#cb27-103" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> pew, <span class="fu">aes</span>(<span class="at">x =</span> knowledge)) <span class="sc">+</span></span>
-<span id="cb27-104"><a href="#cb27-104" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_density</span>()</span>
-<span id="cb27-105"><a href="#cb27-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-106"><a href="#cb27-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-107"><a href="#cb27-107" aria-hidden="true" tabindex="-1"></a>::: fyi</span>
-<span id="cb27-108"><a href="#cb27-108" aria-hidden="true" tabindex="-1"></a>**FYI**</span>
-<span id="cb27-109"><a href="#cb27-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-110"><a href="#cb27-110" aria-hidden="true" tabindex="-1"></a>It is important to change the aspect ratio when you have legends or when you are using <span class="in">`{patchwork}`</span> to stack or put multiple figures next to each other. Many times you need to find a good aspect ratio though trial-and-error of trying different values.</span>
-<span id="cb27-111"><a href="#cb27-111" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb27-112"><a href="#cb27-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-113"><a href="#cb27-113" aria-hidden="true" tabindex="-1"></a>The actual size of the figure in the document is independent of the aspect ratio and can be set using the <span class="in">`#| out-width:`</span> or <span class="in">`#| out-height:`</span> chunk option. These options take a character string of the direct size (in HTML documents this is typically in pixels) or of the percentage of the output width/height. Here we keep the same aspect ratio, but make the figure smaller by setting the figure width to 40% of the document's width.</span>
-<span id="cb27-114"><a href="#cb27-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-117"><a href="#cb27-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-118"><a href="#cb27-118" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: fenced</span></span>
-<span id="cb27-119"><a href="#cb27-119" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-density-knowledge-3</span></span>
-<span id="cb27-120"><a href="#cb27-120" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Density plot showing the distribution of news knowledge."</span></span>
-<span id="cb27-121"><a href="#cb27-121" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Density plot showing a a unimodal distribution of news knowledge."</span></span>
-<span id="cb27-122"><a href="#cb27-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "40%"</span></span>
-<span id="cb27-123"><a href="#cb27-123" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> pew, <span class="fu">aes</span>(<span class="at">x =</span> news, <span class="at">y =</span> knowledge)) <span class="sc">+</span></span>
-<span id="cb27-124"><a href="#cb27-124" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>()</span>
-<span id="cb27-125"><a href="#cb27-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-126"><a href="#cb27-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-127"><a href="#cb27-127" aria-hidden="true" tabindex="-1"></a>::: fyi</span>
-<span id="cb27-128"><a href="#cb27-128" aria-hidden="true" tabindex="-1"></a>**PROTIP**</span>
-<span id="cb27-129"><a href="#cb27-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-130"><a href="#cb27-130" aria-hidden="true" tabindex="-1"></a>If you set the aspect ratio of the figure, you need only set <span class="in">`#| out-width:`</span> or <span class="in">`#| out-height:`</span>. You don't need to set both as the other will be determined by the aspect ratio.</span>
-<span id="cb27-131"><a href="#cb27-131" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb27-132"><a href="#cb27-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-133"><a href="#cb27-133" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-134"><a href="#cb27-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-135"><a href="#cb27-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-136"><a href="#cb27-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inline Code Chunks for Better Reproducibility</span></span>
-<span id="cb27-137"><a href="#cb27-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-138"><a href="#cb27-138" aria-hidden="true" tabindex="-1"></a>In writing papers where there are results from data analyses being reported in the text, inline code chunks are boss! For example, consider writing the following sentence in an analysis of the *pew.csv* data.</span>
-<span id="cb27-139"><a href="#cb27-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-140"><a href="#cb27-140" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The effect of news exposure on news knowledge is 0.327 (SE = 0.09).</span></span>
-<span id="cb27-141"><a href="#cb27-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-142"><a href="#cb27-142" aria-hidden="true" tabindex="-1"></a>Rather than computing these values and then transposing the values into the sentence, we can use inline code chunks to directly compute and write the values in the sentence. Recall, earlier we assigned the <span class="in">`tidy()`</span> output into an object called <span class="in">`lm1coef`</span>. The results from <span class="in">`tidy()`</span> are a tibble (or data frame).</span>
-<span id="cb27-143"><a href="#cb27-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-146"><a href="#cb27-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-147"><a href="#cb27-147" aria-hidden="true" tabindex="-1"></a><span class="co"># Print output</span></span>
-<span id="cb27-148"><a href="#cb27-148" aria-hidden="true" tabindex="-1"></a>lm1coef</span>
-<span id="cb27-149"><a href="#cb27-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-150"><a href="#cb27-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-151"><a href="#cb27-151" aria-hidden="true" tabindex="-1"></a>A tibble/data frame is a combination of rows and columns. We can access different parts of the tibble by indexing the row and column that we want. For example, to access the slope standard error, which is in the 2nd row and 3rd column, we could use:</span>
-<span id="cb27-152"><a href="#cb27-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-155"><a href="#cb27-155" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-156"><a href="#cb27-156" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE</span></span>
-<span id="cb27-157"><a href="#cb27-157" aria-hidden="true" tabindex="-1"></a>lm1coef[<span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb27-158"><a href="#cb27-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-159"><a href="#cb27-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-160"><a href="#cb27-160" aria-hidden="true" tabindex="-1"></a>Unfortunately, this also comes out as a labelled tibble. If we just want the SE value we double index this. Thus to get the value of the slope SE, we use:</span>
-<span id="cb27-161"><a href="#cb27-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-164"><a href="#cb27-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-165"><a href="#cb27-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE number only</span></span>
-<span id="cb27-166"><a href="#cb27-166" aria-hidden="true" tabindex="-1"></a>lm1coef[[<span class="dv">2</span>, <span class="dv">3</span>]]</span>
-<span id="cb27-167"><a href="#cb27-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-168"><a href="#cb27-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-169"><a href="#cb27-169" aria-hidden="true" tabindex="-1"></a>Here is how we could extract the slope value and the SE of the slope value to write our earlier sentence:</span>
-<span id="cb27-170"><a href="#cb27-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-171"><a href="#cb27-171" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The effect of news exposure on news knowledge is `</span><span class="in">` `</span><span class="at">r knitr::inline_expr("lm1coef[</span><span class="co">[</span><span class="ot">2, 2</span><span class="co">]</span><span class="at">]")` `` (SE = `</span><span class="in">` `</span><span class="at">r knitr::inline_expr("lm1coef[</span><span class="co">[</span><span class="ot">2, 3</span><span class="co">]</span><span class="at">]")` ``).</span></span>
-<span id="cb27-172"><a href="#cb27-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-173"><a href="#cb27-173" aria-hidden="true" tabindex="-1"></a>This produces the following sentence in the rendered document:</span>
-<span id="cb27-174"><a href="#cb27-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-175"><a href="#cb27-175" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The effect of news exposure on news knowledge is </span><span class="in">`r lm1coef[[2, 2]]`</span><span class="at"> (SE = </span><span class="in">`r lm1coef[[2, 3]]`</span><span class="at">).</span></span>
-<span id="cb27-176"><a href="#cb27-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-177"><a href="#cb27-177" aria-hidden="true" tabindex="-1"></a>Note: You don't need to assign the output to an object to index it. For example, the SE could also be extracted using: `<span class="in">` `</span>r knitr::inline_expr("tidy(lm.1)[<span class="co">[</span><span class="ot">2, 2</span><span class="co">]</span>]")` ``</span>
-<span id="cb27-178"><a href="#cb27-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-179"><a href="#cb27-179" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-180"><a href="#cb27-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-181"><a href="#cb27-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-182"><a href="#cb27-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### Rounding</span></span>
-<span id="cb27-183"><a href="#cb27-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-184"><a href="#cb27-184" aria-hidden="true" tabindex="-1"></a>There are several ways to set the rounding to two decimal places. One is to embed the computation in the <span class="in">`round()`</span> function. For example, in the first inline chunk we could use: <span class="in">`round(lm1coef[[2, 3]], 2)`</span>.</span>
-<span id="cb27-185"><a href="#cb27-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-186"><a href="#cb27-186" aria-hidden="true" tabindex="-1"></a>You can also do this in a separate code chunk and then call the values in the inline computation (as suggested in the <span class="co">[</span><span class="ot">Quarto Computations Tutorial</span><span class="co">](https://quarto.org/docs/get-started/computations/rstudio.html)</span>).</span>
-<span id="cb27-187"><a href="#cb27-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-188"><a href="#cb27-188" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-189"><a href="#cb27-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-190"><a href="#cb27-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-191"><a href="#cb27-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## Multiline Equations</span></span>
-<span id="cb27-192"><a href="#cb27-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-193"><a href="#cb27-193" aria-hidden="true" tabindex="-1"></a>There are a couple of ways to create multiline equations in a Quarto document. I tend to use the <span class="in">`split`</span> environment from LaTeX to do this. To use this:</span>
-<span id="cb27-194"><a href="#cb27-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-195"><a href="#cb27-195" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Include <span class="in">`\begin{split}`</span> and <span class="in">`\end{split}`</span> in the display equation.</span>
-<span id="cb27-196"><a href="#cb27-196" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>At the end of each line (where you want a linebreak) include a double backslash, <span class="in">`\\`</span>.</span>
-<span id="cb27-197"><a href="#cb27-197" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>In each line of the multiline equation, also include the ampersand sign (<span class="in">`&amp;`</span>) at the point we want the multiple lines to align vertically.</span>
-<span id="cb27-198"><a href="#cb27-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-199"><a href="#cb27-199" aria-hidden="true" tabindex="-1"></a>Here is an example:</span>
-<span id="cb27-200"><a href="#cb27-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-201"><a href="#cb27-201" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
-<span id="cb27-202"><a href="#cb27-202" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
-<span id="cb27-203"><a href="#cb27-203" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{split}</span></span>
-<span id="cb27-204"><a href="#cb27-204" aria-hidden="true" tabindex="-1"></a><span class="in">\hat{y}_i &amp;= 3 + 4(1) \\</span></span>
-<span id="cb27-205"><a href="#cb27-205" aria-hidden="true" tabindex="-1"></a><span class="in">&amp;= 7</span></span>
-<span id="cb27-206"><a href="#cb27-206" aria-hidden="true" tabindex="-1"></a><span class="in">\end{split}</span></span>
-<span id="cb27-207"><a href="#cb27-207" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
-<span id="cb27-208"><a href="#cb27-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-209"><a href="#cb27-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-210"><a href="#cb27-210" aria-hidden="true" tabindex="-1"></a>And the resulting display equation is:</span>
-<span id="cb27-211"><a href="#cb27-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-212"><a href="#cb27-212" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb27-213"><a href="#cb27-213" aria-hidden="true" tabindex="-1"></a>\begin{split}</span>
-<span id="cb27-214"><a href="#cb27-214" aria-hidden="true" tabindex="-1"></a>\hat{y}_i &amp;= 3 + 4(1) <span class="sc">\\</span></span>
-<span id="cb27-215"><a href="#cb27-215" aria-hidden="true" tabindex="-1"></a>&amp;= 7</span>
-<span id="cb27-216"><a href="#cb27-216" aria-hidden="true" tabindex="-1"></a>\end{split}</span>
-<span id="cb27-217"><a href="#cb27-217" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb27-218"><a href="#cb27-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-219"><a href="#cb27-219" aria-hidden="true" tabindex="-1"></a>Note that the ampersand appeared immediately before the equal sign in each line of the equation, so that is where the two lines are aligned vertically (the equal signs are on top of each other). You can add as many lines to this as you want.</span>
-<span id="cb27-220"><a href="#cb27-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-221"><a href="#cb27-221" aria-hidden="true" tabindex="-1"></a>::: fyi</span>
-<span id="cb27-222"><a href="#cb27-222" aria-hidden="true" tabindex="-1"></a>**FYI**</span>
-<span id="cb27-223"><a href="#cb27-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-224"><a href="#cb27-224" aria-hidden="true" tabindex="-1"></a>Multiline equations are quite useful to show your work and when you have really long single equations that need to be broken up so they fit on the page (e.g., a regression equation with many predictors).</span>
-<span id="cb27-225"><a href="#cb27-225" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb27-226"><a href="#cb27-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-227"><a href="#cb27-227" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-228"><a href="#cb27-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-229"><a href="#cb27-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-230"><a href="#cb27-230" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spacing Out the Lines</span></span>
-<span id="cb27-231"><a href="#cb27-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-232"><a href="#cb27-232" aria-hidden="true" tabindex="-1"></a>You can add space between the lines of your multiline equation by including a unit of measurement between square brackets after the double backslashes.</span>
-<span id="cb27-233"><a href="#cb27-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-234"><a href="#cb27-234" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
-<span id="cb27-235"><a href="#cb27-235" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
-<span id="cb27-236"><a href="#cb27-236" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{split}</span></span>
-<span id="cb27-237"><a href="#cb27-237" aria-hidden="true" tabindex="-1"></a><span class="in">\hat{y}_i &amp;= 3 + 4(1) \\[1em]</span></span>
-<span id="cb27-238"><a href="#cb27-238" aria-hidden="true" tabindex="-1"></a><span class="in">&amp;= 7</span></span>
-<span id="cb27-239"><a href="#cb27-239" aria-hidden="true" tabindex="-1"></a><span class="in">\end{split}</span></span>
-<span id="cb27-240"><a href="#cb27-240" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
-<span id="cb27-241"><a href="#cb27-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-242"><a href="#cb27-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-243"><a href="#cb27-243" aria-hidden="true" tabindex="-1"></a>Here the resulting display equation is:</span>
-<span id="cb27-244"><a href="#cb27-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-245"><a href="#cb27-245" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb27-246"><a href="#cb27-246" aria-hidden="true" tabindex="-1"></a>\begin{split}</span>
-<span id="cb27-247"><a href="#cb27-247" aria-hidden="true" tabindex="-1"></a>\hat{y}_i &amp;= 3 + 4(1) <span class="sc">\\</span><span class="co">[</span><span class="ot">1em</span><span class="co">]</span></span>
-<span id="cb27-248"><a href="#cb27-248" aria-hidden="true" tabindex="-1"></a>&amp;= 7</span>
-<span id="cb27-249"><a href="#cb27-249" aria-hidden="true" tabindex="-1"></a>\end{split}</span>
-<span id="cb27-250"><a href="#cb27-250" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb27-251"><a href="#cb27-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-252"><a href="#cb27-252" aria-hidden="true" tabindex="-1"></a>Here we have added line space of 1 em. An *em* is a unit for measuring the width of printed work, equal to the height of the type size being used (typically the width of the letter "m"). Other common printing units include the *en* (the width of the letter "n"), and the *ex* (the width of the letter "x").</span>
-<span id="cb27-253"><a href="#cb27-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-254"><a href="#cb27-254" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ::: fyi --&gt;</span></span>
-<span id="cb27-255"><a href="#cb27-255" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Question #8 on the assignment actually asks: --&gt;</span></span>
-<span id="cb27-256"><a href="#cb27-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-257"><a href="#cb27-257" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- &gt; Use a display equation to write the equation for the underlying regression model (including error and assumptions) using Greek letters, subscripts, and variable names. Also write the equation for the fitted least squares regression equation based on the output from `lm()`. Type these two equations in the same display equation, each on a separate line of text in your document, and align the equals signs. --&gt;</span></span>
-<span id="cb27-258"><a href="#cb27-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-259"><a href="#cb27-259" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Try writing this multiline equation. --&gt;</span></span>
-<span id="cb27-260"><a href="#cb27-260" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ::: --&gt;</span></span>
-<span id="cb27-261"><a href="#cb27-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-262"><a href="#cb27-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-263"><a href="#cb27-263" aria-hidden="true" tabindex="-1"></a>:::fyi</span>
-<span id="cb27-264"><a href="#cb27-264" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typesetting 101: Hyphens, Minus Signs, and Dashes</span></span>
-<span id="cb27-265"><a href="#cb27-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-266"><a href="#cb27-266" aria-hidden="true" tabindex="-1"></a>In printed work the width of a hyphen, a minus sign, and dashes are all different. Quarto will correctly typeset these, but you have to indicate what you want. Below are how we indicate these in Quarto.</span>
-<span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Hyphen:** A hyphen is used to join two or more words together. To typeset a hyphen in Quarto, use a single hyphen; <span class="in">`-`</span>.</span>
-<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**En Dash:** An en dash is used to mark ranges and to indicate the meaning "to" in phrases like "Minneapolis--St. Paul". An en dash is slightly longer than a hyphen and is typeset in Quarto using two hyphens; <span class="in">`--`</span>.</span>
-<span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Em Dash:** An em dash is used to separate extra information or mark a break in a sentence. An em dash is slightly longer than an en dash and is typeset in Quarto using three hyphens; <span class="in">`---`</span>.</span>
-<span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Minus Sign:** A minus sign is used in mathematical expressions (e.g., in subtraction or to indicate a negative number). To typeset a minus sign, use the inline equation with a single hyphen; <span class="in">`$-$`</span>. When a minus sign is typeset, not only is the length of it different than a hyphen, but it also includes the correct spacing around it for mathematical typesetting.</span>
-<span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-273"><a href="#cb27-273" aria-hidden="true" tabindex="-1"></a>Here is a sentence incorporating each of these so you can see the differences:</span>
-<span id="cb27-274"><a href="#cb27-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-275"><a href="#cb27-275" aria-hidden="true" tabindex="-1"></a>*During the time from January--February, my three dogs enjoy playing in the snow---apparently snow is fun for canines---with their sweaters on since it is* $-30$-degrees Fahrenheit outside.</span>
-<span id="cb27-276"><a href="#cb27-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-277"><a href="#cb27-277" aria-hidden="true" tabindex="-1"></a>The input for this sentence was:</span>
-<span id="cb27-278"><a href="#cb27-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-279"><a href="#cb27-279" aria-hidden="true" tabindex="-1"></a><span class="in">`During the time from January--February, my three dogs enjoy playing in the snow---apparently snow is fun for canines---with their sweaters on since it is $-30$-degrees Fahrenheit outside.`</span></span>
-<span id="cb27-280"><a href="#cb27-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-281"><a href="#cb27-281" aria-hidden="true" tabindex="-1"></a>Note that you can also typeset these in Word:</span>
-<span id="cb27-282"><a href="#cb27-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-283"><a href="#cb27-283" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Hyphen:** On both a Mac and PC, press "hyphen".</span>
-<span id="cb27-284"><a href="#cb27-284" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**En Dash:** On a Mac, press "option+hyphen key". On a PC, press "ctrl+hyphen".</span>
-<span id="cb27-285"><a href="#cb27-285" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Em Dash:** On a Mac, press "option+shift+hyphen key". On a PC, press "alt+ctrl+hyphen".</span>
-<span id="cb27-286"><a href="#cb27-286" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Minus Sign:** For a minus sign, you should use Equation Editor.</span>
-<span id="cb27-287"><a href="#cb27-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-288"><a href="#cb27-288" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb27-289"><a href="#cb27-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-290"><a href="#cb27-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-291"><a href="#cb27-291" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-292"><a href="#cb27-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-293"><a href="#cb27-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-294"><a href="#cb27-294" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citations</span></span>
-<span id="cb27-295"><a href="#cb27-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-296"><a href="#cb27-296" aria-hidden="true" tabindex="-1"></a>To add citations, we need to:</span>
-<span id="cb27-297"><a href="#cb27-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-298"><a href="#cb27-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a BibTeX (.bib) file that holds the metadata for our references.</span>
-<span id="cb27-299"><a href="#cb27-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Save the BibTeX file to our project directory (typically in the <span class="in">`assets`</span> directory)</span>
-<span id="cb27-300"><a href="#cb27-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Include <span class="in">`bibliography: "location/bibliography-name.bib"`</span> in the YAML of our QMD document</span>
-<span id="cb27-301"><a href="#cb27-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-302"><a href="#cb27-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-303"><a href="#cb27-303" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-304"><a href="#cb27-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-305"><a href="#cb27-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-306"><a href="#cb27-306" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating .bib Files Using Zotero</span></span>
-<span id="cb27-307"><a href="#cb27-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-308"><a href="#cb27-308" aria-hidden="true" tabindex="-1"></a>Most reference managers (e.g., Papers, Zotero, Mendelay) can produce BibTex files. Here I will illustrate the process using Zotero.</span>
-<span id="cb27-309"><a href="#cb27-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-310"><a href="#cb27-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a <span class="in">`New Collection`</span>.</span>
-<span id="cb27-311"><a href="#cb27-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Drag the references you want in your BibTeX database into this collection. For today, drag the @carmichael_1954 and @ross_2020 references into this collection.</span>
-<span id="cb27-312"><a href="#cb27-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Right-click the collection and select <span class="in">`Export Collection`</span>.</span>
-<span id="cb27-313"><a href="#cb27-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In the pop-up window, change the format of the exported collection to <span class="in">`BibTex`</span>.</span>
-<span id="cb27-314"><a href="#cb27-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Click <span class="in">`OK`</span>.</span>
-<span id="cb27-315"><a href="#cb27-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-316"><a href="#cb27-316" aria-hidden="true" tabindex="-1"></a>Name the BibTex file (here I named it <span class="in">`my-bibliography.bib`</span>) and save it in the <span class="in">`assets`</span> folder. </span>
-<span id="cb27-317"><a href="#cb27-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-318"><a href="#cb27-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-321"><a href="#cb27-321" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-322"><a href="#cb27-322" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb27-323"><a href="#cb27-323" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "90%"</span></span>
-<span id="cb27-324"><a href="#cb27-324" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Zotero screenshot showing exporting of BibTeX file."</span></span>
-<span id="cb27-325"><a href="#cb27-325" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figs/02-zotero-bibtex.png"</span>)</span>
-<span id="cb27-326"><a href="#cb27-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-327"><a href="#cb27-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-328"><a href="#cb27-328" aria-hidden="true" tabindex="-1"></a>When you call the BibTex file in the <span class="in">`bibliography:`</span> key of the YAML in your QMD document, you will need to give the location of the BibTex (relative to the QMD document) and the name you just gave it. For example if you are calling a bibliography in the quarto document <span class="in">`assignment-01.qmd`</span> that has the following directory/folder structure:</span>
-<span id="cb27-329"><a href="#cb27-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-330"><a href="#cb27-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-331"><a href="#cb27-331" aria-hidden="true" tabindex="-1"></a><span class="in">assignment-01</span></span>
-<span id="cb27-332"><a href="#cb27-332" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── README</span></span>
-<span id="cb27-333"><a href="#cb27-333" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assets</span></span>
-<span id="cb27-334"><a href="#cb27-334" aria-hidden="true" tabindex="-1"></a><span class="in">       └── my-bibliography.bib</span></span>
-<span id="cb27-335"><a href="#cb27-335" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.qmd</span></span>
-<span id="cb27-336"><a href="#cb27-336" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.Rproj</span></span>
-<span id="cb27-337"><a href="#cb27-337" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── data</span></span>
-<span id="cb27-338"><a href="#cb27-338" aria-hidden="true" tabindex="-1"></a><span class="in">       └── fertility.csv</span></span>
-<span id="cb27-339"><a href="#cb27-339" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── figs</span></span>
-<span id="cb27-340"><a href="#cb27-340" aria-hidden="true" tabindex="-1"></a><span class="in">    └── scripts</span></span>
-<span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-342"><a href="#cb27-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-343"><a href="#cb27-343" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a><span class="fu">### Including the BIB File in your YAML</span></span>
-<span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a>You would then include the following in your Quarto document's YAML:</span>
-<span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-352"><a href="#cb27-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-353"><a href="#cb27-353" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-354"><a href="#cb27-354" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
-<span id="cb27-355"><a href="#cb27-355" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
-<span id="cb27-356"><a href="#cb27-356" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
-<span id="cb27-357"><a href="#cb27-357" aria-hidden="true" tabindex="-1"></a><span class="in">date: "January XX, 2023"</span></span>
-<span id="cb27-358"><a href="#cb27-358" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-359"><a href="#cb27-359" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
-<span id="cb27-360"><a href="#cb27-360" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
-<span id="cb27-361"><a href="#cb27-361" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-362"><a href="#cb27-362" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-363"><a href="#cb27-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-364"><a href="#cb27-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-365"><a href="#cb27-365" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-366"><a href="#cb27-366" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-367"><a href="#cb27-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-368"><a href="#cb27-368" aria-hidden="true" tabindex="-1"></a><span class="fu">### BibTex Files</span></span>
-<span id="cb27-369"><a href="#cb27-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-370"><a href="#cb27-370" aria-hidden="true" tabindex="-1"></a>BibTeX files are essentially databases that store bibliographic information in a plain-text (style-independent) file. The database includes a set of references and their metadata. Here is the raw text inside an example BibTex file that includes two articles written by @carmichael_1954 and @ross_2020.</span>
-<span id="cb27-371"><a href="#cb27-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-372"><a href="#cb27-372" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-373"><a href="#cb27-373" aria-hidden="true" tabindex="-1"></a><span class="in">@article{carmichael_1954,</span></span>
-<span id="cb27-374"><a href="#cb27-374" aria-hidden="true" tabindex="-1"></a><span class="in">    title = {Laziness and the Scholarly Life},</span></span>
-<span id="cb27-375"><a href="#cb27-375" aria-hidden="true" tabindex="-1"></a><span class="in">    volume = {78},</span></span>
-<span id="cb27-376"><a href="#cb27-376" aria-hidden="true" tabindex="-1"></a><span class="in">    number = {4},</span></span>
-<span id="cb27-377"><a href="#cb27-377" aria-hidden="true" tabindex="-1"></a><span class="in">    journal = {The Scientific Monthly},</span></span>
-<span id="cb27-378"><a href="#cb27-378" aria-hidden="true" tabindex="-1"></a><span class="in">    author = {Carmichael, Leonard},</span></span>
-<span id="cb27-379"><a href="#cb27-379" aria-hidden="true" tabindex="-1"></a><span class="in">    year = {1954},</span></span>
-<span id="cb27-380"><a href="#cb27-380" aria-hidden="true" tabindex="-1"></a><span class="in">    pages = {208--213}</span></span>
-<span id="cb27-381"><a href="#cb27-381" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb27-382"><a href="#cb27-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-383"><a href="#cb27-383" aria-hidden="true" tabindex="-1"></a><span class="in">@article{ross_2020,</span></span>
-<span id="cb27-384"><a href="#cb27-384" aria-hidden="true" tabindex="-1"></a><span class="in">    title = {Racial disparities in police use of deadly force against unarmed individuals persist after appropriately benchmarking shooting data on violent crime rates},</span></span>
-<span id="cb27-385"><a href="#cb27-385" aria-hidden="true" tabindex="-1"></a><span class="in">    issn = {1948-5506, 1948-5514},</span></span>
-<span id="cb27-386"><a href="#cb27-386" aria-hidden="true" tabindex="-1"></a><span class="in">    url = {http://journals.sagepub.com/doi/10.1177/1948550620916071},</span></span>
-<span id="cb27-387"><a href="#cb27-387" aria-hidden="true" tabindex="-1"></a><span class="in">    doi = {10.1177/1948550620916071},</span></span>
-<span id="cb27-388"><a href="#cb27-388" aria-hidden="true" tabindex="-1"></a><span class="in">    language = {en},</span></span>
-<span id="cb27-389"><a href="#cb27-389" aria-hidden="true" tabindex="-1"></a><span class="in">    urldate = {2020-06-24},</span></span>
-<span id="cb27-390"><a href="#cb27-390" aria-hidden="true" tabindex="-1"></a><span class="in">    journal = {Social Psychological and Personality Science},</span></span>
-<span id="cb27-391"><a href="#cb27-391" aria-hidden="true" tabindex="-1"></a><span class="in">    author = {Ross, Cody T. and Winterhalder, Bruce and McElreath, Richard},</span></span>
-<span id="cb27-392"><a href="#cb27-392" aria-hidden="true" tabindex="-1"></a><span class="in">    month = jun,</span></span>
-<span id="cb27-393"><a href="#cb27-393" aria-hidden="true" tabindex="-1"></a><span class="in">    year = {2020},</span></span>
-<span id="cb27-394"><a href="#cb27-394" aria-hidden="true" tabindex="-1"></a><span class="in">    pages = {194855062091607}</span></span>
-<span id="cb27-395"><a href="#cb27-395" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb27-396"><a href="#cb27-396" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-397"><a href="#cb27-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-398"><a href="#cb27-398" aria-hidden="true" tabindex="-1"></a>The citation identifiers in this example are <span class="in">`carmichael_1954`</span> and <span class="in">`ross_2020`</span>. These identifiers are the first bit of text after the initial curly brace in the reference. This is how we will refer to the citations in our QMD document. (Typically these are auto-generated from our reference manager.) To determine the citiation identifiers, you can open your BibTeX file in RStudio. (Do this by using <span class="in">`Open File...`</span> within RStudio; double-clicking on the BibTeX file will likely open it in a different application.)</span>
-<span id="cb27-399"><a href="#cb27-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-400"><a href="#cb27-400" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-401"><a href="#cb27-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-402"><a href="#cb27-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-403"><a href="#cb27-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-404"><a href="#cb27-404" aria-hidden="true" tabindex="-1"></a><span class="fu">### Including Citations in Your Quarto Document</span></span>
-<span id="cb27-405"><a href="#cb27-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-406"><a href="#cb27-406" aria-hidden="true" tabindex="-1"></a>Citations go inside square brackets and are separated by semicolons. Each citation must have a key, composed of <span class="in">`@citation_identifier`</span> from the database (no spaces between them). For example to cite the Carmichael article:</span>
-<span id="cb27-407"><a href="#cb27-407" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-408"><a href="#cb27-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-409"><a href="#cb27-409" aria-hidden="true" tabindex="-1"></a><span class="in">Here is some text and a citation [@carmichael_1954].</span></span>
-<span id="cb27-410"><a href="#cb27-410" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-411"><a href="#cb27-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-412"><a href="#cb27-412" aria-hidden="true" tabindex="-1"></a>This will create a citation where you included it in the text and also add the reference at the end of the document. If you want a section header for your references, include a level-1 heading called "References" at the end of your document.</span>
-<span id="cb27-413"><a href="#cb27-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-414"><a href="#cb27-414" aria-hidden="true" tabindex="-1"></a>The rendered document now includes a citation where you added this is the QMD document. The associated reference is also included at the end of the document.</span>
-<span id="cb27-415"><a href="#cb27-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-418"><a href="#cb27-418" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-419"><a href="#cb27-419" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb27-420"><a href="#cb27-420" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "90%"</span></span>
-<span id="cb27-421"><a href="#cb27-421" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Screenshot of rendered Quarto document with citation."</span></span>
-<span id="cb27-422"><a href="#cb27-422" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figs/02-citations-01.png"</span>)</span>
-<span id="cb27-423"><a href="#cb27-423" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-424"><a href="#cb27-424" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-425"><a href="#cb27-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-426"><a href="#cb27-426" aria-hidden="true" tabindex="-1"></a>Citations may also include. additional text before and after the citation. In this example we have prefixed the citation with the word "see" and added a page number after the citation. The citation identifier and the text following the citation identifier are separated by a comma.</span>
-<span id="cb27-427"><a href="#cb27-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-428"><a href="#cb27-428" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-429"><a href="#cb27-429" aria-hidden="true" tabindex="-1"></a><span class="in">Here is some text and a citation [see @carmichael_1954, p. 208].</span></span>
-<span id="cb27-430"><a href="#cb27-430" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-431"><a href="#cb27-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-432"><a href="#cb27-432" aria-hidden="true" tabindex="-1"></a>The output of this is:</span>
-<span id="cb27-433"><a href="#cb27-433" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-434"><a href="#cb27-434" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Here is some text and a citation </span><span class="co">[</span><span class="ot">see @carmichael_1954, p. 208</span><span class="co">]</span><span class="at">.</span></span>
-<span id="cb27-435"><a href="#cb27-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-436"><a href="#cb27-436" aria-hidden="true" tabindex="-1"></a>You can also include multiple citations. To do this we include the different citation identifiers separated by a semicolon.</span>
-<span id="cb27-437"><a href="#cb27-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-438"><a href="#cb27-438" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-439"><a href="#cb27-439" aria-hidden="true" tabindex="-1"></a><span class="in">Here are multiple citations [@ross_2020; @carmichael_1954].</span></span>
-<span id="cb27-440"><a href="#cb27-440" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-441"><a href="#cb27-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-442"><a href="#cb27-442" aria-hidden="true" tabindex="-1"></a>The output of this is:</span>
-<span id="cb27-443"><a href="#cb27-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-444"><a href="#cb27-444" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Here are multiple citations </span><span class="co">[</span><span class="ot">@ross_2020; @carmichael_1954</span><span class="co">]</span><span class="at">.</span></span>
-<span id="cb27-445"><a href="#cb27-445" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-446"><a href="#cb27-446" aria-hidden="true" tabindex="-1"></a>We can also change the format of the citation. For example, here we use a format common to starting a sentence with a citation. To do that we omit the square brackets.</span>
-<span id="cb27-447"><a href="#cb27-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-448"><a href="#cb27-448" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-449"><a href="#cb27-449" aria-hidden="true" tabindex="-1"></a><span class="in">@carmichael_1954 suggests something is true.</span></span>
-<span id="cb27-450"><a href="#cb27-450" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-451"><a href="#cb27-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-452"><a href="#cb27-452" aria-hidden="true" tabindex="-1"></a>The output of this is:</span>
-<span id="cb27-453"><a href="#cb27-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-454"><a href="#cb27-454" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; @carmichael_1954 suggests something is true.</span></span>
-<span id="cb27-455"><a href="#cb27-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-456"><a href="#cb27-456" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-457"><a href="#cb27-457" aria-hidden="true" tabindex="-1"></a>:::fyi</span>
-<span id="cb27-458"><a href="#cb27-458" aria-hidden="true" tabindex="-1"></a>You can learn more on the <span class="co">[</span><span class="ot">Citations and Footnotes Help Page</span><span class="co">](https://quarto.org/docs/authoring/footnotes-and-citations.html)</span> in the Quarto documentation.</span>
-<span id="cb27-459"><a href="#cb27-459" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb27-460"><a href="#cb27-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-461"><a href="#cb27-461" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-462"><a href="#cb27-462" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-463"><a href="#cb27-463" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-464"><a href="#cb27-464" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use APA Formatted Citations and References</span></span>
-<span id="cb27-465"><a href="#cb27-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-466"><a href="#cb27-466" aria-hidden="true" tabindex="-1"></a>By default, citations and references are formatted using the Chicago style. To use another style, you will need to:</span>
-<span id="cb27-467"><a href="#cb27-467" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-468"><a href="#cb27-468" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download the appropriate citation style language (CSL) file. (Find many at https://zotero.org/styles)</span>
-<span id="cb27-469"><a href="#cb27-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Place the CSL file in the <span class="in">`assets`</span> folder of your project's directory.</span>
-<span id="cb27-470"><a href="#cb27-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Specify the name of the CSL style file in the <span class="in">`csl:`</span> key in the QMD file's YAML.</span>
-<span id="cb27-471"><a href="#cb27-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-472"><a href="#cb27-472" aria-hidden="true" tabindex="-1"></a>For example, say you have downloaded and saved the <span class="in">`apa.csl`</span> file  and placed it in the <span class="in">`assets`</span> directory, giving the following directory/folder structure:</span>
-<span id="cb27-473"><a href="#cb27-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-474"><a href="#cb27-474" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-475"><a href="#cb27-475" aria-hidden="true" tabindex="-1"></a><span class="in">assignment-01</span></span>
-<span id="cb27-476"><a href="#cb27-476" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── README</span></span>
-<span id="cb27-477"><a href="#cb27-477" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assets</span></span>
-<span id="cb27-478"><a href="#cb27-478" aria-hidden="true" tabindex="-1"></a><span class="in">       ├── apa.csl</span></span>
-<span id="cb27-479"><a href="#cb27-479" aria-hidden="true" tabindex="-1"></a><span class="in">       └── my-bibliography.bib</span></span>
-<span id="cb27-480"><a href="#cb27-480" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.qmd</span></span>
-<span id="cb27-481"><a href="#cb27-481" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.Rproj</span></span>
-<span id="cb27-482"><a href="#cb27-482" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── data</span></span>
-<span id="cb27-483"><a href="#cb27-483" aria-hidden="true" tabindex="-1"></a><span class="in">       └── fertility.csv</span></span>
-<span id="cb27-484"><a href="#cb27-484" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── figs</span></span>
-<span id="cb27-485"><a href="#cb27-485" aria-hidden="true" tabindex="-1"></a><span class="in">    └── scripts</span></span>
-<span id="cb27-486"><a href="#cb27-486" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-487"><a href="#cb27-487" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-488"><a href="#cb27-488" aria-hidden="true" tabindex="-1"></a>You would include the following in your YAML.</span>
-<span id="cb27-489"><a href="#cb27-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-490"><a href="#cb27-490" aria-hidden="true" tabindex="-1"></a>If, for example, you had named the BIB file <span class="in">`my-bibliography.bib`</span> and had put this file in the <span class="in">`assets`</span> directory, your YAML would be:</span>
-<span id="cb27-491"><a href="#cb27-491" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-492"><a href="#cb27-492" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-493"><a href="#cb27-493" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-494"><a href="#cb27-494" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
-<span id="cb27-495"><a href="#cb27-495" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
-<span id="cb27-496"><a href="#cb27-496" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
-<span id="cb27-497"><a href="#cb27-497" aria-hidden="true" tabindex="-1"></a><span class="in">date: "January XX, 2023"</span></span>
-<span id="cb27-498"><a href="#cb27-498" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-499"><a href="#cb27-499" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
-<span id="cb27-500"><a href="#cb27-500" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
-<span id="cb27-501"><a href="#cb27-501" aria-hidden="true" tabindex="-1"></a><span class="in">csl: "assets/apa-single-spaced.csl"</span></span>
-<span id="cb27-502"><a href="#cb27-502" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-503"><a href="#cb27-503" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-504"><a href="#cb27-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-505"><a href="#cb27-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-506"><a href="#cb27-506" aria-hidden="true" tabindex="-1"></a>Use of the APA CSL file not only formats the references according to APA format, but it also fixed the order of the citations in the text itself! (Even though we included the Ross citation identifier prior to the Carmichael citation identifier in the multiple references example, the APA CSL file put them in the text alphabetically!)</span>
-<span id="cb27-507"><a href="#cb27-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-508"><a href="#cb27-508" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-509"><a href="#cb27-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-510"><a href="#cb27-510" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-511"><a href="#cb27-511" aria-hidden="true" tabindex="-1"></a><span class="fu">### Citation Extras</span></span>
-<span id="cb27-512"><a href="#cb27-512" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-513"><a href="#cb27-513" aria-hidden="true" tabindex="-1"></a>One R package that is extremely useful, especially if you are using the visual editor in RStudio for writing QMD documents, is <span class="in">`{citr}`</span>. This package provides functionality and an RStudio Add-In to search a BibTeX-file to create and insert formatted Markdown citations into a QMD document.</span>
-<span id="cb27-514"><a href="#cb27-514" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-517"><a href="#cb27-517" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-518"><a href="#cb27-518" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb27-519"><a href="#cb27-519" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Screenshot of the citr package."</span></span>
-<span id="cb27-520"><a href="#cb27-520" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figs/02-citr-package.png"</span>)</span>
-<span id="cb27-521"><a href="#cb27-521" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-522"><a href="#cb27-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-523"><a href="#cb27-523" aria-hidden="true" tabindex="-1"></a>The <span class="in">`{citr}`</span> package is only available via GitHub, so you will need to install it using <span class="in">`{remotes}`</span> or <span class="in">`{devtools}`</span>. (See the Computational Toolkit book for a reminder on how to do this.) The directions for installing <span class="in">`{citr}`</span> are also on the <span class="co">[</span><span class="ot">citr webpage</span><span class="co">](https://github.com/crsh/citr)</span> along with instructions for using the package. </span>
-<span id="cb27-524"><a href="#cb27-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-525"><a href="#cb27-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-526"><a href="#cb27-526" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-527"><a href="#cb27-527" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-528"><a href="#cb27-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-529"><a href="#cb27-529" aria-hidden="true" tabindex="-1"></a><span class="fu"># Auto-Populating the Date in Your YAML</span></span>
-<span id="cb27-530"><a href="#cb27-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-531"><a href="#cb27-531" aria-hidden="true" tabindex="-1"></a>We can auto-populate the <span class="in">`date:`</span> key in our document's YAML by including "today".</span>
-<span id="cb27-532"><a href="#cb27-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-533"><a href="#cb27-533" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-534"><a href="#cb27-534" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-535"><a href="#cb27-535" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
-<span id="cb27-536"><a href="#cb27-536" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
-<span id="cb27-537"><a href="#cb27-537" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
-<span id="cb27-538"><a href="#cb27-538" aria-hidden="true" tabindex="-1"></a><span class="in">date: "today"</span></span>
-<span id="cb27-539"><a href="#cb27-539" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-540"><a href="#cb27-540" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
-<span id="cb27-541"><a href="#cb27-541" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
-<span id="cb27-542"><a href="#cb27-542" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-543"><a href="#cb27-543" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-544"><a href="#cb27-544" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-545"><a href="#cb27-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-546"><a href="#cb27-546" aria-hidden="true" tabindex="-1"></a>You can also use an inline code chunk that calls the <span class="in">`Sys.Date()`</span> function. This function returns your computer's idea of the current date in the <span class="in">`YYYY-MM-DD`</span> format (ISO 8601 standard). If you want to be hyper specific, you can use <span class="in">`Sys.time()`</span> to return the date and time in the format: <span class="in">`YYYY-MM-DD HH-MM:SS Time Zone`</span>.</span>
-<span id="cb27-547"><a href="#cb27-547" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-550"><a href="#cb27-550" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb27-551"><a href="#cb27-551" aria-hidden="true" tabindex="-1"></a><span class="co"># Return date</span></span>
-<span id="cb27-552"><a href="#cb27-552" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()</span>
-<span id="cb27-553"><a href="#cb27-553" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-554"><a href="#cb27-554" aria-hidden="true" tabindex="-1"></a><span class="co"># Return time</span></span>
-<span id="cb27-555"><a href="#cb27-555" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span>
-<span id="cb27-556"><a href="#cb27-556" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-557"><a href="#cb27-557" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-558"><a href="#cb27-558" aria-hidden="true" tabindex="-1"></a>Here is an example of the YAML in the <span class="in">`date:`</span> key to use <span class="in">`Sys.Date()`</span> to auto-populate the date.</span>
-<span id="cb27-559"><a href="#cb27-559" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-560"><a href="#cb27-560" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-561"><a href="#cb27-561" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-562"><a href="#cb27-562" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
-<span id="cb27-563"><a href="#cb27-563" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
-<span id="cb27-564"><a href="#cb27-564" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
-<span id="cb27-565"><a href="#cb27-565" aria-hidden="true" tabindex="-1"></a><span class="in">date: " `r knitr::inline_expr("Sys.Date()")` "</span></span>
-<span id="cb27-566"><a href="#cb27-566" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-567"><a href="#cb27-567" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
-<span id="cb27-568"><a href="#cb27-568" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
-<span id="cb27-569"><a href="#cb27-569" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-570"><a href="#cb27-570" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-571"><a href="#cb27-571" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-572"><a href="#cb27-572" aria-hidden="true" tabindex="-1"></a>Note that the inline chunk is embedded in quotation marks. We can custom format each of these using the <span class="in">`format()`</span> function. This function takes the <span class="in">`Sys.Date()`</span> function as its first argument, and then a character string of formatting rules. Here I format the date to have the full month name, day of the month, and year (with century): e.g., January 12, 2023.</span>
-<span id="cb27-573"><a href="#cb27-573" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-574"><a href="#cb27-574" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-575"><a href="#cb27-575" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-576"><a href="#cb27-576" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-577"><a href="#cb27-577" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
-<span id="cb27-578"><a href="#cb27-578" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
-<span id="cb27-579"><a href="#cb27-579" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
-<span id="cb27-580"><a href="#cb27-580" aria-hidden="true" tabindex="-1"></a><span class="in">date: " `r knitr::inline_expr("format(Sys.Date(), '%B %d %Y')")`"</span></span>
-<span id="cb27-581"><a href="#cb27-581" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
-<span id="cb27-582"><a href="#cb27-582" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
-<span id="cb27-583"><a href="#cb27-583" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
-<span id="cb27-584"><a href="#cb27-584" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
-<span id="cb27-585"><a href="#cb27-585" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb27-586"><a href="#cb27-586" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-587"><a href="#cb27-587" aria-hidden="true" tabindex="-1"></a>You can see all the formatting options by calling <span class="in">`help(strptime)`</span>.</span>
-<span id="cb27-588"><a href="#cb27-588" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-589"><a href="#cb27-589" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-590"><a href="#cb27-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-591"><a href="#cb27-591" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-592"><a href="#cb27-592" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learn More</span></span>
-<span id="cb27-593"><a href="#cb27-593" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-594"><a href="#cb27-594" aria-hidden="true" tabindex="-1"></a>Yihui Xie, the creater of the RMarkdown package (which does a lot of the work in converting your QMD file to an HTML/PDF file, gave a nice trechnical talk to the *American Statistical Association's Section on Statistical Computing* that explain what actually happens behind the scenes when you click the <span class="in">`Knit`</span> or <span class="in">`Render`</span> button in RStudio to render a RMD or QMD document.</span>
-<span id="cb27-595"><a href="#cb27-595" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-596"><a href="#cb27-596" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">An anatomy of R Markdown with minimal applications </span><span class="co">](https://www.youtube.com/watch?v=fiy32LjgGUE)</span></span>
-<span id="cb27-597"><a href="#cb27-597" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-598"><a href="#cb27-598" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
-<span id="cb27-599"><a href="#cb27-599" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-600"><a href="#cb27-600" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-601"><a href="#cb27-601" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
-<span id="cb27-602"><a href="#cb27-602" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-603"><a href="#cb27-603" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-604"><a href="#cb27-604" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-605"><a href="#cb27-605" aria-hidden="true" tabindex="-1"></a></span>
+<div class="sourceCode" id="cb29" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># More Quarto</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"scripts/_common.R"</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>pew <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/zief0002/fluffy-ants/main/data/pew.csv"</span>)</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a>lm<span class="fl">.1</span> <span class="ot">=</span> <span class="fu">lm</span>(knowledge <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> news, <span class="at">data =</span> pew)</span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>lm1coef <span class="ot">=</span> <span class="fu">tidy</span>(lm<span class="fl">.1</span>)</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>This document contains some additional instruction for EPsy 8252. Note that I might add to this as students hit me with questions over the course of the semester.</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code Chunks for Figures</span></span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a>Code chunks can be used to do anything you can do in R. For example we can fit regression models, create plots, compute summary measures, or mutate dummy variables into our data. For figures, there are a bunch of chunk options that are useful.</span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a>To label code chunks that include figures, we will append <span class="in">`fig-`</span> to the label name. For example, we can use <span class="in">`#| label: fig-density-knowledge`</span> to label a code chunk where we are creating a density plot of the news knowledge variable. </span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>We can add a caption using the <span class="in">`#| fig-cap:`</span> chunk option. It is also a good idea to also include the <span class="in">`#| fig-alt:`</span> chunk option with figures. This provides alternative text for screenreaders (which is required under the new federal accessability laws). Below is an example of this:</span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a><span class="in">title: "My First Quarto Document"</span></span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Hello World"</span></span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Andy and Iggy"</span></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a><span class="in">date: today</span></span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a><span class="in"># Code Chunk</span></span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-density-knowledge</span></span>
+<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Here is your figure caption."</span></span>
+<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-alt: "Here is alternative text for screenreaders."</span></span>
+<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = pew, aes(x = knowledge)) +</span></span>
+<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a><span class="in">   geom_density()</span></span>
+<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-58"><a href="#cb29-58" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb29-59"><a href="#cb29-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-60"><a href="#cb29-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-61"><a href="#cb29-61" aria-hidden="true" tabindex="-1"></a>Notice that by labeling this chunk with <span class="in">`fig-`</span>, the figure is numbered in the document. This allows the figure to also be cross-referenced. You can do this by using the "at" symbol (\@) along with the figure's label name. For example, to cross-reference to the density plot we created, we could use something like:</span>
+<span id="cb29-62"><a href="#cb29-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-63"><a href="#cb29-63" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb29-64"><a href="#cb29-64" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-65"><a href="#cb29-65" aria-hidden="true" tabindex="-1"></a><span class="in">title: "My First Quarto Document"</span></span>
+<span id="cb29-66"><a href="#cb29-66" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Hello World"</span></span>
+<span id="cb29-67"><a href="#cb29-67" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Andy and Iggy"</span></span>
+<span id="cb29-68"><a href="#cb29-68" aria-hidden="true" tabindex="-1"></a><span class="in">date: today</span></span>
+<span id="cb29-69"><a href="#cb29-69" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-70"><a href="#cb29-70" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-71"><a href="#cb29-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-72"><a href="#cb29-72" aria-hidden="true" tabindex="-1"></a><span class="in"># Code Chunk</span></span>
+<span id="cb29-73"><a href="#cb29-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-74"><a href="#cb29-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-75"><a href="#cb29-75" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: fig-density-knowledge</span></span>
+<span id="cb29-76"><a href="#cb29-76" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "Here is your figure caption."</span></span>
+<span id="cb29-77"><a href="#cb29-77" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-alt: "Here is alternative text for screenreaders."</span></span>
+<span id="cb29-78"><a href="#cb29-78" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(data = pew, aes(x = knowledge)) +</span></span>
+<span id="cb29-79"><a href="#cb29-79" aria-hidden="true" tabindex="-1"></a><span class="in">   geom_density()</span></span>
+<span id="cb29-80"><a href="#cb29-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-81"><a href="#cb29-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-82"><a href="#cb29-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-83"><a href="#cb29-83" aria-hidden="true" tabindex="-1"></a><span class="in">The distribution of news knowledge is unimodal (see @fig-density-knowledge).</span></span>
+<span id="cb29-84"><a href="#cb29-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-85"><a href="#cb29-85" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb29-86"><a href="#cb29-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-87"><a href="#cb29-87" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-88"><a href="#cb29-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-89"><a href="#cb29-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-90"><a href="#cb29-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### Figure Size</span></span>
+<span id="cb29-91"><a href="#cb29-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-92"><a href="#cb29-92" aria-hidden="true" tabindex="-1"></a>There are a couple other chunk options for figures that help set the aspect ratio and size of the figure in your document. The aspect ratio is the ratio of a figure's width to its height. We set this using the <span class="in">`#| fig-width:`</span> and <span class="in">`#| fig-height:`</span> chunk options. (The default value for both is 6; thus the figure appears square.) Below we change these so that the figure appears wider than it is tall.</span>
+<span id="cb29-93"><a href="#cb29-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-96"><a href="#cb29-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-97"><a href="#cb29-97" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: fenced</span></span>
+<span id="cb29-98"><a href="#cb29-98" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-density-knowledge-2</span></span>
+<span id="cb29-99"><a href="#cb29-99" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Density plot showing the distribution of news knowledge."</span></span>
+<span id="cb29-100"><a href="#cb29-100" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Density plot showing a a unimodal distribution of news knowledge."</span></span>
+<span id="cb29-101"><a href="#cb29-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 9</span></span>
+<span id="cb29-102"><a href="#cb29-102" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb29-103"><a href="#cb29-103" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> pew, <span class="fu">aes</span>(<span class="at">x =</span> knowledge)) <span class="sc">+</span></span>
+<span id="cb29-104"><a href="#cb29-104" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_density</span>()</span>
+<span id="cb29-105"><a href="#cb29-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-106"><a href="#cb29-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-107"><a href="#cb29-107" aria-hidden="true" tabindex="-1"></a>::: fyi</span>
+<span id="cb29-108"><a href="#cb29-108" aria-hidden="true" tabindex="-1"></a>**FYI**</span>
+<span id="cb29-109"><a href="#cb29-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-110"><a href="#cb29-110" aria-hidden="true" tabindex="-1"></a>It is important to change the aspect ratio when you have legends or when you are using <span class="in">`{patchwork}`</span> to stack or put multiple figures next to each other. Many times you need to find a good aspect ratio though trial-and-error of trying different values.</span>
+<span id="cb29-111"><a href="#cb29-111" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb29-112"><a href="#cb29-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-113"><a href="#cb29-113" aria-hidden="true" tabindex="-1"></a>The actual size of the figure in the document is independent of the aspect ratio and can be set using the <span class="in">`#| out-width:`</span> or <span class="in">`#| out-height:`</span> chunk option. These options take a character string of the direct size (in HTML documents this is typically in pixels) or of the percentage of the output width/height. Here we keep the same aspect ratio, but make the figure smaller by setting the figure width to 40% of the document's width.</span>
+<span id="cb29-114"><a href="#cb29-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-117"><a href="#cb29-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-118"><a href="#cb29-118" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: fenced</span></span>
+<span id="cb29-119"><a href="#cb29-119" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-density-knowledge-3</span></span>
+<span id="cb29-120"><a href="#cb29-120" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Density plot showing the distribution of news knowledge."</span></span>
+<span id="cb29-121"><a href="#cb29-121" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Density plot showing a a unimodal distribution of news knowledge."</span></span>
+<span id="cb29-122"><a href="#cb29-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "40%"</span></span>
+<span id="cb29-123"><a href="#cb29-123" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> pew, <span class="fu">aes</span>(<span class="at">x =</span> news, <span class="at">y =</span> knowledge)) <span class="sc">+</span></span>
+<span id="cb29-124"><a href="#cb29-124" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_point</span>()</span>
+<span id="cb29-125"><a href="#cb29-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-126"><a href="#cb29-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-127"><a href="#cb29-127" aria-hidden="true" tabindex="-1"></a>::: fyi</span>
+<span id="cb29-128"><a href="#cb29-128" aria-hidden="true" tabindex="-1"></a>**PROTIP**</span>
+<span id="cb29-129"><a href="#cb29-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-130"><a href="#cb29-130" aria-hidden="true" tabindex="-1"></a>If you set the aspect ratio of the figure, you need only set <span class="in">`#| out-width:`</span> or <span class="in">`#| out-height:`</span>. You don't need to set both as the other will be determined by the aspect ratio.</span>
+<span id="cb29-131"><a href="#cb29-131" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb29-132"><a href="#cb29-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-133"><a href="#cb29-133" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-134"><a href="#cb29-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-135"><a href="#cb29-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-136"><a href="#cb29-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Inline Code Chunks for Better Reproducibility</span></span>
+<span id="cb29-137"><a href="#cb29-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-138"><a href="#cb29-138" aria-hidden="true" tabindex="-1"></a>In writing papers where there are results from data analyses being reported in the text, inline code chunks are boss! For example, consider writing the following sentence in an analysis of the *pew.csv* data.</span>
+<span id="cb29-139"><a href="#cb29-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-140"><a href="#cb29-140" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The effect of news exposure on news knowledge is 0.327 (SE = 0.09).</span></span>
+<span id="cb29-141"><a href="#cb29-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-142"><a href="#cb29-142" aria-hidden="true" tabindex="-1"></a>Rather than computing these values and then transposing the values into the sentence, we can use inline code chunks to directly compute and write the values in the sentence. Recall, earlier we assigned the <span class="in">`tidy()`</span> output into an object called <span class="in">`lm1coef`</span>. The results from <span class="in">`tidy()`</span> are a tibble (or data frame).</span>
+<span id="cb29-143"><a href="#cb29-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-146"><a href="#cb29-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-147"><a href="#cb29-147" aria-hidden="true" tabindex="-1"></a><span class="co"># Print output</span></span>
+<span id="cb29-148"><a href="#cb29-148" aria-hidden="true" tabindex="-1"></a>lm1coef</span>
+<span id="cb29-149"><a href="#cb29-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-150"><a href="#cb29-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-151"><a href="#cb29-151" aria-hidden="true" tabindex="-1"></a>A tibble/data frame is a combination of rows and columns. We can access different parts of the tibble by indexing the row and column that we want. For example, to access the slope standard error, which is in the 2nd row and 3rd column, we could use:</span>
+<span id="cb29-152"><a href="#cb29-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-155"><a href="#cb29-155" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-156"><a href="#cb29-156" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE</span></span>
+<span id="cb29-157"><a href="#cb29-157" aria-hidden="true" tabindex="-1"></a>lm1coef[<span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb29-158"><a href="#cb29-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-159"><a href="#cb29-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-160"><a href="#cb29-160" aria-hidden="true" tabindex="-1"></a>Unfortunately, this also comes out as a labelled tibble. If we just want the SE value we double index this. Thus to get the value of the slope SE, we use:</span>
+<span id="cb29-161"><a href="#cb29-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-164"><a href="#cb29-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-165"><a href="#cb29-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Access slope SE number only</span></span>
+<span id="cb29-166"><a href="#cb29-166" aria-hidden="true" tabindex="-1"></a>lm1coef[[<span class="dv">2</span>, <span class="dv">3</span>]]</span>
+<span id="cb29-167"><a href="#cb29-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-168"><a href="#cb29-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-169"><a href="#cb29-169" aria-hidden="true" tabindex="-1"></a>Here is how we could extract the slope value and the SE of the slope value to write our earlier sentence:</span>
+<span id="cb29-170"><a href="#cb29-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-171"><a href="#cb29-171" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The effect of news exposure on news knowledge is `</span><span class="in">` `</span><span class="at">r knitr::inline_expr("lm1coef[</span><span class="co">[</span><span class="ot">2, 2</span><span class="co">]</span><span class="at">]")` `` (SE = `</span><span class="in">` `</span><span class="at">r knitr::inline_expr("lm1coef[</span><span class="co">[</span><span class="ot">2, 3</span><span class="co">]</span><span class="at">]")` ``).</span></span>
+<span id="cb29-172"><a href="#cb29-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-173"><a href="#cb29-173" aria-hidden="true" tabindex="-1"></a>This produces the following sentence in the rendered document:</span>
+<span id="cb29-174"><a href="#cb29-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-175"><a href="#cb29-175" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The effect of news exposure on news knowledge is </span><span class="in">`r lm1coef[[2, 2]]`</span><span class="at"> (SE = </span><span class="in">`r lm1coef[[2, 3]]`</span><span class="at">).</span></span>
+<span id="cb29-176"><a href="#cb29-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-177"><a href="#cb29-177" aria-hidden="true" tabindex="-1"></a>Note: You don't need to assign the output to an object to index it. For example, the SE could also be extracted using: `<span class="in">` `</span>r knitr::inline_expr("tidy(lm.1)[<span class="co">[</span><span class="ot">2, 2</span><span class="co">]</span>]")` ``</span>
+<span id="cb29-178"><a href="#cb29-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-179"><a href="#cb29-179" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-180"><a href="#cb29-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-181"><a href="#cb29-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-182"><a href="#cb29-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### Rounding</span></span>
+<span id="cb29-183"><a href="#cb29-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-184"><a href="#cb29-184" aria-hidden="true" tabindex="-1"></a>There are several ways to set the rounding to two decimal places. One is to embed the computation in the <span class="in">`round()`</span> function. For example, in the first inline chunk we could use: <span class="in">`round(lm1coef[[2, 3]], 2)`</span>.</span>
+<span id="cb29-185"><a href="#cb29-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-186"><a href="#cb29-186" aria-hidden="true" tabindex="-1"></a>You can also do this in a separate code chunk and then call the values in the inline computation (as suggested in the <span class="co">[</span><span class="ot">Quarto Computations Tutorial</span><span class="co">](https://quarto.org/docs/get-started/computations/rstudio.html)</span>).</span>
+<span id="cb29-187"><a href="#cb29-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-188"><a href="#cb29-188" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-189"><a href="#cb29-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-190"><a href="#cb29-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-191"><a href="#cb29-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## Multiline Equations</span></span>
+<span id="cb29-192"><a href="#cb29-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-193"><a href="#cb29-193" aria-hidden="true" tabindex="-1"></a>There are a couple of ways to create multiline equations in a Quarto document. I tend to use the <span class="in">`split`</span> environment from LaTeX to do this. To use this:</span>
+<span id="cb29-194"><a href="#cb29-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-195"><a href="#cb29-195" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Include <span class="in">`\begin{split}`</span> and <span class="in">`\end{split}`</span> in the display equation.</span>
+<span id="cb29-196"><a href="#cb29-196" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>At the end of each line (where you want a linebreak) include a double backslash, <span class="in">`\\`</span>.</span>
+<span id="cb29-197"><a href="#cb29-197" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>In each line of the multiline equation, also include the ampersand sign (<span class="in">`&amp;`</span>) at the point we want the multiple lines to align vertically.</span>
+<span id="cb29-198"><a href="#cb29-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-199"><a href="#cb29-199" aria-hidden="true" tabindex="-1"></a>Here is an example:</span>
+<span id="cb29-200"><a href="#cb29-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-201"><a href="#cb29-201" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb29-202"><a href="#cb29-202" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
+<span id="cb29-203"><a href="#cb29-203" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{split}</span></span>
+<span id="cb29-204"><a href="#cb29-204" aria-hidden="true" tabindex="-1"></a><span class="in">\hat{y}_i &amp;= 3 + 4(1) \\</span></span>
+<span id="cb29-205"><a href="#cb29-205" aria-hidden="true" tabindex="-1"></a><span class="in">&amp;= 7</span></span>
+<span id="cb29-206"><a href="#cb29-206" aria-hidden="true" tabindex="-1"></a><span class="in">\end{split}</span></span>
+<span id="cb29-207"><a href="#cb29-207" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
+<span id="cb29-208"><a href="#cb29-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-209"><a href="#cb29-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-210"><a href="#cb29-210" aria-hidden="true" tabindex="-1"></a>And the resulting display equation is:</span>
+<span id="cb29-211"><a href="#cb29-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-212"><a href="#cb29-212" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb29-213"><a href="#cb29-213" aria-hidden="true" tabindex="-1"></a>\begin{split}</span>
+<span id="cb29-214"><a href="#cb29-214" aria-hidden="true" tabindex="-1"></a>\hat{y}_i &amp;= 3 + 4(1) <span class="sc">\\</span></span>
+<span id="cb29-215"><a href="#cb29-215" aria-hidden="true" tabindex="-1"></a>&amp;= 7</span>
+<span id="cb29-216"><a href="#cb29-216" aria-hidden="true" tabindex="-1"></a>\end{split}</span>
+<span id="cb29-217"><a href="#cb29-217" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb29-218"><a href="#cb29-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-219"><a href="#cb29-219" aria-hidden="true" tabindex="-1"></a>Note that the ampersand appeared immediately before the equal sign in each line of the equation, so that is where the two lines are aligned vertically (the equal signs are on top of each other). You can add as many lines to this as you want.</span>
+<span id="cb29-220"><a href="#cb29-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-221"><a href="#cb29-221" aria-hidden="true" tabindex="-1"></a>::: fyi</span>
+<span id="cb29-222"><a href="#cb29-222" aria-hidden="true" tabindex="-1"></a>**FYI**</span>
+<span id="cb29-223"><a href="#cb29-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-224"><a href="#cb29-224" aria-hidden="true" tabindex="-1"></a>Multiline equations are quite useful to show your work and when you have really long single equations that need to be broken up so they fit on the page (e.g., a regression equation with many predictors).</span>
+<span id="cb29-225"><a href="#cb29-225" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb29-226"><a href="#cb29-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-227"><a href="#cb29-227" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-228"><a href="#cb29-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-229"><a href="#cb29-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-230"><a href="#cb29-230" aria-hidden="true" tabindex="-1"></a><span class="fu">### Spacing Out the Lines</span></span>
+<span id="cb29-231"><a href="#cb29-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-232"><a href="#cb29-232" aria-hidden="true" tabindex="-1"></a>You can add space between the lines of your multiline equation by including a unit of measurement between square brackets after the double backslashes.</span>
+<span id="cb29-233"><a href="#cb29-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-234"><a href="#cb29-234" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb29-235"><a href="#cb29-235" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
+<span id="cb29-236"><a href="#cb29-236" aria-hidden="true" tabindex="-1"></a><span class="in">\begin{split}</span></span>
+<span id="cb29-237"><a href="#cb29-237" aria-hidden="true" tabindex="-1"></a><span class="in">\hat{y}_i &amp;= 3 + 4(1) \\[1em]</span></span>
+<span id="cb29-238"><a href="#cb29-238" aria-hidden="true" tabindex="-1"></a><span class="in">&amp;= 7</span></span>
+<span id="cb29-239"><a href="#cb29-239" aria-hidden="true" tabindex="-1"></a><span class="in">\end{split}</span></span>
+<span id="cb29-240"><a href="#cb29-240" aria-hidden="true" tabindex="-1"></a><span class="in">$$</span></span>
+<span id="cb29-241"><a href="#cb29-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-242"><a href="#cb29-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-243"><a href="#cb29-243" aria-hidden="true" tabindex="-1"></a>Here the resulting display equation is:</span>
+<span id="cb29-244"><a href="#cb29-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-245"><a href="#cb29-245" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb29-246"><a href="#cb29-246" aria-hidden="true" tabindex="-1"></a>\begin{split}</span>
+<span id="cb29-247"><a href="#cb29-247" aria-hidden="true" tabindex="-1"></a>\hat{y}_i &amp;= 3 + 4(1) <span class="sc">\\</span><span class="co">[</span><span class="ot">1em</span><span class="co">]</span></span>
+<span id="cb29-248"><a href="#cb29-248" aria-hidden="true" tabindex="-1"></a>&amp;= 7</span>
+<span id="cb29-249"><a href="#cb29-249" aria-hidden="true" tabindex="-1"></a>\end{split}</span>
+<span id="cb29-250"><a href="#cb29-250" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb29-251"><a href="#cb29-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-252"><a href="#cb29-252" aria-hidden="true" tabindex="-1"></a>Here we have added line space of 1 em. An *em* is a unit for measuring the width of printed work, equal to the height of the type size being used (typically the width of the letter "m"). Other common printing units include the *en* (the width of the letter "n"), and the *ex* (the width of the letter "x").</span>
+<span id="cb29-253"><a href="#cb29-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-254"><a href="#cb29-254" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ::: fyi --&gt;</span></span>
+<span id="cb29-255"><a href="#cb29-255" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Question #8 on the assignment actually asks: --&gt;</span></span>
+<span id="cb29-256"><a href="#cb29-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-257"><a href="#cb29-257" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- &gt; Use a display equation to write the equation for the underlying regression model (including error and assumptions) using Greek letters, subscripts, and variable names. Also write the equation for the fitted least squares regression equation based on the output from `lm()`. Type these two equations in the same display equation, each on a separate line of text in your document, and align the equals signs. --&gt;</span></span>
+<span id="cb29-258"><a href="#cb29-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-259"><a href="#cb29-259" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Try writing this multiline equation. --&gt;</span></span>
+<span id="cb29-260"><a href="#cb29-260" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ::: --&gt;</span></span>
+<span id="cb29-261"><a href="#cb29-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-262"><a href="#cb29-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-263"><a href="#cb29-263" aria-hidden="true" tabindex="-1"></a>:::fyi</span>
+<span id="cb29-264"><a href="#cb29-264" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typesetting 101: Hyphens, Minus Signs, and Dashes</span></span>
+<span id="cb29-265"><a href="#cb29-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-266"><a href="#cb29-266" aria-hidden="true" tabindex="-1"></a>In printed work the width of a hyphen, a minus sign, and dashes are all different. Quarto will correctly typeset these, but you have to indicate what you want. Below are how we indicate these in Quarto.</span>
+<span id="cb29-267"><a href="#cb29-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-268"><a href="#cb29-268" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Hyphen:** A hyphen is used to join two or more words together. To typeset a hyphen in Quarto, use a single hyphen; <span class="in">`-`</span>.</span>
+<span id="cb29-269"><a href="#cb29-269" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**En Dash:** An en dash is used to mark ranges and to indicate the meaning "to" in phrases like "Minneapolis--St. Paul". An en dash is slightly longer than a hyphen and is typeset in Quarto using two hyphens; <span class="in">`--`</span>.</span>
+<span id="cb29-270"><a href="#cb29-270" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Em Dash:** An em dash is used to separate extra information or mark a break in a sentence. An em dash is slightly longer than an en dash and is typeset in Quarto using three hyphens; <span class="in">`---`</span>.</span>
+<span id="cb29-271"><a href="#cb29-271" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Minus Sign:** A minus sign is used in mathematical expressions (e.g., in subtraction or to indicate a negative number). To typeset a minus sign, use the inline equation with a single hyphen; <span class="in">`$-$`</span>. When a minus sign is typeset, not only is the length of it different than a hyphen, but it also includes the correct spacing around it for mathematical typesetting.</span>
+<span id="cb29-272"><a href="#cb29-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-273"><a href="#cb29-273" aria-hidden="true" tabindex="-1"></a>Here is a sentence incorporating each of these so you can see the differences:</span>
+<span id="cb29-274"><a href="#cb29-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-275"><a href="#cb29-275" aria-hidden="true" tabindex="-1"></a>*During the time from January--February, my three dogs enjoy playing in the snow---apparently snow is fun for canines---with their sweaters on since it is* $-30$-degrees Fahrenheit outside.</span>
+<span id="cb29-276"><a href="#cb29-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-277"><a href="#cb29-277" aria-hidden="true" tabindex="-1"></a>The input for this sentence was:</span>
+<span id="cb29-278"><a href="#cb29-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-279"><a href="#cb29-279" aria-hidden="true" tabindex="-1"></a><span class="in">`During the time from January--February, my three dogs enjoy playing in the snow---apparently snow is fun for canines---with their sweaters on since it is $-30$-degrees Fahrenheit outside.`</span></span>
+<span id="cb29-280"><a href="#cb29-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-281"><a href="#cb29-281" aria-hidden="true" tabindex="-1"></a>Note that you can also typeset these in Word:</span>
+<span id="cb29-282"><a href="#cb29-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-283"><a href="#cb29-283" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Hyphen:** On both a Mac and PC, press "hyphen".</span>
+<span id="cb29-284"><a href="#cb29-284" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**En Dash:** On a Mac, press "option+hyphen key". On a PC, press "ctrl+hyphen".</span>
+<span id="cb29-285"><a href="#cb29-285" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Em Dash:** On a Mac, press "option+shift+hyphen key". On a PC, press "alt+ctrl+hyphen".</span>
+<span id="cb29-286"><a href="#cb29-286" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Minus Sign:** For a minus sign, you should use Equation Editor.</span>
+<span id="cb29-287"><a href="#cb29-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-288"><a href="#cb29-288" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb29-289"><a href="#cb29-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-290"><a href="#cb29-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-291"><a href="#cb29-291" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-292"><a href="#cb29-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-293"><a href="#cb29-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-294"><a href="#cb29-294" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citations</span></span>
+<span id="cb29-295"><a href="#cb29-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-296"><a href="#cb29-296" aria-hidden="true" tabindex="-1"></a>To add citations, we need to:</span>
+<span id="cb29-297"><a href="#cb29-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-298"><a href="#cb29-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a BibTeX (.bib) file that holds the metadata for our references.</span>
+<span id="cb29-299"><a href="#cb29-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Save the BibTeX file to our project directory (typically in the <span class="in">`assets`</span> directory)</span>
+<span id="cb29-300"><a href="#cb29-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Include <span class="in">`bibliography: "location/bibliography-name.bib"`</span> in the YAML of our QMD document</span>
+<span id="cb29-301"><a href="#cb29-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-302"><a href="#cb29-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-303"><a href="#cb29-303" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-304"><a href="#cb29-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-305"><a href="#cb29-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-306"><a href="#cb29-306" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating .bib Files Using Zotero</span></span>
+<span id="cb29-307"><a href="#cb29-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-308"><a href="#cb29-308" aria-hidden="true" tabindex="-1"></a>Most reference managers (e.g., Papers, Zotero, Mendelay) can produce BibTex files. Here I will illustrate the process using Zotero.</span>
+<span id="cb29-309"><a href="#cb29-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-310"><a href="#cb29-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a <span class="in">`New Collection`</span>.</span>
+<span id="cb29-311"><a href="#cb29-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Drag the references you want in your BibTeX database into this collection. For today, drag the @carmichael_1954 and @ross_2020 references into this collection.</span>
+<span id="cb29-312"><a href="#cb29-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Right-click the collection and select <span class="in">`Export Collection`</span>.</span>
+<span id="cb29-313"><a href="#cb29-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In the pop-up window, change the format of the exported collection to <span class="in">`BibTex`</span>.</span>
+<span id="cb29-314"><a href="#cb29-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Click <span class="in">`OK`</span>.</span>
+<span id="cb29-315"><a href="#cb29-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-316"><a href="#cb29-316" aria-hidden="true" tabindex="-1"></a>Name the BibTex file (here I named it <span class="in">`my-bibliography.bib`</span>) and save it in the <span class="in">`assets`</span> folder. </span>
+<span id="cb29-317"><a href="#cb29-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-318"><a href="#cb29-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-321"><a href="#cb29-321" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-322"><a href="#cb29-322" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb29-323"><a href="#cb29-323" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "90%"</span></span>
+<span id="cb29-324"><a href="#cb29-324" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Zotero screenshot showing exporting of BibTeX file."</span></span>
+<span id="cb29-325"><a href="#cb29-325" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figs/02-zotero-bibtex.png"</span>)</span>
+<span id="cb29-326"><a href="#cb29-326" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-327"><a href="#cb29-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-328"><a href="#cb29-328" aria-hidden="true" tabindex="-1"></a>When you call the BibTex file in the <span class="in">`bibliography:`</span> key of the YAML in your QMD document, you will need to give the location of the BibTex (relative to the QMD document) and the name you just gave it. For example if you are calling a bibliography in the quarto document <span class="in">`assignment-01.qmd`</span> that has the following directory/folder structure:</span>
+<span id="cb29-329"><a href="#cb29-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-330"><a href="#cb29-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-331"><a href="#cb29-331" aria-hidden="true" tabindex="-1"></a><span class="in">assignment-01</span></span>
+<span id="cb29-332"><a href="#cb29-332" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── README</span></span>
+<span id="cb29-333"><a href="#cb29-333" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assets</span></span>
+<span id="cb29-334"><a href="#cb29-334" aria-hidden="true" tabindex="-1"></a><span class="in">       └── my-bibliography.bib</span></span>
+<span id="cb29-335"><a href="#cb29-335" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.qmd</span></span>
+<span id="cb29-336"><a href="#cb29-336" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.Rproj</span></span>
+<span id="cb29-337"><a href="#cb29-337" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── data</span></span>
+<span id="cb29-338"><a href="#cb29-338" aria-hidden="true" tabindex="-1"></a><span class="in">       └── fertility.csv</span></span>
+<span id="cb29-339"><a href="#cb29-339" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── figs</span></span>
+<span id="cb29-340"><a href="#cb29-340" aria-hidden="true" tabindex="-1"></a><span class="in">    └── scripts</span></span>
+<span id="cb29-341"><a href="#cb29-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-342"><a href="#cb29-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-343"><a href="#cb29-343" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-344"><a href="#cb29-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-345"><a href="#cb29-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-346"><a href="#cb29-346" aria-hidden="true" tabindex="-1"></a><span class="fu">### Including the BIB File in your YAML</span></span>
+<span id="cb29-347"><a href="#cb29-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-348"><a href="#cb29-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-349"><a href="#cb29-349" aria-hidden="true" tabindex="-1"></a>You would then include the following in your Quarto document's YAML:</span>
+<span id="cb29-350"><a href="#cb29-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-351"><a href="#cb29-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-352"><a href="#cb29-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-353"><a href="#cb29-353" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-354"><a href="#cb29-354" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
+<span id="cb29-355"><a href="#cb29-355" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
+<span id="cb29-356"><a href="#cb29-356" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
+<span id="cb29-357"><a href="#cb29-357" aria-hidden="true" tabindex="-1"></a><span class="in">date: "January XX, 2023"</span></span>
+<span id="cb29-358"><a href="#cb29-358" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-359"><a href="#cb29-359" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
+<span id="cb29-360"><a href="#cb29-360" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
+<span id="cb29-361"><a href="#cb29-361" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-362"><a href="#cb29-362" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-363"><a href="#cb29-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-364"><a href="#cb29-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-365"><a href="#cb29-365" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-366"><a href="#cb29-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-367"><a href="#cb29-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-368"><a href="#cb29-368" aria-hidden="true" tabindex="-1"></a><span class="fu">### BibTex Files</span></span>
+<span id="cb29-369"><a href="#cb29-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-370"><a href="#cb29-370" aria-hidden="true" tabindex="-1"></a>BibTeX files are essentially databases that store bibliographic information in a plain-text (style-independent) file. The database includes a set of references and their metadata. Here is the raw text inside an example BibTex file that includes two articles written by @carmichael_1954 and @ross_2020.</span>
+<span id="cb29-371"><a href="#cb29-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-372"><a href="#cb29-372" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-373"><a href="#cb29-373" aria-hidden="true" tabindex="-1"></a><span class="in">@article{carmichael_1954,</span></span>
+<span id="cb29-374"><a href="#cb29-374" aria-hidden="true" tabindex="-1"></a><span class="in">    title = {Laziness and the Scholarly Life},</span></span>
+<span id="cb29-375"><a href="#cb29-375" aria-hidden="true" tabindex="-1"></a><span class="in">    volume = {78},</span></span>
+<span id="cb29-376"><a href="#cb29-376" aria-hidden="true" tabindex="-1"></a><span class="in">    number = {4},</span></span>
+<span id="cb29-377"><a href="#cb29-377" aria-hidden="true" tabindex="-1"></a><span class="in">    journal = {The Scientific Monthly},</span></span>
+<span id="cb29-378"><a href="#cb29-378" aria-hidden="true" tabindex="-1"></a><span class="in">    author = {Carmichael, Leonard},</span></span>
+<span id="cb29-379"><a href="#cb29-379" aria-hidden="true" tabindex="-1"></a><span class="in">    year = {1954},</span></span>
+<span id="cb29-380"><a href="#cb29-380" aria-hidden="true" tabindex="-1"></a><span class="in">    pages = {208--213}</span></span>
+<span id="cb29-381"><a href="#cb29-381" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb29-382"><a href="#cb29-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-383"><a href="#cb29-383" aria-hidden="true" tabindex="-1"></a><span class="in">@article{ross_2020,</span></span>
+<span id="cb29-384"><a href="#cb29-384" aria-hidden="true" tabindex="-1"></a><span class="in">    title = {Racial disparities in police use of deadly force against unarmed individuals persist after appropriately benchmarking shooting data on violent crime rates},</span></span>
+<span id="cb29-385"><a href="#cb29-385" aria-hidden="true" tabindex="-1"></a><span class="in">    issn = {1948-5506, 1948-5514},</span></span>
+<span id="cb29-386"><a href="#cb29-386" aria-hidden="true" tabindex="-1"></a><span class="in">    url = {http://journals.sagepub.com/doi/10.1177/1948550620916071},</span></span>
+<span id="cb29-387"><a href="#cb29-387" aria-hidden="true" tabindex="-1"></a><span class="in">    doi = {10.1177/1948550620916071},</span></span>
+<span id="cb29-388"><a href="#cb29-388" aria-hidden="true" tabindex="-1"></a><span class="in">    language = {en},</span></span>
+<span id="cb29-389"><a href="#cb29-389" aria-hidden="true" tabindex="-1"></a><span class="in">    urldate = {2020-06-24},</span></span>
+<span id="cb29-390"><a href="#cb29-390" aria-hidden="true" tabindex="-1"></a><span class="in">    journal = {Social Psychological and Personality Science},</span></span>
+<span id="cb29-391"><a href="#cb29-391" aria-hidden="true" tabindex="-1"></a><span class="in">    author = {Ross, Cody T. and Winterhalder, Bruce and McElreath, Richard},</span></span>
+<span id="cb29-392"><a href="#cb29-392" aria-hidden="true" tabindex="-1"></a><span class="in">    month = jun,</span></span>
+<span id="cb29-393"><a href="#cb29-393" aria-hidden="true" tabindex="-1"></a><span class="in">    year = {2020},</span></span>
+<span id="cb29-394"><a href="#cb29-394" aria-hidden="true" tabindex="-1"></a><span class="in">    pages = {194855062091607}</span></span>
+<span id="cb29-395"><a href="#cb29-395" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb29-396"><a href="#cb29-396" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-397"><a href="#cb29-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-398"><a href="#cb29-398" aria-hidden="true" tabindex="-1"></a>The citation identifiers in this example are <span class="in">`carmichael_1954`</span> and <span class="in">`ross_2020`</span>. These identifiers are the first bit of text after the initial curly brace in the reference. This is how we will refer to the citations in our QMD document. (Typically these are auto-generated from our reference manager.) To determine the citiation identifiers, you can open your BibTeX file in RStudio. (Do this by using <span class="in">`Open File...`</span> within RStudio; double-clicking on the BibTeX file will likely open it in a different application.)</span>
+<span id="cb29-399"><a href="#cb29-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-400"><a href="#cb29-400" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-401"><a href="#cb29-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-402"><a href="#cb29-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-403"><a href="#cb29-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-404"><a href="#cb29-404" aria-hidden="true" tabindex="-1"></a><span class="fu">### Including Citations in Your Quarto Document</span></span>
+<span id="cb29-405"><a href="#cb29-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-406"><a href="#cb29-406" aria-hidden="true" tabindex="-1"></a>Citations go inside square brackets and are separated by semicolons. Each citation must have a key, composed of <span class="in">`@citation_identifier`</span> from the database (no spaces between them). For example to cite the Carmichael article:</span>
+<span id="cb29-407"><a href="#cb29-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-408"><a href="#cb29-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-409"><a href="#cb29-409" aria-hidden="true" tabindex="-1"></a><span class="in">Here is some text and a citation [@carmichael_1954].</span></span>
+<span id="cb29-410"><a href="#cb29-410" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-411"><a href="#cb29-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-412"><a href="#cb29-412" aria-hidden="true" tabindex="-1"></a>This will create a citation where you included it in the text and also add the reference at the end of the document. If you want a section header for your references, include a level-1 heading called "References" at the end of your document.</span>
+<span id="cb29-413"><a href="#cb29-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-414"><a href="#cb29-414" aria-hidden="true" tabindex="-1"></a>The rendered document now includes a citation where you added this is the QMD document. The associated reference is also included at the end of the document.</span>
+<span id="cb29-415"><a href="#cb29-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-418"><a href="#cb29-418" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-419"><a href="#cb29-419" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb29-420"><a href="#cb29-420" aria-hidden="true" tabindex="-1"></a><span class="co">#| out-width: "90%"</span></span>
+<span id="cb29-421"><a href="#cb29-421" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Screenshot of rendered Quarto document with citation."</span></span>
+<span id="cb29-422"><a href="#cb29-422" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figs/02-citations-01.png"</span>)</span>
+<span id="cb29-423"><a href="#cb29-423" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-424"><a href="#cb29-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-425"><a href="#cb29-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-426"><a href="#cb29-426" aria-hidden="true" tabindex="-1"></a>Citations may also include. additional text before and after the citation. In this example we have prefixed the citation with the word "see" and added a page number after the citation. The citation identifier and the text following the citation identifier are separated by a comma.</span>
+<span id="cb29-427"><a href="#cb29-427" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-428"><a href="#cb29-428" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-429"><a href="#cb29-429" aria-hidden="true" tabindex="-1"></a><span class="in">Here is some text and a citation [see @carmichael_1954, p. 208].</span></span>
+<span id="cb29-430"><a href="#cb29-430" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-431"><a href="#cb29-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-432"><a href="#cb29-432" aria-hidden="true" tabindex="-1"></a>The output of this is:</span>
+<span id="cb29-433"><a href="#cb29-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-434"><a href="#cb29-434" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Here is some text and a citation </span><span class="co">[</span><span class="ot">see @carmichael_1954, p. 208</span><span class="co">]</span><span class="at">.</span></span>
+<span id="cb29-435"><a href="#cb29-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-436"><a href="#cb29-436" aria-hidden="true" tabindex="-1"></a>You can also include multiple citations. To do this we include the different citation identifiers separated by a semicolon.</span>
+<span id="cb29-437"><a href="#cb29-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-438"><a href="#cb29-438" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-439"><a href="#cb29-439" aria-hidden="true" tabindex="-1"></a><span class="in">Here are multiple citations [@ross_2020; @carmichael_1954].</span></span>
+<span id="cb29-440"><a href="#cb29-440" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-441"><a href="#cb29-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-442"><a href="#cb29-442" aria-hidden="true" tabindex="-1"></a>The output of this is:</span>
+<span id="cb29-443"><a href="#cb29-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-444"><a href="#cb29-444" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Here are multiple citations </span><span class="co">[</span><span class="ot">@ross_2020; @carmichael_1954</span><span class="co">]</span><span class="at">.</span></span>
+<span id="cb29-445"><a href="#cb29-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-446"><a href="#cb29-446" aria-hidden="true" tabindex="-1"></a>We can also change the format of the citation. For example, here we use a format common to starting a sentence with a citation. To do that we omit the square brackets.</span>
+<span id="cb29-447"><a href="#cb29-447" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-448"><a href="#cb29-448" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-449"><a href="#cb29-449" aria-hidden="true" tabindex="-1"></a><span class="in">@carmichael_1954 suggests something is true.</span></span>
+<span id="cb29-450"><a href="#cb29-450" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-451"><a href="#cb29-451" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-452"><a href="#cb29-452" aria-hidden="true" tabindex="-1"></a>The output of this is:</span>
+<span id="cb29-453"><a href="#cb29-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-454"><a href="#cb29-454" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; @carmichael_1954 suggests something is true.</span></span>
+<span id="cb29-455"><a href="#cb29-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-456"><a href="#cb29-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-457"><a href="#cb29-457" aria-hidden="true" tabindex="-1"></a>:::fyi</span>
+<span id="cb29-458"><a href="#cb29-458" aria-hidden="true" tabindex="-1"></a>You can learn more on the <span class="co">[</span><span class="ot">Citations and Footnotes Help Page</span><span class="co">](https://quarto.org/docs/authoring/footnotes-and-citations.html)</span> in the Quarto documentation.</span>
+<span id="cb29-459"><a href="#cb29-459" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb29-460"><a href="#cb29-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-461"><a href="#cb29-461" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-462"><a href="#cb29-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-463"><a href="#cb29-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-464"><a href="#cb29-464" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use APA Formatted Citations and References</span></span>
+<span id="cb29-465"><a href="#cb29-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-466"><a href="#cb29-466" aria-hidden="true" tabindex="-1"></a>By default, citations and references are formatted using the Chicago style. To use another style, you will need to:</span>
+<span id="cb29-467"><a href="#cb29-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-468"><a href="#cb29-468" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download the appropriate citation style language (CSL) file. (Find many at https://zotero.org/styles)</span>
+<span id="cb29-469"><a href="#cb29-469" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Place the CSL file in the <span class="in">`assets`</span> folder of your project's directory.</span>
+<span id="cb29-470"><a href="#cb29-470" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Specify the name of the CSL style file in the <span class="in">`csl:`</span> key in the QMD file's YAML.</span>
+<span id="cb29-471"><a href="#cb29-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-472"><a href="#cb29-472" aria-hidden="true" tabindex="-1"></a>For example, say you have downloaded and saved the <span class="in">`apa.csl`</span> file  and placed it in the <span class="in">`assets`</span> directory, giving the following directory/folder structure:</span>
+<span id="cb29-473"><a href="#cb29-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-474"><a href="#cb29-474" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-475"><a href="#cb29-475" aria-hidden="true" tabindex="-1"></a><span class="in">assignment-01</span></span>
+<span id="cb29-476"><a href="#cb29-476" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── README</span></span>
+<span id="cb29-477"><a href="#cb29-477" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assets</span></span>
+<span id="cb29-478"><a href="#cb29-478" aria-hidden="true" tabindex="-1"></a><span class="in">       ├── apa.csl</span></span>
+<span id="cb29-479"><a href="#cb29-479" aria-hidden="true" tabindex="-1"></a><span class="in">       └── my-bibliography.bib</span></span>
+<span id="cb29-480"><a href="#cb29-480" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.qmd</span></span>
+<span id="cb29-481"><a href="#cb29-481" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── assignment-01.Rproj</span></span>
+<span id="cb29-482"><a href="#cb29-482" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── data</span></span>
+<span id="cb29-483"><a href="#cb29-483" aria-hidden="true" tabindex="-1"></a><span class="in">       └── fertility.csv</span></span>
+<span id="cb29-484"><a href="#cb29-484" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── figs</span></span>
+<span id="cb29-485"><a href="#cb29-485" aria-hidden="true" tabindex="-1"></a><span class="in">    └── scripts</span></span>
+<span id="cb29-486"><a href="#cb29-486" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-487"><a href="#cb29-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-488"><a href="#cb29-488" aria-hidden="true" tabindex="-1"></a>You would include the following in your YAML.</span>
+<span id="cb29-489"><a href="#cb29-489" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-490"><a href="#cb29-490" aria-hidden="true" tabindex="-1"></a>If, for example, you had named the BIB file <span class="in">`my-bibliography.bib`</span> and had put this file in the <span class="in">`assets`</span> directory, your YAML would be:</span>
+<span id="cb29-491"><a href="#cb29-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-492"><a href="#cb29-492" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-493"><a href="#cb29-493" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-494"><a href="#cb29-494" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
+<span id="cb29-495"><a href="#cb29-495" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
+<span id="cb29-496"><a href="#cb29-496" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
+<span id="cb29-497"><a href="#cb29-497" aria-hidden="true" tabindex="-1"></a><span class="in">date: "January XX, 2023"</span></span>
+<span id="cb29-498"><a href="#cb29-498" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-499"><a href="#cb29-499" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
+<span id="cb29-500"><a href="#cb29-500" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
+<span id="cb29-501"><a href="#cb29-501" aria-hidden="true" tabindex="-1"></a><span class="in">csl: "assets/apa-single-spaced.csl"</span></span>
+<span id="cb29-502"><a href="#cb29-502" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-503"><a href="#cb29-503" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-504"><a href="#cb29-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-505"><a href="#cb29-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-506"><a href="#cb29-506" aria-hidden="true" tabindex="-1"></a>Use of the APA CSL file not only formats the references according to APA format, but it also fixed the order of the citations in the text itself! (Even though we included the Ross citation identifier prior to the Carmichael citation identifier in the multiple references example, the APA CSL file put them in the text alphabetically!)</span>
+<span id="cb29-507"><a href="#cb29-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-508"><a href="#cb29-508" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-509"><a href="#cb29-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-510"><a href="#cb29-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-511"><a href="#cb29-511" aria-hidden="true" tabindex="-1"></a><span class="fu">### Citation Extras</span></span>
+<span id="cb29-512"><a href="#cb29-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-513"><a href="#cb29-513" aria-hidden="true" tabindex="-1"></a>One R package that is extremely useful, especially if you are using the visual editor in RStudio for writing QMD documents, is <span class="in">`{citr}`</span>. This package provides functionality and an RStudio Add-In to search a BibTeX-file to create and insert formatted Markdown citations into a QMD document.</span>
+<span id="cb29-514"><a href="#cb29-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-517"><a href="#cb29-517" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-518"><a href="#cb29-518" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb29-519"><a href="#cb29-519" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-alt: "Screenshot of the citr package."</span></span>
+<span id="cb29-520"><a href="#cb29-520" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"figs/02-citr-package.png"</span>)</span>
+<span id="cb29-521"><a href="#cb29-521" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-522"><a href="#cb29-522" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-523"><a href="#cb29-523" aria-hidden="true" tabindex="-1"></a>The <span class="in">`{citr}`</span> package is only available via GitHub, so you will need to install it using <span class="in">`{remotes}`</span> or <span class="in">`{devtools}`</span>. (See the Computational Toolkit book for a reminder on how to do this.) The directions for installing <span class="in">`{citr}`</span> are also on the <span class="co">[</span><span class="ot">citr webpage</span><span class="co">](https://github.com/crsh/citr)</span> along with instructions for using the package. </span>
+<span id="cb29-524"><a href="#cb29-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-525"><a href="#cb29-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-526"><a href="#cb29-526" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-527"><a href="#cb29-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-528"><a href="#cb29-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-529"><a href="#cb29-529" aria-hidden="true" tabindex="-1"></a><span class="fu"># Auto-Populating the Date in Your YAML</span></span>
+<span id="cb29-530"><a href="#cb29-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-531"><a href="#cb29-531" aria-hidden="true" tabindex="-1"></a>We can auto-populate the <span class="in">`date:`</span> key in our document's YAML by including "today".</span>
+<span id="cb29-532"><a href="#cb29-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-533"><a href="#cb29-533" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-534"><a href="#cb29-534" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-535"><a href="#cb29-535" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
+<span id="cb29-536"><a href="#cb29-536" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
+<span id="cb29-537"><a href="#cb29-537" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
+<span id="cb29-538"><a href="#cb29-538" aria-hidden="true" tabindex="-1"></a><span class="in">date: "today"</span></span>
+<span id="cb29-539"><a href="#cb29-539" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-540"><a href="#cb29-540" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
+<span id="cb29-541"><a href="#cb29-541" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
+<span id="cb29-542"><a href="#cb29-542" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-543"><a href="#cb29-543" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-544"><a href="#cb29-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-545"><a href="#cb29-545" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-546"><a href="#cb29-546" aria-hidden="true" tabindex="-1"></a>You can also use an inline code chunk that calls the <span class="in">`Sys.Date()`</span> function. This function returns your computer's idea of the current date in the <span class="in">`YYYY-MM-DD`</span> format (ISO 8601 standard). If you want to be hyper specific, you can use <span class="in">`Sys.time()`</span> to return the date and time in the format: <span class="in">`YYYY-MM-DD HH-MM:SS Time Zone`</span>.</span>
+<span id="cb29-547"><a href="#cb29-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-550"><a href="#cb29-550" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-551"><a href="#cb29-551" aria-hidden="true" tabindex="-1"></a><span class="co"># Return date</span></span>
+<span id="cb29-552"><a href="#cb29-552" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()</span>
+<span id="cb29-553"><a href="#cb29-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-554"><a href="#cb29-554" aria-hidden="true" tabindex="-1"></a><span class="co"># Return time</span></span>
+<span id="cb29-555"><a href="#cb29-555" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span>
+<span id="cb29-556"><a href="#cb29-556" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-557"><a href="#cb29-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-558"><a href="#cb29-558" aria-hidden="true" tabindex="-1"></a>Here is an example of the YAML in the <span class="in">`date:`</span> key to use <span class="in">`Sys.Date()`</span> to auto-populate the date.</span>
+<span id="cb29-559"><a href="#cb29-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-560"><a href="#cb29-560" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-561"><a href="#cb29-561" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-562"><a href="#cb29-562" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
+<span id="cb29-563"><a href="#cb29-563" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
+<span id="cb29-564"><a href="#cb29-564" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
+<span id="cb29-565"><a href="#cb29-565" aria-hidden="true" tabindex="-1"></a><span class="in">date: " `r knitr::inline_expr("Sys.Date()")` "</span></span>
+<span id="cb29-566"><a href="#cb29-566" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-567"><a href="#cb29-567" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
+<span id="cb29-568"><a href="#cb29-568" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
+<span id="cb29-569"><a href="#cb29-569" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-570"><a href="#cb29-570" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-571"><a href="#cb29-571" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-572"><a href="#cb29-572" aria-hidden="true" tabindex="-1"></a>Note that the inline chunk is embedded in quotation marks. We can custom format each of these using the <span class="in">`format()`</span> function. This function takes the <span class="in">`Sys.Date()`</span> function as its first argument, and then a character string of formatting rules. Here I format the date to have the full month name, day of the month, and year (with century): e.g., January 12, 2023.</span>
+<span id="cb29-573"><a href="#cb29-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-574"><a href="#cb29-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-575"><a href="#cb29-575" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-576"><a href="#cb29-576" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-577"><a href="#cb29-577" aria-hidden="true" tabindex="-1"></a><span class="in">title: "Assignment 1"</span></span>
+<span id="cb29-578"><a href="#cb29-578" aria-hidden="true" tabindex="-1"></a><span class="in">subtitle: "Introduction to Quarto"</span></span>
+<span id="cb29-579"><a href="#cb29-579" aria-hidden="true" tabindex="-1"></a><span class="in">author: "Your Group's Names"</span></span>
+<span id="cb29-580"><a href="#cb29-580" aria-hidden="true" tabindex="-1"></a><span class="in">date: " `r knitr::inline_expr("format(Sys.Date(), '%B %d %Y')")`"</span></span>
+<span id="cb29-581"><a href="#cb29-581" aria-hidden="true" tabindex="-1"></a><span class="in">format: html</span></span>
+<span id="cb29-582"><a href="#cb29-582" aria-hidden="true" tabindex="-1"></a><span class="in">editor: visual</span></span>
+<span id="cb29-583"><a href="#cb29-583" aria-hidden="true" tabindex="-1"></a><span class="in">bibliography: "assets/my-bibliography.bib"</span></span>
+<span id="cb29-584"><a href="#cb29-584" aria-hidden="true" tabindex="-1"></a><span class="in">---</span></span>
+<span id="cb29-585"><a href="#cb29-585" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb29-586"><a href="#cb29-586" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-587"><a href="#cb29-587" aria-hidden="true" tabindex="-1"></a>You can see all the formatting options by calling <span class="in">`help(strptime)`</span>.</span>
+<span id="cb29-588"><a href="#cb29-588" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-589"><a href="#cb29-589" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-590"><a href="#cb29-590" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-591"><a href="#cb29-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-592"><a href="#cb29-592" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learn More</span></span>
+<span id="cb29-593"><a href="#cb29-593" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-594"><a href="#cb29-594" aria-hidden="true" tabindex="-1"></a>Yihui Xie, the creater of the RMarkdown package (which does a lot of the work in converting your QMD file to an HTML/PDF file, gave a nice trechnical talk to the *American Statistical Association's Section on Statistical Computing* that explain what actually happens behind the scenes when you click the <span class="in">`Knit`</span> or <span class="in">`Render`</span> button in RStudio to render a RMD or QMD document.</span>
+<span id="cb29-595"><a href="#cb29-595" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-596"><a href="#cb29-596" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">An anatomy of R Markdown with minimal applications </span><span class="co">](https://www.youtube.com/watch?v=fiy32LjgGUE)</span></span>
+<span id="cb29-597"><a href="#cb29-597" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-598"><a href="#cb29-598" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;</span>
+<span id="cb29-599"><a href="#cb29-599" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-600"><a href="#cb29-600" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-601"><a href="#cb29-601" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb29-602"><a href="#cb29-602" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-603"><a href="#cb29-603" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-604"><a href="#cb29-604" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-605"><a href="#cb29-605" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

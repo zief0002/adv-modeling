@@ -1,0 +1,8 @@
+# Modeling Nonlinearity
+
+
+Many relationships in the educational sciences are nonlinear. In this section, you will be introduced to several methods for modeling nonlinear relationships. Specifically, you will learn how to add a polynomial effect and also how to use logarithms to transform nonlinear relationships into linear relationships. Each of these is useful, depending on the specific type of nonlinearity inherent in the relationship.
+
+Additionally, you will learn about using information criteria to evaluate models instead of *p*-values. Information criteria have many advantages over *p*-values when evaluating statistical models, including quantifying the uncertainty in selecting one model over another.
+
+

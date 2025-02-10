@@ -170,6 +170,19 @@ div.sourceCode {
  border-radius: 0; 
 }
 
+
+/*********************************************
+ * R CODE OUTPUT
+ *********************************************/
+
+pre code:not(.sourceCode) {
+  color: black;
+  background-color: #fdfbd4;
+}
+
+
+
+
 /** Make the caption italic and black 
 .table caption{
   font-style: italic;

@@ -48,8 +48,14 @@ In the previous set of notes we began by fitting a model that only included the 
 $$
 \begin{split}
 \mathbf{Model~1:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{News~Exposure}_i) + \epsilon_i \\[2ex]
-\mathbf{Model~2:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Age}_i) + \beta_2(\mathrm{Education}_i) + \beta_3(\mathrm{Male}_i) + \beta_4(\mathrm{Engagement}_i) + \beta_5(\mathrm{Ideology}_i)+ \beta_6(\mathrm{Democrat}_i) + \\ &\beta_7(\mathrm{Republican}_i) + \beta_8(\mathrm{News~Exposure}_i) + \epsilon_i \\[2ex]
-\mathbf{Model~3:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Age}_i) + \beta_2(\mathrm{Education}_i) + \beta_3(\mathrm{Male}_i) + \beta_4(\mathrm{Engagement}_i) + \beta_5(\mathrm{Ideology}_i)+ \beta_6(\mathrm{Democrat}_i) + \\ &\beta_7(\mathrm{Republican}_i) + \beta_8(\mathrm{News~Exposure}_i) + \beta_9(\mathrm{News~Exposure}_i)(\mathrm{Education}_i) + \epsilon_i \\[2ex]
+\mathbf{Model~2:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Age}_i) + \beta_2(\mathrm{Education}_i) + \beta_3(\mathrm{Male}_i) + \\ 
+&\beta_4(\mathrm{Engagement}_i) + \beta_5(\mathrm{Ideology}_i)+ \\
+&\beta_6(\mathrm{Democrat}_i) + \beta_7(\mathrm{Republican}_i) + \\
+&\beta_8(\mathrm{News~Exposure}_i) + \epsilon_i \\[2ex]
+\mathbf{Model~3:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Age}_i) + \beta_2(\mathrm{Education}_i) + \beta_3(\mathrm{Male}_i) + \\
+&\beta_4(\mathrm{Engagement}_i) + \beta_5(\mathrm{Ideology}_i)+ \\
+&\beta_6(\mathrm{Democrat}_i) + \beta_7(\mathrm{Republican}_i) + \\ 
+&\beta_8(\mathrm{News~Exposure}_i) + \beta_9(\mathrm{News~Exposure}_i)(\mathrm{Education}_i) + \epsilon_i \\[2ex]
 \end{split}
 $$
 
@@ -673,8 +679,10 @@ In RQ 2, we are evaluating the effect of news exposure on news knowledge after c
 
 $$
 \begin{split}
-\mathbf{Simple~Model:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Education}_i) + \beta_2(\mathrm{Male}_i) + \beta_3(\mathrm{Engagement}_i) + \epsilon_i \\[2ex]
-\mathbf{Complex~Model:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Education}_i) + \beta_2(\mathrm{Male}_i) + \beta_3(\mathrm{Engagement}_i) + \beta_8(\mathrm{News~Exposure}_i) + \epsilon_i \\[2ex]
+\mathbf{Simple~Model:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Education}_i) + \beta_2(\mathrm{Male}_i) + \\ 
+&\beta_3(\mathrm{Engagement}_i) + \epsilon_i \\[2ex]
+\mathbf{Complex~Model:~} \quad \mathrm{News~Knowledge}_i = &\beta_0 + \beta_1(\mathrm{Education}_i) + \beta_2(\mathrm{Male}_i) + \\
+&\beta_3(\mathrm{Engagement}_i) + \beta_8(\mathrm{News~Exposure}_i) + \epsilon_i \\[2ex]
 \end{split}
 $$
 
