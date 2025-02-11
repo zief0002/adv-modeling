@@ -1,0 +1,7 @@
+# Modeling Nonindependence
+
+
+The assumption of independence is important for using the general linear model (i.e., regression). When that assumption is not met, we need to use a different analytic method. In this section you will learn about linear mixed-effects models and how to fit, interpret, and evaluate these models using R.
+
+
+

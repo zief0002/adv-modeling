@@ -35,18 +35,19 @@ book:
       chapters:
         - 03-01-polynomial-effects.qmd
         - 03-02-information-criteria-and-model-selection.qmd
-    #     - 03-03-model-assumptions.qmd
+        - 03-03-logarithmic-transformations-outcome.qmd
     # - part: 04-00-multiple-regression.qmd
     #   chapters:
     #     - 04-01-intro-to-multiple-regression.qmd
     #     - 04-02-more-multiple-regression.qmd
     #     - 04-03-understanding-statistical-control.qmd
     #     - 04-04-assumptions.qmd
-    # - part: 05-00-categorical-predictors.qmd
-    #   chapters:
-    #     - 05-01-dichotomous-predictors.qmd
-    #     - 05-02-polychotomous-predictors.qmd
-    #     - 05-03-multiple-comparisons.qmd
+    - part: 05-00-modeling-nonindependece.qmd
+      chapters:
+        - 05-01-introduction-to-mixed-effects-models.qmd
+        - 05-02-lmer-average-change-over-time.qmd
+        - 05-03-lmer-other-random-effects-and-covariates.qmd
+        - 05-04-lmer-alt-representations-and-assumptions.qmd
     # - part: 06-00-interaction-effects.qmd
     #   chapters:
     #     - 06-01-intro-to-interaction-effects.qmd
