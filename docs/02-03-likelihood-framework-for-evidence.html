@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -91,7 +91,7 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3043699f4f525e226433170f63674df.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed04999718f06b735b1f8009dce43b94.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-7c121de436c7c20b050f1da4c0bef0bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -283,6 +283,47 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./03-02-information-criteria-and-model-selection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Information Criteria and Model Selection</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-03-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">05-00-modeling-nonindependece.qmd</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -1053,23 +1094,23 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
 </figcaption>
 <div aria-describedby="tbl-model-likelihood-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="vrptvjbraa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vrptvjbraa table {
+<div id="yptomzfoyn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yptomzfoyn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vrptvjbraa thead, #vrptvjbraa tbody, #vrptvjbraa tfoot, #vrptvjbraa tr, #vrptvjbraa td, #vrptvjbraa th {
+#yptomzfoyn thead, #yptomzfoyn tbody, #yptomzfoyn tfoot, #yptomzfoyn tr, #yptomzfoyn td, #yptomzfoyn th {
   border-style: none;
 }
 
-#vrptvjbraa p {
+#yptomzfoyn p {
   margin: 0;
   padding: 0;
 }
 
-#vrptvjbraa .gt_table {
+#yptomzfoyn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1095,12 +1136,12 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-left-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_caption {
+#yptomzfoyn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vrptvjbraa .gt_title {
+#yptomzfoyn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1112,7 +1153,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-width: 0;
 }
 
-#vrptvjbraa .gt_subtitle {
+#yptomzfoyn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1124,7 +1165,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-top-width: 0;
 }
 
-#vrptvjbraa .gt_heading {
+#yptomzfoyn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1136,13 +1177,13 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_bottom_border {
+#yptomzfoyn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_col_headings {
+#yptomzfoyn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1157,7 +1198,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_col_heading {
+#yptomzfoyn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1177,7 +1218,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   overflow-x: hidden;
 }
 
-#vrptvjbraa .gt_column_spanner_outer {
+#yptomzfoyn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1189,15 +1230,15 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 4px;
 }
 
-#vrptvjbraa .gt_column_spanner_outer:first-child {
+#yptomzfoyn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vrptvjbraa .gt_column_spanner_outer:last-child {
+#yptomzfoyn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vrptvjbraa .gt_column_spanner {
+#yptomzfoyn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1209,11 +1250,11 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   width: 100%;
 }
 
-#vrptvjbraa .gt_spanner_row {
+#yptomzfoyn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vrptvjbraa .gt_group_heading {
+#yptomzfoyn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1239,7 +1280,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   text-align: left;
 }
 
-#vrptvjbraa .gt_empty_group_heading {
+#yptomzfoyn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1254,15 +1295,15 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   vertical-align: middle;
 }
 
-#vrptvjbraa .gt_from_md > :first-child {
+#yptomzfoyn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vrptvjbraa .gt_from_md > :last-child {
+#yptomzfoyn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vrptvjbraa .gt_row {
+#yptomzfoyn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1281,7 +1322,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   overflow-x: hidden;
 }
 
-#vrptvjbraa .gt_stub {
+#yptomzfoyn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1294,7 +1335,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#vrptvjbraa .gt_stub_row_group {
+#yptomzfoyn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1308,15 +1349,15 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   vertical-align: top;
 }
 
-#vrptvjbraa .gt_row_group_first td {
+#yptomzfoyn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vrptvjbraa .gt_row_group_first th {
+#yptomzfoyn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vrptvjbraa .gt_summary_row {
+#yptomzfoyn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1326,16 +1367,16 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#vrptvjbraa .gt_first_summary_row {
+#yptomzfoyn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_first_summary_row.thick {
+#yptomzfoyn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vrptvjbraa .gt_last_summary_row {
+#yptomzfoyn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1345,7 +1386,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_grand_summary_row {
+#yptomzfoyn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1355,7 +1396,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#vrptvjbraa .gt_first_grand_summary_row {
+#yptomzfoyn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1365,7 +1406,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-top-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_last_grand_summary_row_top {
+#yptomzfoyn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1375,11 +1416,11 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_striped {
+#yptomzfoyn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vrptvjbraa .gt_table_body {
+#yptomzfoyn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1388,7 +1429,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_footnotes {
+#yptomzfoyn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1402,7 +1443,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_footnote {
+#yptomzfoyn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1411,7 +1452,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#vrptvjbraa .gt_sourcenotes {
+#yptomzfoyn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1425,7 +1466,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#vrptvjbraa .gt_sourcenote {
+#yptomzfoyn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1433,72 +1474,72 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#vrptvjbraa .gt_left {
+#yptomzfoyn .gt_left {
   text-align: left;
 }
 
-#vrptvjbraa .gt_center {
+#yptomzfoyn .gt_center {
   text-align: center;
 }
 
-#vrptvjbraa .gt_right {
+#yptomzfoyn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vrptvjbraa .gt_font_normal {
+#yptomzfoyn .gt_font_normal {
   font-weight: normal;
 }
 
-#vrptvjbraa .gt_font_bold {
+#yptomzfoyn .gt_font_bold {
   font-weight: bold;
 }
 
-#vrptvjbraa .gt_font_italic {
+#yptomzfoyn .gt_font_italic {
   font-style: italic;
 }
 
-#vrptvjbraa .gt_super {
+#yptomzfoyn .gt_super {
   font-size: 65%;
 }
 
-#vrptvjbraa .gt_footnote_marks {
+#yptomzfoyn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vrptvjbraa .gt_asterisk {
+#yptomzfoyn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vrptvjbraa .gt_indent_1 {
+#yptomzfoyn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vrptvjbraa .gt_indent_2 {
+#yptomzfoyn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vrptvjbraa .gt_indent_3 {
+#yptomzfoyn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vrptvjbraa .gt_indent_4 {
+#yptomzfoyn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vrptvjbraa .gt_indent_5 {
+#yptomzfoyn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vrptvjbraa .katex-display {
+#yptomzfoyn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vrptvjbraa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#yptomzfoyn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1745,23 +1786,23 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
 </figcaption>
 <div aria-describedby="tbl-model-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="cxbnortubr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cxbnortubr table {
+<div id="bjsmzprbif" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bjsmzprbif table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cxbnortubr thead, #cxbnortubr tbody, #cxbnortubr tfoot, #cxbnortubr tr, #cxbnortubr td, #cxbnortubr th {
+#bjsmzprbif thead, #bjsmzprbif tbody, #bjsmzprbif tfoot, #bjsmzprbif tr, #bjsmzprbif td, #bjsmzprbif th {
   border-style: none;
 }
 
-#cxbnortubr p {
+#bjsmzprbif p {
   margin: 0;
   padding: 0;
 }
 
-#cxbnortubr .gt_table {
+#bjsmzprbif .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1787,12 +1828,12 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-left-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_caption {
+#bjsmzprbif .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cxbnortubr .gt_title {
+#bjsmzprbif .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1804,7 +1845,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-width: 0;
 }
 
-#cxbnortubr .gt_subtitle {
+#bjsmzprbif .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1816,7 +1857,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-top-width: 0;
 }
 
-#cxbnortubr .gt_heading {
+#bjsmzprbif .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1828,13 +1869,13 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_bottom_border {
+#bjsmzprbif .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_col_headings {
+#bjsmzprbif .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1849,7 +1890,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_col_heading {
+#bjsmzprbif .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1869,7 +1910,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   overflow-x: hidden;
 }
 
-#cxbnortubr .gt_column_spanner_outer {
+#bjsmzprbif .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1881,15 +1922,15 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 4px;
 }
 
-#cxbnortubr .gt_column_spanner_outer:first-child {
+#bjsmzprbif .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cxbnortubr .gt_column_spanner_outer:last-child {
+#bjsmzprbif .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cxbnortubr .gt_column_spanner {
+#bjsmzprbif .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1901,11 +1942,11 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   width: 100%;
 }
 
-#cxbnortubr .gt_spanner_row {
+#bjsmzprbif .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cxbnortubr .gt_group_heading {
+#bjsmzprbif .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1931,7 +1972,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   text-align: left;
 }
 
-#cxbnortubr .gt_empty_group_heading {
+#bjsmzprbif .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1946,15 +1987,15 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   vertical-align: middle;
 }
 
-#cxbnortubr .gt_from_md > :first-child {
+#bjsmzprbif .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cxbnortubr .gt_from_md > :last-child {
+#bjsmzprbif .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cxbnortubr .gt_row {
+#bjsmzprbif .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1973,7 +2014,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   overflow-x: hidden;
 }
 
-#cxbnortubr .gt_stub {
+#bjsmzprbif .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1986,7 +2027,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#cxbnortubr .gt_stub_row_group {
+#bjsmzprbif .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2000,15 +2041,15 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   vertical-align: top;
 }
 
-#cxbnortubr .gt_row_group_first td {
+#bjsmzprbif .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cxbnortubr .gt_row_group_first th {
+#bjsmzprbif .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cxbnortubr .gt_summary_row {
+#bjsmzprbif .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2018,16 +2059,16 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#cxbnortubr .gt_first_summary_row {
+#bjsmzprbif .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_first_summary_row.thick {
+#bjsmzprbif .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cxbnortubr .gt_last_summary_row {
+#bjsmzprbif .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2037,7 +2078,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_grand_summary_row {
+#bjsmzprbif .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2047,7 +2088,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#cxbnortubr .gt_first_grand_summary_row {
+#bjsmzprbif .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2057,7 +2098,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-top-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_last_grand_summary_row_top {
+#bjsmzprbif .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2067,11 +2108,11 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_striped {
+#bjsmzprbif .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cxbnortubr .gt_table_body {
+#bjsmzprbif .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2080,7 +2121,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_footnotes {
+#bjsmzprbif .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2094,7 +2135,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_footnote {
+#bjsmzprbif .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2103,7 +2144,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#cxbnortubr .gt_sourcenotes {
+#bjsmzprbif .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2117,7 +2158,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#cxbnortubr .gt_sourcenote {
+#bjsmzprbif .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2125,72 +2166,72 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#cxbnortubr .gt_left {
+#bjsmzprbif .gt_left {
   text-align: left;
 }
 
-#cxbnortubr .gt_center {
+#bjsmzprbif .gt_center {
   text-align: center;
 }
 
-#cxbnortubr .gt_right {
+#bjsmzprbif .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cxbnortubr .gt_font_normal {
+#bjsmzprbif .gt_font_normal {
   font-weight: normal;
 }
 
-#cxbnortubr .gt_font_bold {
+#bjsmzprbif .gt_font_bold {
   font-weight: bold;
 }
 
-#cxbnortubr .gt_font_italic {
+#bjsmzprbif .gt_font_italic {
   font-style: italic;
 }
 
-#cxbnortubr .gt_super {
+#bjsmzprbif .gt_super {
   font-size: 65%;
 }
 
-#cxbnortubr .gt_footnote_marks {
+#bjsmzprbif .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cxbnortubr .gt_asterisk {
+#bjsmzprbif .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cxbnortubr .gt_indent_1 {
+#bjsmzprbif .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cxbnortubr .gt_indent_2 {
+#bjsmzprbif .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cxbnortubr .gt_indent_3 {
+#bjsmzprbif .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cxbnortubr .gt_indent_4 {
+#bjsmzprbif .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cxbnortubr .gt_indent_5 {
+#bjsmzprbif .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cxbnortubr .katex-display {
+#bjsmzprbif .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cxbnortubr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bjsmzprbif div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

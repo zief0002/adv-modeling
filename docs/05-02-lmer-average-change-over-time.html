@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; LMER: Average Change Over Time – Advanced Modeling and Reproducibility for Educational Scientists</title>
+<title>12&nbsp; LMER: Average Change Over Time – Advanced Modeling and Reproducibility for Educational Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,6 +84,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./05-03-lmer-other-random-effects-and-covariates.html" rel="next">
 <link href="./05-01-introduction-to-mixed-effects-models.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -168,7 +169,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html">05-00-modeling-nonindependece.qmd</a></li><li class="breadcrumb-item"><a href="./05-02-lmer-average-change-over-time.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html">05-00-modeling-nonindependece.qmd</a></li><li class="breadcrumb-item"><a href="./05-02-lmer-average-change-over-time.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -284,6 +285,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Information Criteria and Model Selection</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-03-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -298,13 +305,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,9 +337,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html">05-00-modeling-nonindependece.qmd</a></li><li class="breadcrumb-item"><a href="./05-02-lmer-average-change-over-time.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html">05-00-modeling-nonindependece.qmd</a></li><li class="breadcrumb-item"><a href="./05-02-lmer-average-change-over-time.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Quarto Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Quarto Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -374,8 +393,8 @@ window.Quarto = {
 </div>
 <p>We will use these data to explore the change in vocabulary over time (longitudinal variation in the vocabulary scores). In most longitudinal analyses, the primary goal is to examine the mean change of some outcome over time. To do this we will focus on the following research question: (1) What is the growth pattern in the average vocabulary score over time?</p>
 <p><br></p>
-<section id="data-structure-tidylong-data-vs.-wide-data" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="data-structure-tidylong-data-vs.-wide-data"><span class="header-section-number">11.1</span> Data Structure: Tidy/Long Data vs.&nbsp;Wide Data</h2>
+<section id="data-structure-tidylong-data-vs.-wide-data" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="data-structure-tidylong-data-vs.-wide-data"><span class="header-section-number">12.1</span> Data Structure: Tidy/Long Data vs.&nbsp;Wide Data</h2>
 <p>Before doing any analysis of the data, it is worth understanding the structure of the data. There are two common structures for repeated measures data: <em>tidy/long structured data</em> and <em>wide structured data</em>.</p>
 <ul>
 <li>In <strong>tidy/long</strong> structured data, there is a single column per variable. For example, the outcome variable (vocabulary scores) would be organized into a single column. Similarly, the predictor that designates time (grade-level in our example) would also be organized into a single column.</li>
@@ -404,8 +423,8 @@ window.Quarto = {
 <p>There are advantages to each of the structures. For example the wide structure has the advantage of being a better structure for data entry. Since each row corresponds to a different student, there are fewer rows and therefore less redundancy in the data entry process. Compare this to the tidy/long data where each student’s data encompasses four rows. If you were doing data entry in this structure you would need to record the student’s sex four times rather than once in the wide structure.</p>
 <p>The tidy/long structure is the structure that is needed for modeling. Thus, if one of the analytic goals is to fit a linear mixed-effects model to explain variation or examine predictor effects, the tidy/long data structure is key. Note that the wide structured data is also used in some analyses (e.g., computing correlations).</p>
 <p><br></p>
-<section id="switching-between-the-two-data-structures" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="switching-between-the-two-data-structures"><span class="header-section-number">11.1.1</span> Switching between the Two Data Structures</h3>
+<section id="switching-between-the-two-data-structures" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="switching-between-the-two-data-structures"><span class="header-section-number">12.1.1</span> Switching between the Two Data Structures</h3>
 <p>The library <code>{tidyr}</code> (loaded as part of the <code>{tidyverse}</code> metapackage) has two functions that convert data between these two structures:</p>
 <ul>
 <li><code>pivot_longer()</code> (wide <span class="math inline">\(\rightarrow\)</span> tidy/long), and</li>
@@ -443,8 +462,8 @@ window.Quarto = {
 <p><br></p>
 </section>
 </section>
-<section id="exploration-plot-of-the-mean-and-individual-profiles" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="exploration-plot-of-the-mean-and-individual-profiles"><span class="header-section-number">11.2</span> Exploration: Plot of the Mean and Individual Profiles</h2>
+<section id="exploration-plot-of-the-mean-and-individual-profiles" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="exploration-plot-of-the-mean-and-individual-profiles"><span class="header-section-number">12.2</span> Exploration: Plot of the Mean and Individual Profiles</h2>
 <p>There are two plots that are particularly useful in exploring longitudinal data. The first is a plot of the mean value of the outcome at each time point (<em>mean profile plot</em>). This shows the average growth profile and is useful for determining the functional form of the fixed-effects part of the model; is the mean change over time linear? Quadratic? Log-linear?</p>
 <p>Another plot that is often examined is a plot of the individual patterns or profiles, referred to as a <em>spaghetti plot</em>. A spaghetti plot is useful for determining whether there is variation from the average profile. This helps us to consider the set of random-effects to include in the model. Below we examine both the mean profile and individual profiles simultaneously.</p>
 <div class="cell" data-layout-align="center">
@@ -459,13 +478,13 @@ window.Quarto = {
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-ind-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line." data-fig-align="center">
+<div id="fig-ind-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ind-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-ind-profiles-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ind-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.1: Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line.
+Figure&nbsp;12.1: Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line.
 </figcaption>
 </figure>
 </div>
@@ -477,8 +496,8 @@ Figure&nbsp;11.1: Plot showing the change in vocabulary score over time for 64 s
 </ul>
 <p><br></p>
 </section>
-<section id="unconditional-random-intercepts-model" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="unconditional-random-intercepts-model"><span class="header-section-number">11.3</span> Unconditional Random Intercepts Model</h2>
+<section id="unconditional-random-intercepts-model" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="unconditional-random-intercepts-model"><span class="header-section-number">12.3</span> Unconditional Random Intercepts Model</h2>
 <p>As in a conventional fixed-effects regression analysis we begin a mixed-effects analysis by fitting the intercept-only model. This model is referred to as the <em>unconditional random intercepts model</em> or the <em>unconditional means model</em>. The model posits that there is <em>no change over time</em> in the average vocabulary score.</p>
 <p>This model includes a fixed-effect of intercept and a random-effect of intercept, and no other predictors. This is the simplest model we can fit while still accounting for the dependence in the data (e.g., including a random-effect). The statistical model in this example can be expressed as:</p>
 <p><span class="math display">\[
@@ -492,8 +511,8 @@ Figure&nbsp;11.1: Plot showing the change in vocabulary score over time for 64 s
 <li><span class="math inline">\(\epsilon_{ij}\)</span> is the error for Student <span class="math inline">\(j\)</span> at time point <span class="math inline">\(i\)</span>.</li>
 </ul>
 <p><br></p>
-<section id="fitting-and-interpreting-the-model" class="level3" data-number="11.3.1">
-<h3 data-number="11.3.1" class="anchored" data-anchor-id="fitting-and-interpreting-the-model"><span class="header-section-number">11.3.1</span> Fitting and Interpreting the Model</h3>
+<section id="fitting-and-interpreting-the-model" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="fitting-and-interpreting-the-model"><span class="header-section-number">12.3.1</span> Fitting and Interpreting the Model</h3>
 <p>We fit the model and display the output below. We include the argument <code>REML=FALSE</code> to force the <code>lmer()</code> function to produce maximum likelihood estimates (rather than restricted maximum likelihood estimates). In practice, we will generally want to fit these models using ML estimation.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit model</span></span>
@@ -595,13 +614,13 @@ Figure&nbsp;11.1: Plot showing the change in vocabulary score over time for 64 s
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-fitted-1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line)." data-fig-align="center">
+<div id="fig-fitted-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fitted-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-fitted-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fitted-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.2: Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).
+Figure&nbsp;12.2: Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).
 </figcaption>
 </figure>
 </div>
@@ -609,19 +628,19 @@ Figure&nbsp;11.2: Predicted change in vocabulary score over time based on the un
 </div>
 <p><br></p>
 </section>
-<section id="partitioning-unexplained-variation" class="level3" data-number="11.3.2">
-<h3 data-number="11.3.2" class="anchored" data-anchor-id="partitioning-unexplained-variation"><span class="header-section-number">11.3.2</span> Partitioning Unexplained Variation</h3>
+<section id="partitioning-unexplained-variation" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="partitioning-unexplained-variation"><span class="header-section-number">12.3.2</span> Partitioning Unexplained Variation</h3>
 <p>This model is not very informative for applied researchers in terms of characterizing change over time, but it is essential to decompose the variation into within- and between-subjects variation. In our model, there are two sources of variation. The first source of variation measures the between-student variation (how different are students’ individual “growth” curves). The second source of variation measures the within-student variation (how different are an individual’s outcome values from their individual “growth” curve).</p>
 <p>To see this graphically, we show Student 1’s data along with the global “growth” curve and Student 1’s specific “growth” curves. The between-student variation is akin to the average of the squared deviations between each student-specific “growth” curve and the global “growth” curve. The left-hand plot below shows these residuals for Student 1, referred to as <em>Level-2 residuals</em>. The within-student variation is akin to the average of the squared deviations between each student’s outcome (vocabulary scores) and that student’s specific “growth” curve. The right-hand plot below shows these residuals for Student 1, referred to as <em>Level-1 residuals</em>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-between-and-within-variation" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Student 1's vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed." data-fig-align="center">
+<div id="fig-between-and-within-variation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Student 1's vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-between-and-within-variation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figs/lmer-sources-of-variation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Student 1's vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-between-and-within-variation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed.
+Figure&nbsp;12.3: Student 1’s vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed.
 </figcaption>
 </figure>
 </div>
@@ -683,8 +702,8 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 <p><br></p>
 </section>
 </section>
-<section id="modeling-unconditional-growth-model" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="modeling-unconditional-growth-model"><span class="header-section-number">11.4</span> Modeling: Unconditional Growth Model</h2>
+<section id="modeling-unconditional-growth-model" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="modeling-unconditional-growth-model"><span class="header-section-number">12.4</span> Modeling: Unconditional Growth Model</h2>
 <p>To model change in the outcome over time, we include time as a fixed-effect in the LMER model. In this data set, the time predictor is <code>grade</code>, which is a categorical predictor. We could create dummy variables, or simply add <code>grade</code> into the model and let R choose the reference group alphabetically (<code>vocab_08</code> in this example). The statistical model in this example can be expressed as:</p>
 <p><span class="math display">\[
 \mathrm{Vocabulary~Score}_{ij} = \big[\beta_0 + b_{0j}\big] + \beta_1(\mathrm{Vocab\_09}_{ij}) + \beta_2(\mathrm{Vocab\_10}_{ij}) + \beta_3(\mathrm{Vocab\_11}_{ij}) + \epsilon_{ij}
@@ -755,8 +774,8 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 <p><strong>Between-Student Variance (<span class="math inline">\(\hat\sigma^2_{0}\)</span>)</strong></p>
 <p>The unexplained variance that is between-students has increased from 2.96 to 3.21. This means that by including grade in the model we have increased the amount of unexplained variation that is between students! (The model explained <span class="math inline">\(-8.7\)</span>% of the between-student variance.) This is a mathematical artifact of the estimation process.</p>
 <p><br></p>
-<section id="repeated-measures-anova-rm-anova" class="level3" data-number="11.4.1">
-<h3 data-number="11.4.1" class="anchored" data-anchor-id="repeated-measures-anova-rm-anova"><span class="header-section-number">11.4.1</span> Repeated-Measures ANOVA (RM-ANOVA)</h3>
+<section id="repeated-measures-anova-rm-anova" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="repeated-measures-anova-rm-anova"><span class="header-section-number">12.4.1</span> Repeated-Measures ANOVA (RM-ANOVA)</h3>
 <p>One historic method of analyzing longitudinal data is Repeated Measures Analysis of Variance (RM-ANOVA).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The linear mixed-effects model that includes time as one or more categorical predictors and a random-effect of intercept produces the same results as the RM-ANOVA.</p>
 <div class="fyi">
 <p><strong>WARNING</strong></p>
@@ -780,8 +799,8 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 </div>
 <p><br></p>
 </section>
-<section id="quantitative-time-predictor-a-more-flexible-model-for-repeated-measures-data" class="level3" data-number="11.4.2">
-<h3 data-number="11.4.2" class="anchored" data-anchor-id="quantitative-time-predictor-a-more-flexible-model-for-repeated-measures-data"><span class="header-section-number">11.4.2</span> Quantitative Time Predictor: A More Flexible Model for Repeated Measures Data</h3>
+<section id="quantitative-time-predictor-a-more-flexible-model-for-repeated-measures-data" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="quantitative-time-predictor-a-more-flexible-model-for-repeated-measures-data"><span class="header-section-number">12.4.2</span> Quantitative Time Predictor: A More Flexible Model for Repeated Measures Data</h3>
 <p>One advantage to using the linear mixed-effects model to analyze repeated measures data over traditional methods (e.g., RM-ANOVA or MANOVA) is that the regression model allows for both categorical and quantitative variables. For example, rather than code our grade-levels categorically (as <code>vocab_08</code>, <code>vocab_09</code>, <code>vocab_10</code> and <code>vocab_11</code>), which was a necessity in days of yore, we could have simply coded them as 8, 9, 10, and 11. Then we could have fitted the LMER model using this quantitative predictor. The statistical model when time is quantitative would be:</p>
 <p><span class="math display">\[
 \mathrm{Vocabulary~Score}_{ij} = \big[\beta_0 + b_{0j}\big] + \beta_1(\mathrm{Grade}_{ij}) + \epsilon_{ij}
@@ -798,8 +817,8 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 <p>This is still referred to as the <em>unconditional growth model</em> since the only predictor is a fixed-effect of time.</p>
 <p><br></p>
 </section>
-<section id="lookup-table-mapping-categories-to-quantities" class="level3" data-number="11.4.3">
-<h3 data-number="11.4.3" class="anchored" data-anchor-id="lookup-table-mapping-categories-to-quantities"><span class="header-section-number">11.4.3</span> Lookup Table: Mapping Categories to Quantities</h3>
+<section id="lookup-table-mapping-categories-to-quantities" class="level3" data-number="12.4.3">
+<h3 data-number="12.4.3" class="anchored" data-anchor-id="lookup-table-mapping-categories-to-quantities"><span class="header-section-number">12.4.3</span> Lookup Table: Mapping Categories to Quantities</h3>
 <p>One method to convert <code>grade</code> to a quantitative variable is to create a <strong>lookup table</strong>. A lookup table maps the levels of the categorical time predictor to the values we want to use in our new quantitative predictor. Below I create a lookup table to map the categorical time predictor to the relevant grade-level (<code>grade_quant</code>).</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create lookup table</span></span>
@@ -848,8 +867,8 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 <p><br></p>
 </section>
 </section>
-<section id="fitting-the-unconditional-growth-model-with-a-quantitative-time-predictor" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="fitting-the-unconditional-growth-model-with-a-quantitative-time-predictor"><span class="header-section-number">11.5</span> Fitting the Unconditional Growth Model with a Quantitative Time Predictor</h2>
+<section id="fitting-the-unconditional-growth-model-with-a-quantitative-time-predictor" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="fitting-the-unconditional-growth-model-with-a-quantitative-time-predictor"><span class="header-section-number">12.5</span> Fitting the Unconditional Growth Model with a Quantitative Time Predictor</h2>
 <p>Below we fit the linear mixed-effects model using the <code>grade_quant</code> predictor.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit unconditional growth model</span></span>
@@ -904,8 +923,8 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 <p>These are similar to the variance components obtained from the model using the categorical predictors of grade level.</p>
 <p><br></p>
 </section>
-<section id="centering-the-time-predictor-better-interpretations-of-the-intercept" class="level2" data-number="11.6">
-<h2 data-number="11.6" class="anchored" data-anchor-id="centering-the-time-predictor-better-interpretations-of-the-intercept"><span class="header-section-number">11.6</span> Centering the Time Predictor: Better Interpretations of the Intercept</h2>
+<section id="centering-the-time-predictor-better-interpretations-of-the-intercept" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="centering-the-time-predictor-better-interpretations-of-the-intercept"><span class="header-section-number">12.6</span> Centering the Time Predictor: Better Interpretations of the Intercept</h2>
 <p>One method of improving the interpretations of the intercept is to center the time predictor. Recall that centering a variable means to add/subtract a constant value from each case. In a longitudinal analysis, we typically center the time predictor by subtracting the value of the time predictor at baseline (i.e., the first time point). In our example:</p>
 <p><span class="math display">\[
 \mathrm{Centered~Grade}_{ij} = \mathrm{Grade}_{ij} - 8
@@ -976,13 +995,13 @@ Figure&nbsp;11.3: Student 1’s vocabulary scores at each time point along with 
 <span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-fitted-lmer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots." data-fig-align="center">
+<div id="fig-fitted-lmer" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fitted-lmer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-fitted-lmer-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fitted-lmer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.4: Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots.
+Figure&nbsp;12.4: Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots.
 </figcaption>
 </figure>
 </div>
@@ -1016,8 +1035,8 @@ Figure&nbsp;11.4: Plot showing the change in vocabulary score over time for 64 s
 <p>The unexplained variance that is between-students has increased from 2.96 to 3.18. This means that by including grade in the model we have increased the amount of unexplained variation that is between students by 7.8%; a mathematical artifact of the estimation process.</p>
 <p>These values are <strong>identical</strong> to the variance components obtained from the previous model. That is because the model we fitted is mostly identical to the uncentered quantitative model. The only difference is in the intercept value, which now is interpretable since a grade of 0 on the centered scale corresponds to the initial time point in the data; it is no longer extrapolation.</p>
 <p><br></p>
-<section id="student-specific-profiles" class="level3" data-number="11.6.1">
-<h3 data-number="11.6.1" class="anchored" data-anchor-id="student-specific-profiles"><span class="header-section-number">11.6.1</span> Student-Specific Profiles</h3>
+<section id="student-specific-profiles" class="level3" data-number="12.6.1">
+<h3 data-number="12.6.1" class="anchored" data-anchor-id="student-specific-profiles"><span class="header-section-number">12.6.1</span> Student-Specific Profiles</h3>
 <p>Obtaining the coefficients for the student specific growth curves we get:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get student estimated parameters</span></span>
@@ -1064,13 +1083,13 @@ Figure&nbsp;11.4: Plot showing the change in vocabulary score over time for 64 s
 <span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-lmer-students" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line)." data-fig-align="center">
+<div id="fig-lmer-students" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lmer-students-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-lmer-students-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lmer-students-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.5: Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).
+Figure&nbsp;12.5: Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).
 </figcaption>
 </figure>
 </div>
@@ -1079,8 +1098,8 @@ Figure&nbsp;11.5: Predicted change in vocabulary score over time based on the li
 <p>The parallel lines suggest the same rate-of-growth across students.</p>
 <p><br></p>
 </section>
-<section id="comparing-the-unconditional-growth-models" class="level3" data-number="11.6.2">
-<h3 data-number="11.6.2" class="anchored" data-anchor-id="comparing-the-unconditional-growth-models"><span class="header-section-number">11.6.2</span> Comparing the Unconditional Growth Models</h3>
+<section id="comparing-the-unconditional-growth-models" class="level3" data-number="12.6.2">
+<h3 data-number="12.6.2" class="anchored" data-anchor-id="comparing-the-unconditional-growth-models"><span class="header-section-number">12.6.2</span> Comparing the Unconditional Growth Models</h3>
 <p>The unconditional growth model was fitted using three different methods.</p>
 <ul>
 <li>The first model treated time (grade) as categorical.</li>
@@ -1101,8 +1120,8 @@ Figure&nbsp;11.5: Predicted change in vocabulary score over time based on the li
 <p><br></p>
 </section>
 </section>
-<section id="re-visiting-the-functional-form-of-the-growth-model" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="re-visiting-the-functional-form-of-the-growth-model"><span class="header-section-number">11.7</span> Re-Visiting the Functional Form of the Growth Model</h2>
+<section id="re-visiting-the-functional-form-of-the-growth-model" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="re-visiting-the-functional-form-of-the-growth-model"><span class="header-section-number">12.7</span> Re-Visiting the Functional Form of the Growth Model</h2>
 <p>As in any regression analysis, we need to specify the functional form of the growth model. Since the spaghetti plot suggested that the relationship between grade-level and vocabulary score may be nonlinear, below we consider three potential functional forms for our growth model (using centered grade level):</p>
 <ol type="1">
 <li>A linear relationship (already fitted: <code>lmer.3</code>);</li>
@@ -1120,8 +1139,8 @@ Figure&nbsp;11.5: Predicted change in vocabulary score over time based on the li
 <span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> vocabulary_long, <span class="at">REML =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
-<section id="evaluating-the-three-functional-forms" class="level3" data-number="11.7.1">
-<h3 data-number="11.7.1" class="anchored" data-anchor-id="evaluating-the-three-functional-forms"><span class="header-section-number">11.7.1</span> Evaluating the Three Functional Forms</h3>
+<section id="evaluating-the-three-functional-forms" class="level3" data-number="12.7.1">
+<h3 data-number="12.7.1" class="anchored" data-anchor-id="evaluating-the-three-functional-forms"><span class="header-section-number">12.7.1</span> Evaluating the Three Functional Forms</h3>
 <p>As with any model, we want to examine the evidence to determine the correct functional form. In practice, you would also want to evaluate the residuals to see which of the potential candidate models meets the assumptions. (We will look at residuals in an upcoming set of notes.) Suffice it to say, the residual plots look similar across all three models indicating that all the models seem to meet the assumptions equally well. Since we are using the same outcome and data in all three models, we can also evaluate the models using information criteria and their related metrics.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model-evidence</span></span>
@@ -1143,8 +1162,8 @@ No change         3 1015.35     151.06   0.00   1.00 -504.63</code></pre>
 <p>Given the data and candidate models, the evidence primarily supports the log-linear model. There is also some evidence for the quadratic model and almost no evidence for the linear model. This is consistent with the nonlinearity we observed in the mean profile in the spaghetti plot. Given this, the higher evidence for the log-linear model, and the simplicity of the log-linear model relative to the quadratic model, we will adopt the log-linear functional form for our unconditional growth model.</p>
 <p><br></p>
 </section>
-<section id="examining-the-output-for-the-adopted-log-linear-fitted-model" class="level3" data-number="11.7.2">
-<h3 data-number="11.7.2" class="anchored" data-anchor-id="examining-the-output-for-the-adopted-log-linear-fitted-model"><span class="header-section-number">11.7.2</span> Examining the Output for the Adopted Log-Linear Fitted Model</h3>
+<section id="examining-the-output-for-the-adopted-log-linear-fitted-model" class="level3" data-number="12.7.2">
+<h3 data-number="12.7.2" class="anchored" data-anchor-id="examining-the-output-for-the-adopted-log-linear-fitted-model"><span class="header-section-number">12.7.2</span> Examining the Output for the Adopted Log-Linear Fitted Model</h3>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coefficient-level output</span></span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(lmer<span class="fl">.5</span>, <span class="at">effects =</span> <span class="st">"fixed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1194,8 +1213,8 @@ No change         3 1015.35     151.06   0.00   1.00 -504.63</code></pre>
 <p>These values are quite similar to the variance components obtained from the other unconditional growth models since time (grade level) is the only effect included in the model.</p>
 <p><br></p>
 </section>
-<section id="plot-of-the-unconditional-growth-model" class="level3" data-number="11.7.3">
-<h3 data-number="11.7.3" class="anchored" data-anchor-id="plot-of-the-unconditional-growth-model"><span class="header-section-number">11.7.3</span> Plot of the Unconditional Growth Model</h3>
+<section id="plot-of-the-unconditional-growth-model" class="level3" data-number="12.7.3">
+<h3 data-number="12.7.3" class="anchored" data-anchor-id="plot-of-the-unconditional-growth-model"><span class="header-section-number">12.7.3</span> Plot of the Unconditional Growth Model</h3>
 <p>To better understand the relationship between grade-level and vocabulary score represented in the adopted unconditional growth model, we can plot the predicted mean profile based on the model’s fixed-effects.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create plot</span></span>
@@ -1213,13 +1232,13 @@ No change         3 1015.35     151.06   0.00   1.00 -504.63</code></pre>
 <span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-lmer-log" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score as a function of grade-level." data-fig-align="center">
+<div id="fig-lmer-log" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score as a function of grade-level.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lmer-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-lmer-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score as a function of grade-level.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lmer-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.6: Predicted change in vocabulary score as a function of grade-level.
+Figure&nbsp;12.6: Predicted change in vocabulary score as a function of grade-level.
 </figcaption>
 </figure>
 </div>
@@ -1227,8 +1246,8 @@ Figure&nbsp;11.6: Predicted change in vocabulary score as a function of grade-le
 </div>
 <p><br></p>
 </section>
-<section id="student-specific-profiles-1" class="level3" data-number="11.7.4">
-<h3 data-number="11.7.4" class="anchored" data-anchor-id="student-specific-profiles-1"><span class="header-section-number">11.7.4</span> Student-Specific Profiles</h3>
+<section id="student-specific-profiles-1" class="level3" data-number="12.7.4">
+<h3 data-number="12.7.4" class="anchored" data-anchor-id="student-specific-profiles-1"><span class="header-section-number">12.7.4</span> Student-Specific Profiles</h3>
 <p>Obtaining the coefficients for the student specific growth curves we get:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get student estimated parameters</span></span>
@@ -1287,13 +1306,13 @@ Figure&nbsp;11.6: Predicted change in vocabulary score as a function of grade-le
 <span id="cb71-24"><a href="#cb71-24" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb71-25"><a href="#cb71-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-lmer-log-students" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line)." data-fig-align="center">
+<div id="fig-lmer-log-students" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lmer-log-students-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-lmer-log-students-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lmer-log-students-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.7: Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).
+Figure&nbsp;12.7: Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).
 </figcaption>
 </figure>
 </div>
@@ -1303,8 +1322,8 @@ Figure&nbsp;11.7: Predicted change in vocabulary score over time based on the lo
 <p><br></p>
 </section>
 </section>
-<section id="answering-the-research-question" class="level2" data-number="11.8">
-<h2 data-number="11.8" class="anchored" data-anchor-id="answering-the-research-question"><span class="header-section-number">11.8</span> Answering the Research Question</h2>
+<section id="answering-the-research-question" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="answering-the-research-question"><span class="header-section-number">12.8</span> Answering the Research Question</h2>
 <p>Here we present the rersults of our analysis in prose. We also presented a table of results from the fitted candidate models. For mixed-effects models, it is important to present coefficients and standard errors, estimated variance components, and any model-level summaries.</p>
 <div class="fyi">
 <p><strong>INTERPRETATION</strong></p>
@@ -1343,7 +1362,7 @@ Figure&nbsp;11.7: Predicted change in vocabulary score over time based on the lo
 <div id="tbl-models" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;11.1: Four candidate models predicting longitudinal variation in students’ vocabulary scores.
+Table&nbsp;12.1: Four candidate models predicting longitudinal variation in students’ vocabulary scores.
 </figcaption>
 <div aria-describedby="tbl-models-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="texreg" style="margin: 10px auto;border-collapse: collapse;border-spacing: 0px;color: #000000;border-top: 1px solid #000000;">
@@ -2057,10 +2076,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./05-01-introduction-to-mixed-effects-models.html" class="pagination-link" aria-label="Introduction to Mixed-Effects Models">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="pagination-link" aria-label="LMER: Other Random-Effects and Covariates">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb73" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># LMER: Average Change Over Time</span></span>
