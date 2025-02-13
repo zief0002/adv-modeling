@@ -35,14 +35,16 @@ book:
       chapters:
         - 03-01-polynomial-effects.qmd
         - 03-02-information-criteria-and-model-selection.qmd
-        - 03-03-logarithmic-transformations-outcome.qmd
+        - 03-03-logarithmic-transformations-predictor.qmd
+        - 03-04-logarithmic-transformations-outcome.qmd
+        - 03-05-rule-of-the-bulge.qmd
     # - part: 04-00-multiple-regression.qmd
     #   chapters:
     #     - 04-01-intro-to-multiple-regression.qmd
     #     - 04-02-more-multiple-regression.qmd
     #     - 04-03-understanding-statistical-control.qmd
     #     - 04-04-assumptions.qmd
-    - part: 05-00-modeling-nonindependece.qmd
+    - part: 05-00-modeling-nonindependence.qmd
       chapters:
         - 05-01-introduction-to-mixed-effects-models.qmd
         - 05-02-lmer-average-change-over-time.qmd

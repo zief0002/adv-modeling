@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Log-Transforming the Outcome – Advanced Modeling and Reproducibility for Educational Scientists</title>
+<title>11&nbsp; Log-Transforming the Outcome – Advanced Modeling and Reproducibility for Educational Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,8 +84,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05-01-introduction-to-mixed-effects-models.html" rel="next">
-<link href="./03-02-information-criteria-and-model-selection.html" rel="prev">
+<link href="./03-05-rule-of-the-bulge.html" rel="next">
+<link href="./03-03-logarithmic-transformations-predictor.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -169,7 +169,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-00-modeling-nonlinearity.html">Modeling Nonlinearity</a></li><li class="breadcrumb-item"><a href="./03-03-logarithmic-transformations-outcome.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-00-modeling-nonlinearity.html">Modeling Nonlinearity</a></li><li class="breadcrumb-item"><a href="./03-04-logarithmic-transformations-outcome.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -287,16 +287,28 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-03-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  <a href="./03-03-logarithmic-transformations-predictor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Predictor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-04-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-05-rule-of-the-bulge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rule of the Bulge—An Example”</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">05-00-modeling-nonindependece.qmd</span></a>
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonindependence</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -305,25 +317,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -337,9 +349,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-00-modeling-nonlinearity.html">Modeling Nonlinearity</a></li><li class="breadcrumb-item"><a href="./03-03-logarithmic-transformations-outcome.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-00-modeling-nonlinearity.html">Modeling Nonlinearity</a></li><li class="breadcrumb-item"><a href="./03-04-logarithmic-transformations-outcome.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Quarto Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Quarto Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -397,8 +409,8 @@ window.Quarto = {
 </div>
 </div>
 <p><br></p>
-<section id="relationship-between-wealth-and-carbon-emissions" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="relationship-between-wealth-and-carbon-emissions"><span class="header-section-number">10.1</span> Relationship between Wealth and Carbon Emissions</h2>
+<section id="relationship-between-wealth-and-carbon-emissions" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="relationship-between-wealth-and-carbon-emissions"><span class="header-section-number">11.1</span> Relationship between Wealth and Carbon Emissions</h2>
 <p>To being the analysis, we will examine the marginal distributions of wealth (predictor) and carbon emissions (outcome), as well as a scatterplot between them for our sample data.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Marginal distribution of co2 (outcome)</span></span>
@@ -428,20 +440,20 @@ window.Quarto = {
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Place figures side-by-side</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>(p1 <span class="sc">/</span> p2) <span class="sc">|</span>  p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-exploration" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plot of the distribution of carbon dioxide emissions (LEFT) and wealth (CENTER). The scatterplot (RIGHT) shows the relationship between wealth and carbon dioxide emissions. The loess smoother  (blue line) is also displayed on the scatterplot. Two countries having extreme CO2 emissions are also identified.">
+<div id="fig-exploration" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plot of the distribution of carbon dioxide emissions (LEFT) and wealth (CENTER). The scatterplot (RIGHT) shows the relationship between wealth and carbon dioxide emissions. The loess smoother  (blue line) is also displayed on the scatterplot. Two countries having extreme CO2 emissions are also identified." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-exploration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-exploration-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Density plot of the distribution of carbon dioxide emissions (LEFT) and wealth (CENTER). The scatterplot (RIGHT) shows the relationship between wealth and carbon dioxide emissions. The loess smoother  (blue line) is also displayed on the scatterplot. Two countries having extreme CO2 emissions are also identified.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-exploration-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Density plot of the distribution of carbon dioxide emissions (LEFT) and wealth (CENTER). The scatterplot (RIGHT) shows the relationship between wealth and carbon dioxide emissions. The loess smoother  (blue line) is also displayed on the scatterplot. Two countries having extreme CO2 emissions are also identified.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exploration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.1: Density plot of the distribution of carbon dioxide emissions (LEFT) and wealth (CENTER). The scatterplot (RIGHT) shows the relationship between wealth and carbon dioxide emissions. The loess smoother (blue line) is also displayed on the scatterplot. Two countries having extreme CO2 emissions are also identified.
+Figure&nbsp;11.1: Density plot of the distribution of carbon dioxide emissions (LEFT) and wealth (CENTER). The scatterplot (RIGHT) shows the relationship between wealth and carbon dioxide emissions. The loess smoother (blue line) is also displayed on the scatterplot. Two countries having extreme CO2 emissions are also identified.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>The distribution of CO2 emissions is severely right-skewed. Although the median emissions is around 2.5 metric tons per person, the plot shows evidence that several countries have high emissions. The distribution of wealth is more symmetric (perhaps a little left-skewed), with most countries having a weath level around 3.5.</p>
-<p>The scatterplot suggests a positive, nonlinear relationship between wealth and CO2 emissions; countries that are wealthier also tend to have higher CO2 emissions. It also suggests that there is more variation in CO2 emissions at higher levels of wealth than at lower levels of wealth—potential violation of the homoskedasticity assumption. The curvilinear relationship between wealth and carbon emissions suggests that we may want to include a quadratic effect of wealth in the model. We fit both a linear and quadratic model and show the residual plots for both models in <a href="#fig-resid-model-linear" class="quarto-xref">Figure&nbsp;<span>10.2</span></a>.</p>
+<p>The scatterplot suggests a positive, nonlinear relationship between wealth and CO2 emissions; countries that are wealthier also tend to have higher CO2 emissions. It also suggests that there is more variation in CO2 emissions at higher levels of wealth than at lower levels of wealth—potential violation of the homoskedasticity assumption. The curvilinear relationship between wealth and carbon emissions suggests that we may want to include a quadratic effect of wealth in the model. We fit both a linear and quadratic model and show the residual plots for both models in <a href="#fig-resid-model-linear" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|fig-alt: "Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing CO2 emissions on wealth in a linear model (TOP) and in a model that includes a quadratic effect of wealth (BOTTOM). The reference line of Y=0 is also displayed in the scatterplot along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values."</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8</span></span>
@@ -457,10 +469,10 @@ Figure&nbsp;10.1: Density plot of the distribution of carbon dioxide emissions (
 <div id="fig-resid-model-linear" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resid-model-linear-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-resid-model-linear-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-resid-model-linear-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resid-model-linear-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.2: Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing CO2 emissions on wealth in a linear model (TOP) and in a model that includes a quadratic effect of wealth (BOTTOM). The reference line of Y=0 is also displayed in the scatterplot along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.
+Figure&nbsp;11.2: Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing CO2 emissions on wealth in a linear model (TOP) and in a model that includes a quadratic effect of wealth (BOTTOM). The reference line of Y=0 is also displayed in the scatterplot along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.
 </figcaption>
 </figure>
 </div>
@@ -469,8 +481,8 @@ Figure&nbsp;10.2: Density plot of the standardized residuals (LEFT) and scatterp
 <p>The plots from the linear model show clear violations of almost every assumption. By including a quadratic effect of wealth in the model, we have mitigated the “linearity” assumption; the average residual is 0 in this model. However, the residual plots still suggest violations of the normality assumption and of the assumption of homoskedasticity.</p>
 <p><br></p>
 </section>
-<section id="exponential-functions-another-non-linear-function" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="exponential-functions-another-non-linear-function"><span class="header-section-number">10.2</span> Exponential Functions: Another Non-Linear Function</h2>
+<section id="exponential-functions-another-non-linear-function" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="exponential-functions-another-non-linear-function"><span class="header-section-number">11.2</span> Exponential Functions: Another Non-Linear Function</h2>
 <p>We do not have to use a quadratic function to model curvilinear relationships. We can use any mathematical function that mimics the curvilinear pattern observed in the data.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> One mathematical function that is useful for modeling curvilinearity is the exponential function. The exponential function is shown in the right-hand side of the figure below.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
@@ -504,13 +516,13 @@ Figure&nbsp;10.2: Density plot of the standardized residuals (LEFT) and scatterp
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-quadratic-log" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="LEFT: Negative quadratic function of *X*. RIGHT: Logarithmic function of *X*.">
+<div id="fig-quadratic-log" class="quarto-float quarto-figure quarto-figure-center anchored" alt="LEFT: Negative quadratic function of *X*. RIGHT: Logarithmic function of *X*." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-quadratic-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-quadratic-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="LEFT: Negative quadratic function of *X*. RIGHT: Logarithmic function of *X*.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-quadratic-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="LEFT: Negative quadratic function of *X*. RIGHT: Logarithmic function of *X*.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadratic-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.3: LEFT: Negative quadratic function of <em>X</em>. RIGHT: Logarithmic function of <em>X</em>.
+Figure&nbsp;11.3: LEFT: Negative quadratic function of <em>X</em>. RIGHT: Logarithmic function of <em>X</em>.
 </figcaption>
 </figure>
 </div>
@@ -524,8 +536,8 @@ Figure&nbsp;10.3: LEFT: Negative quadratic function of <em>X</em>. RIGHT: Logari
 <p>Unfortunately, the <code>lm()</code> function does not allow us to fit this directly. There is, however, a workaround that we can employ. But, to do so, requires us to understand the relationship between exponents and logarithms.</p>
 <!-- As you consider different mathematical functions, it is important to consider the substantive knowledge in an area. For example, while empirically both the quadratic polynomial model and the exponential model might both suggest reasonable fit to the data, in this context, the logarithmic model might be a more substantively sound model than the quadratic polynomial model. We would probably expect that the effect of SAT on graduation rate would diminish for schools with higher median SAT scores, but that it wouldn't actually change direction. (This would mean that at some value, an increase in SAT would be asociated with a lower graduation rate!) -->
 <p><br></p>
-<section id="quick-refresher-on-exponents-and-logarithms" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="quick-refresher-on-exponents-and-logarithms"><span class="header-section-number">10.2.1</span> Quick Refresher on Exponents and Logarithms</h3>
+<section id="quick-refresher-on-exponents-and-logarithms" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="quick-refresher-on-exponents-and-logarithms"><span class="header-section-number">11.2.1</span> Quick Refresher on Exponents and Logarithms</h3>
 <p>The logarithm is an inverse function of an exponent. Consider this example,</p>
 <p><span class="math display">\[
 \log_2 (32)
@@ -558,8 +570,8 @@ x &amp;= 5
 <p><br></p>
 </section>
 </section>
-<section id="workaround-for-lm" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="workaround-for-lm"><span class="header-section-number">10.3</span> Workaround for <code>lm()</code></h2>
+<section id="workaround-for-lm" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="workaround-for-lm"><span class="header-section-number">11.3</span> Workaround for <code>lm()</code></h2>
 <p>Recall that what we want to fit is the following exponential model:</p>
 <p><span class="math display">\[
 \hat{Y}_i = 2^{\hat\beta_0 + \hat\beta_1(X_i)}
@@ -574,8 +586,8 @@ x &amp;= 5
 \]</span></p>
 <p>That is, we can regress the log-transformed values of <em>Y</em> onto <em>X</em>.</p>
 <p><br></p>
-<section id="log-transforming-variables" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="log-transforming-variables"><span class="header-section-number">10.3.1</span> Log-Transforming Variables</h3>
+<section id="log-transforming-variables" class="level3" data-number="11.3.1">
+<h3 data-number="11.3.1" class="anchored" data-anchor-id="log-transforming-variables"><span class="header-section-number">11.3.1</span> Log-Transforming Variables</h3>
 <p>For our purposes, we need to log-transform each value of the <em>Y</em> attribute, namely the CO2 values in our data. Here, we will log-transform the CO2 values (using base-2). To do this we create a new column called <code>l2co2</code> using the <code>mutate()</code> function.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create base-2 log-transformed CO2 values</span></span>
@@ -625,13 +637,13 @@ x &amp;= 5
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-log-dist" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plot of the raw CO2 values (LEFT) and the base-2 log-transformed CO2 (RIGHT).">
+<div id="fig-log-dist" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plot of the raw CO2 values (LEFT) and the base-2 log-transformed CO2 (RIGHT)." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-log-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-log-dist-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Density plot of the raw CO2 values (LEFT) and the base-2 log-transformed CO2 (RIGHT).">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-log-dist-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Density plot of the raw CO2 values (LEFT) and the base-2 log-transformed CO2 (RIGHT).">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-log-dist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.4: Density plot of the raw CO2 values (LEFT) and the base-2 log-transformed CO2 (RIGHT).
+Figure&nbsp;11.4: Density plot of the raw CO2 values (LEFT) and the base-2 log-transformed CO2 (RIGHT).
 </figcaption>
 </figure>
 </div>
@@ -648,8 +660,8 @@ Figure&nbsp;10.4: Density plot of the raw CO2 values (LEFT) and the base-2 log-t
 </div>
 <p><br></p>
 </section>
-<section id="relationship-between-log-transformed-co2-emissions-and-wealth" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="relationship-between-log-transformed-co2-emissions-and-wealth"><span class="header-section-number">10.3.2</span> Relationship between Log-Transformed CO2 Emissions and Wealth</h3>
+<section id="relationship-between-log-transformed-co2-emissions-and-wealth" class="level3" data-number="11.3.2">
+<h3 data-number="11.3.2" class="anchored" data-anchor-id="relationship-between-log-transformed-co2-emissions-and-wealth"><span class="header-section-number">11.3.2</span> Relationship between Log-Transformed CO2 Emissions and Wealth</h3>
 <p>Let’s examine the relationship between the log-transformed CO2 emissions and wealth.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot</span></span>
@@ -662,13 +674,13 @@ Figure&nbsp;10.4: Density plot of the raw CO2 values (LEFT) and the base-2 log-t
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">6.4</span>, <span class="at">y =</span> <span class="fl">5.25</span>, <span class="at">label =</span> <span class="st">"Quatar"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">4.6</span>, <span class="at">y =</span> <span class="fl">4.97</span>, <span class="at">label =</span> <span class="st">"Trinidad and Tobago"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-scatterplot-log" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Scatterplot between wealth and log base-2 transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.">
+<div id="fig-scatterplot-log" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatterplot between wealth and log base-2 transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-scatterplot-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-scatterplot-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Scatterplot between wealth and log base-2 transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-scatterplot-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Scatterplot between wealth and log base-2 transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatterplot-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.5: Scatterplot between wealth and log base-2 transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.
+Figure&nbsp;11.5: Scatterplot between wealth and log base-2 transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.
 </figcaption>
 </figure>
 </div>
@@ -683,13 +695,13 @@ Figure&nbsp;10.5: Scatterplot between wealth and log base-2 transformed CO2 emis
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain residual plots</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">residual_plots</span>(lm.log2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-resid-log" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing log-transformed CO2 emisssions on wealth. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
+<div id="fig-resid-log" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing log-transformed CO2 emisssions on wealth. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resid-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-resid-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing log-transformed CO2 emisssions on wealth. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-resid-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing log-transformed CO2 emisssions on wealth. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resid-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.6: Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing log-transformed CO2 emisssions on wealth. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.
+Figure&nbsp;11.6: Density plot of the standardized residuals (LEFT) and scatterplot of the standarized residuals versus the fitted values (RIGHT) from regressing log-transformed CO2 emisssions on wealth. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.
 </figcaption>
 </figure>
 </div>
@@ -703,8 +715,8 @@ Figure&nbsp;10.6: Density plot of the standardized residuals (LEFT) and scatterp
 <p><br></p>
 </section>
 </section>
-<section id="interpreting-the-regression-output" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="interpreting-the-regression-output"><span class="header-section-number">10.4</span> Interpreting the Regression Output</h2>
+<section id="interpreting-the-regression-output" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="interpreting-the-regression-output"><span class="header-section-number">11.4</span> Interpreting the Regression Output</h2>
 <p>We will now examine the model- and coefficient-level output from the model.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model-level output</span></span>
@@ -736,8 +748,8 @@ Figure&nbsp;10.6: Density plot of the standardized residuals (LEFT) and scatterp
 <li>The slope, <span class="math inline">\(\hat{\beta_1} = 1.19\)</span>, indicates that each one-unit difference in the wealth measure is associated with a 1.19-unit change in the log-2 carbon dioxide emission, on average.</li>
 </ul>
 <p><br></p>
-<section id="better-interpretations-back-transforming-to-the-raw-metric" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="better-interpretations-back-transforming-to-the-raw-metric"><span class="header-section-number">10.4.1</span> Better Interpretations: Back-transforming to the Raw Metric</h3>
+<section id="better-interpretations-back-transforming-to-the-raw-metric" class="level3" data-number="11.4.1">
+<h3 data-number="11.4.1" class="anchored" data-anchor-id="better-interpretations-back-transforming-to-the-raw-metric"><span class="header-section-number">11.4.1</span> Better Interpretations: Back-transforming to the Raw Metric</h3>
 <p>While these interpretations are technically correct, it is more helpful to your readers (and more conventional) to interpret any regression results in the raw metric of the variable rather than log-transformed metric. This means we have to <em>back-transform the interpretations</em>. To think about how to do this, we first consider a more general expression of the fitted linear model:</p>
 <p><span class="math display">\[
 \log_2\left(\hat{Y}_i\right) = \hat\beta_0 + \hat\beta_1(X_{i})
@@ -760,8 +772,8 @@ Y_i = 2^{\hat\beta_0} \times 2^{\hat\beta_1(X_{i})}
 \]</span></p>
 <p><br></p>
 </section>
-<section id="substituting-in-values-for-wealth-to-interpret-effects" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="substituting-in-values-for-wealth-to-interpret-effects"><span class="header-section-number">10.4.2</span> Substituting in Values for Wealth to Interpret Effects</h3>
+<section id="substituting-in-values-for-wealth-to-interpret-effects" class="level3" data-number="11.4.2">
+<h3 data-number="11.4.2" class="anchored" data-anchor-id="substituting-in-values-for-wealth-to-interpret-effects"><span class="header-section-number">11.4.2</span> Substituting in Values for Wealth to Interpret Effects</h3>
 <p>To interpret the back-transformed effects, we can substitute in the different values for wealth and solve. For example when wealth = 0:</p>
 <p><span class="math display">\[
 \begin{split}
@@ -822,8 +834,8 @@ Y_i = 2^{\hat\beta_0} \times 2^{\hat\beta_1(X_{i})}
 </div>
 <p><br></p>
 </section>
-<section id="interpretation-of-the-rate-of-change-as-percent-change" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="interpretation-of-the-rate-of-change-as-percent-change"><span class="header-section-number">10.4.3</span> Interpretation of the Rate-of-Change as Percent Change</h3>
+<section id="interpretation-of-the-rate-of-change-as-percent-change" class="level3" data-number="11.4.3">
+<h3 data-number="11.4.3" class="anchored" data-anchor-id="interpretation-of-the-rate-of-change-as-percent-change"><span class="header-section-number">11.4.3</span> Interpretation of the Rate-of-Change as Percent Change</h3>
 <p>The results of log-transformed models are often interpreted as <em>percent change</em>. Rather than saying that each one-unit difference in wealth is associated with a 2.28-fold difference in carbon emissions, on average. We can also interpret this change as a percent change. To do this, we compute:</p>
 <p><span class="math display">\[
 \mathrm{Percent~Change} = (2^{\hat{\beta_1}} -1) \times 100
@@ -845,8 +857,8 @@ Y_i = 2^{\hat\beta_0} \times 2^{\hat\beta_1(X_{i})}
 </div>
 <p><br></p>
 </section>
-<section id="plotting-the-fitted-model" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="plotting-the-fitted-model"><span class="header-section-number">10.4.4</span> Plotting the Fitted Model</h3>
+<section id="plotting-the-fitted-model" class="level3" data-number="11.4.4">
+<h3 data-number="11.4.4" class="anchored" data-anchor-id="plotting-the-fitted-model"><span class="header-section-number">11.4.4</span> Plotting the Fitted Model</h3>
 <p>As always, we should plot the fitted model to aid in interpretation. To do this we will use the back-transformed expression of the fitted equation:</p>
 <p><span class="math display">\[
 \widehat{\mathrm{CO2}_i} = 2^{-3.17} \times 2^{1.19(\mathrm{Wealth}_i)}
@@ -861,13 +873,13 @@ Y_i = 2^{\hat\beta_0} \times 2^{\hat\beta_1(X_{i})}
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Wealth"</span>) <span class="sc">+</span></span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Predicted CO2 emissions (in metric tones per person)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-model-02-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted CO2 emisssions as a function of wealth.">
+<div id="fig-model-02-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted CO2 emisssions as a function of wealth." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-model-02-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-model-02-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of predicted CO2 emisssions as a function of wealth.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-model-02-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of predicted CO2 emisssions as a function of wealth.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-02-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.7: Plot of predicted CO2 emisssions as a function of wealth.
+Figure&nbsp;11.7: Plot of predicted CO2 emisssions as a function of wealth.
 </figcaption>
 </figure>
 </div>
@@ -877,8 +889,8 @@ Figure&nbsp;10.7: Plot of predicted CO2 emisssions as a function of wealth.
 <p><br></p>
 </section>
 </section>
-<section id="using-a-different-base" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="using-a-different-base"><span class="header-section-number">10.5</span> Using a Different Base</h2>
+<section id="using-a-different-base" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="using-a-different-base"><span class="header-section-number">11.5</span> Using a Different Base</h2>
 <p>The choice of base-2 for our logarithm was arbitrary. We could have chosen any base. For example, another common base to use is base-10. Now the fitted equation will be represented as:</p>
 <p><span class="math display">\[
 \hat{Y}_i = 10^{\hat\beta_0 + \hat\beta_1(X_i)}
@@ -969,13 +981,13 @@ Figure&nbsp;10.7: Plot of predicted CO2 emisssions as a function of wealth.
 <span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Wealth"</span>) <span class="sc">+</span></span>
 <span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Predicted CO2 emissions (in metric tones per person)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-model-10-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted CO2 emisssions as a function of wealth.">
+<div id="fig-model-10-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted CO2 emisssions as a function of wealth." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-model-10-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-model-10-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of predicted CO2 emisssions as a function of wealth.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-model-10-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of predicted CO2 emisssions as a function of wealth.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-10-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.8: Plot of predicted CO2 emisssions as a function of wealth.
+Figure&nbsp;11.8: Plot of predicted CO2 emisssions as a function of wealth.
 </figcaption>
 </figure>
 </div>
@@ -988,8 +1000,8 @@ Figure&nbsp;10.8: Plot of predicted CO2 emisssions as a function of wealth.
 <p>Changing the base does not change any of the information we get from the model. The model-level output is the same regardless of base. While the fitted equation changes depending on the base chosen, the back-transformed interpretations of the coefficients and the plot of the fitted curve are the same. Moreover the residuals and therefore your evaluations of the assumptions will be the same regardless of base!</p>
 </div>
 </section>
-<section id="one-more-base-base-e" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="one-more-base-base-e"><span class="header-section-number">10.6</span> One More Base: Base-e</h2>
+<section id="one-more-base-base-e" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="one-more-base-base-e"><span class="header-section-number">11.6</span> One More Base: Base-e</h2>
 <p>One base that is commonly used for log-transformations in the social sciences is base-<em>e</em>. <em>e</em> is a mathematical constant (Euler’s number) that is approximately equal to 2.71828.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> We can obtain this by using the <code>exp()</code> function in R. This function takes <em>e</em> to some exponent that is given as the argument. So to obtain the approximation of <em>e</em> we use</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1009,8 +1021,8 @@ Figure&nbsp;10.8: Plot of predicted CO2 emisssions as a function of wealth.
 \ln (10) = 2.303
 \]</span></p>
 <p><br></p>
-<section id="fitting-the-model-using-base-e-logarithms" class="level3" data-number="10.6.1">
-<h3 data-number="10.6.1" class="anchored" data-anchor-id="fitting-the-model-using-base-e-logarithms"><span class="header-section-number">10.6.1</span> Fitting the Model Using Base-e Logarithms</h3>
+<section id="fitting-the-model-using-base-e-logarithms" class="level3" data-number="11.6.1">
+<h3 data-number="11.6.1" class="anchored" data-anchor-id="fitting-the-model-using-base-e-logarithms"><span class="header-section-number">11.6.1</span> Fitting the Model Using Base-e Logarithms</h3>
 <p>The fitted equation will be represented as:</p>
 <p><span class="math display">\[
 \hat{Y}_i = e^{\hat\beta_0 + \hat\beta_1(X_i)}
@@ -1102,13 +1114,13 @@ Figure&nbsp;10.8: Plot of predicted CO2 emisssions as a function of wealth.
 <span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Wealth"</span>) <span class="sc">+</span></span>
 <span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Predicted CO2 emissions (in metric tones per person)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-model-e-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted CO2 emisssions as a function of wealth.">
+<div id="fig-model-e-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted CO2 emisssions as a function of wealth." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-model-e-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-model-e-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of predicted CO2 emisssions as a function of wealth.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-model-e-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of predicted CO2 emisssions as a function of wealth.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-e-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.9: Plot of predicted CO2 emisssions as a function of wealth.
+Figure&nbsp;11.9: Plot of predicted CO2 emisssions as a function of wealth.
 </figcaption>
 </figure>
 </div>
@@ -1116,8 +1128,8 @@ Figure&nbsp;10.9: Plot of predicted CO2 emisssions as a function of wealth.
 </div>
 <p>This is the exact same fitted curve we obtained from the base-2 and base-10 models. Once again, this is completely expected.</p>
 </section>
-<section id="what-is-special-about-base-e" class="level3" data-number="10.6.2">
-<h3 data-number="10.6.2" class="anchored" data-anchor-id="what-is-special-about-base-e"><span class="header-section-number">10.6.2</span> What is Special About Base-e</h3>
+<section id="what-is-special-about-base-e" class="level3" data-number="11.6.2">
+<h3 data-number="11.6.2" class="anchored" data-anchor-id="what-is-special-about-base-e"><span class="header-section-number">11.6.2</span> What is Special About Base-e</h3>
 <p>Other than being a cool number, why do Social Scientists like using base-e? It turns out that if the slope estimate is small (e.g., <span class="math inline">\(\hat\beta_k &lt; 0.20\)</span>), we can directly take the slope value from the <code>coef()</code> output, multiply it by 100, and interpret it as the percent change. That is because for small values of the slope,</p>
 <p><span class="math display">\[
 (e^{\hat{\beta_1}} -1) \approx \hat{\beta_1}
@@ -1125,8 +1137,8 @@ Figure&nbsp;10.9: Plot of predicted CO2 emisssions as a function of wealth.
 <p>In our example, the slope is not less than 0.20, so we have to do the math, <span class="math inline">\((e^{0.824}-1)\times 100=128\)</span>, to compute the percent change.</p>
 </section>
 </section>
-<section id="modeling-the-remaining-non-linearity" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="modeling-the-remaining-non-linearity"><span class="header-section-number">10.7</span> Modeling the Remaining Non-Linearity</h2>
+<section id="modeling-the-remaining-non-linearity" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="modeling-the-remaining-non-linearity"><span class="header-section-number">11.7</span> Modeling the Remaining Non-Linearity</h2>
 <p>Remember that the residual plots suggested that the problem of heterogeneity in the residuals was “fixed” by using the log-transformed outcome, but it did not completely fix the non-linearity. We can also see this by plotting the log-transformed CO2 emisssions versus wealth.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot</span></span>
@@ -1139,13 +1151,13 @@ Figure&nbsp;10.9: Plot of predicted CO2 emisssions as a function of wealth.
 <span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">6.4</span>, <span class="at">y =</span> <span class="fl">3.64</span>, <span class="at">label =</span> <span class="st">"Quatar"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">4.6</span>, <span class="at">y =</span> <span class="fl">3.44</span>, <span class="at">label =</span> <span class="st">"Trinidad and Tobago"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-scatterplot-log-take2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Scatterplot between wealth and log-transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.">
+<div id="fig-scatterplot-log-take2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatterplot between wealth and log-transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-scatterplot-log-take2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-scatterplot-log-take2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Scatterplot between wealth and log-transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-scatterplot-log-take2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Scatterplot between wealth and log-transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatterplot-log-take2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.10: Scatterplot between wealth and log-transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.
+Figure&nbsp;11.10: Scatterplot between wealth and log-transformed CO2 emissions. The loess smoother (blue, dashed line) is also displayed. The two countries with extreme carbon emissions are also identified on this plot.
 </figcaption>
 </figure>
 </div>
@@ -1160,13 +1172,13 @@ Figure&nbsp;10.10: Scatterplot between wealth and log-transformed CO2 emissions.
 <span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Residual plots</span></span>
 <span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="fu">residual_plots</span>(lm.poly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-residuals-log-quad" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plots of the standardized residuals and scatterplot of the standardized residuals versus the fitted values for the model using the linear and quadratic effects of wealth to predict variation in log-transfomed carbon emissions. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area) in the scatterplot. The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
+<div id="fig-residuals-log-quad" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plots of the standardized residuals and scatterplot of the standardized residuals versus the fitted values for the model using the linear and quadratic effects of wealth to predict variation in log-transfomed carbon emissions. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area) in the scatterplot. The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuals-log-quad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-residuals-log-quad-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Density plots of the standardized residuals and scatterplot of the standardized residuals versus the fitted values for the model using the linear and quadratic effects of wealth to predict variation in log-transfomed carbon emissions. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area) in the scatterplot. The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-residuals-log-quad-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Density plots of the standardized residuals and scatterplot of the standardized residuals versus the fitted values for the model using the linear and quadratic effects of wealth to predict variation in log-transfomed carbon emissions. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area) in the scatterplot. The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuals-log-quad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.11: Density plots of the standardized residuals and scatterplot of the standardized residuals versus the fitted values for the model using the linear and quadratic effects of wealth to predict variation in log-transfomed carbon emissions. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area) in the scatterplot. The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.
+Figure&nbsp;11.11: Density plots of the standardized residuals and scatterplot of the standardized residuals versus the fitted values for the model using the linear and quadratic effects of wealth to predict variation in log-transfomed carbon emissions. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area) in the scatterplot. The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.
 </figcaption>
 </figure>
 </div>
@@ -1220,8 +1232,8 @@ Linear effect    3 343.78      29.99      0      1 -168.83</code></pre>
 \ln\left(\widehat{\mathrm{CO2}_i}\right) = -2.90 + 1.38(\mathrm{Wealth}_i) - 0.0837(\mathrm{Wealth}_i^2)
 \]</span></p>
 <p><br></p>
-<section id="interpreting-the-effect-of-wealth" class="level3" data-number="10.7.1">
-<h3 data-number="10.7.1" class="anchored" data-anchor-id="interpreting-the-effect-of-wealth"><span class="header-section-number">10.7.1</span> Interpreting the Effect of Wealth</h3>
+<section id="interpreting-the-effect-of-wealth" class="level3" data-number="11.7.1">
+<h3 data-number="11.7.1" class="anchored" data-anchor-id="interpreting-the-effect-of-wealth"><span class="header-section-number">11.7.1</span> Interpreting the Effect of Wealth</h3>
 <p>Since the quadratic term is an interaction term, we interpret the effect of wealth generally as:</p>
 <div class="fyi">
 <p><strong>INTERPRETATION</strong></p>
@@ -1241,13 +1253,13 @@ Linear effect    3 343.78      29.99      0      1 -168.83</code></pre>
 <span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Wealth"</span>) <span class="sc">+</span></span>
 <span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Predicted CO2 (in metric tons per person)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-poly-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model.">
+<div id="fig-poly-fitted" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-poly-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-poly-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-poly-fitted-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-poly-fitted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.12: Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model.
+Figure&nbsp;11.12: Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model.
 </figcaption>
 </figure>
 </div>
@@ -1260,8 +1272,8 @@ Figure&nbsp;10.12: Plot of predicted carbon emisssions as a function of wealth f
 <p><br></p>
 </section>
 </section>
-<section id="rq-2-does-the-quadratic-effect-of-wealth-persist-after-controlling-for-urbanization" class="level2" data-number="10.8">
-<h2 data-number="10.8" class="anchored" data-anchor-id="rq-2-does-the-quadratic-effect-of-wealth-persist-after-controlling-for-urbanization"><span class="header-section-number">10.8</span> RQ 2: Does the quadratic effect of wealth persist after controlling for urbanization?</h2>
+<section id="rq-2-does-the-quadratic-effect-of-wealth-persist-after-controlling-for-urbanization" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="rq-2-does-the-quadratic-effect-of-wealth-persist-after-controlling-for-urbanization"><span class="header-section-number">11.8</span> RQ 2: Does the quadratic effect of wealth persist after controlling for urbanization?</h2>
 <p>To answer the second research we will include urbanization in the model as a covariate. That is, we will fit the model:</p>
 <p><span class="math display">\[
 \ln\left(\mathrm{CO2}_i\right) = \beta_0 + \beta_1(\mathrm{Wealth}_i) + \beta_2(\mathrm{Wealth}_i^2) + \beta_3(\mathrm{Urbanization_i}) + \epsilon_i
@@ -1364,13 +1376,13 @@ Wealth                         3 343.78      30.09   0.00   1.00 -168.83</code><
 <span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Wealth"</span>) <span class="sc">+</span></span>
 <span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Predicted CO2 (in metric tons per person)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-rq2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries with low (light blue) and high (dark blue) urbanization.">
+<div id="fig-rq2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries with low (light blue) and high (dark blue) urbanization." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rq2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-rq2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries with low (light blue) and high (dark blue) urbanization.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-rq2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries with low (light blue) and high (dark blue) urbanization.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rq2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.13: Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries with low (light blue) and high (dark blue) urbanization.
+Figure&nbsp;11.13: Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries with low (light blue) and high (dark blue) urbanization.
 </figcaption>
 </figure>
 </div>
@@ -1381,8 +1393,8 @@ Figure&nbsp;10.13: Plot of predicted carbon emisssions as a function of wealth f
 <p>Here we see that in general wealthier countries have exponentially increasing CO2 emissions that begins to diminish for countries with exceptionally high wealth levels. This pattern is similar for countries with both low and high urbanization, although the countries with higher urbanization have lower carbon dioxide emissions.</p>
 </div>
 </section>
-<section id="rq-3-does-the-effect-of-wealth-vary-between-world-regions" class="level2" data-number="10.9">
-<h2 data-number="10.9" class="anchored" data-anchor-id="rq-3-does-the-effect-of-wealth-vary-between-world-regions"><span class="header-section-number">10.9</span> RQ 3: Does the Effect of Wealth Vary Between World Regions?</h2>
+<section id="rq-3-does-the-effect-of-wealth-vary-between-world-regions" class="level2" data-number="11.9">
+<h2 data-number="11.9" class="anchored" data-anchor-id="rq-3-does-the-effect-of-wealth-vary-between-world-regions"><span class="header-section-number">11.9</span> RQ 3: Does the Effect of Wealth Vary Between World Regions?</h2>
 <p>To answer the third research question, we will include world region and urbanization into the model along with our linear and quadratic effects of wealth. To determine if the effects of wealth are different across the different regions we have to include interaction effects between wealth and world region. Since our model includes a quadratic effect of wealth we need to include both:</p>
 <ul>
 <li><span class="math inline">\(\mathrm{Wealth} \times \mathrm{World~Region}\)</span>, and</li>
@@ -1547,13 +1559,13 @@ e^{-.16} - 1 = -.147
 <span id="cb72-19"><a href="#cb72-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_textbox_simple</span>()</span>
 <span id="cb72-20"><a href="#cb72-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-rq3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries from different regions of the world. Urbanization has been adjusted for by setting it to its mean value.">
+<div id="fig-rq3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries from different regions of the world. Urbanization has been adjusted for by setting it to its mean value." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rq3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="03-03-logarithmic-transformations-outcome_files/figure-html/fig-rq3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries from different regions of the world. Urbanization has been adjusted for by setting it to its mean value.">
+<img src="03-04-logarithmic-transformations-outcome_files/figure-html/fig-rq3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries from different regions of the world. Urbanization has been adjusted for by setting it to its mean value.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rq3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.14: Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries from different regions of the world. Urbanization has been adjusted for by setting it to its mean value.
+Figure&nbsp;11.14: Plot of predicted carbon emisssions as a function of wealth for the quadratic polynomial model shown for countries from different regions of the world. Urbanization has been adjusted for by setting it to its mean value.
 </figcaption>
 </figure>
 </div>
@@ -2054,13 +2066,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03-02-information-criteria-and-model-selection.html" class="pagination-link" aria-label="Information Criteria and Model Selection">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Information Criteria and Model Selection</span></span>
+      <a href="./03-03-logarithmic-transformations-predictor.html" class="pagination-link" aria-label="Log-Transforming the Predictor">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Predictor</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05-01-introduction-to-mixed-effects-models.html" class="pagination-link" aria-label="Introduction to Mixed-Effects Models">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-05-rule-of-the-bulge.html" class="pagination-link" aria-label="Rule of the Bulge---An Example&quot;">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rule of the Bulge—An Example”</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">

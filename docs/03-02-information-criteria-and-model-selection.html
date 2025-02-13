@@ -84,7 +84,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03-03-logarithmic-transformations-outcome.html" rel="next">
+<link href="./03-03-logarithmic-transformations-predictor.html" rel="next">
 <link href="./03-01-polynomial-effects.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -287,16 +287,28 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-03-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  <a href="./03-03-logarithmic-transformations-predictor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Predictor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-04-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-05-rule-of-the-bulge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rule of the Bulge—An Example”</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">05-00-modeling-nonindependece.qmd</span></a>
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonindependence</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -305,25 +317,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -531,23 +543,23 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-aics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="jenxkuebgj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jenxkuebgj table {
+<div id="mlfidbnhly" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mlfidbnhly table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jenxkuebgj thead, #jenxkuebgj tbody, #jenxkuebgj tfoot, #jenxkuebgj tr, #jenxkuebgj td, #jenxkuebgj th {
+#mlfidbnhly thead, #mlfidbnhly tbody, #mlfidbnhly tfoot, #mlfidbnhly tr, #mlfidbnhly td, #mlfidbnhly th {
   border-style: none;
 }
 
-#jenxkuebgj p {
+#mlfidbnhly p {
   margin: 0;
   padding: 0;
 }
 
-#jenxkuebgj .gt_table {
+#mlfidbnhly .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -573,12 +585,12 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_caption {
+#mlfidbnhly .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jenxkuebgj .gt_title {
+#mlfidbnhly .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -590,7 +602,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#jenxkuebgj .gt_subtitle {
+#mlfidbnhly .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -602,7 +614,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#jenxkuebgj .gt_heading {
+#mlfidbnhly .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -614,13 +626,13 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_bottom_border {
+#mlfidbnhly .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_col_headings {
+#mlfidbnhly .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -635,7 +647,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_col_heading {
+#mlfidbnhly .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -655,7 +667,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#jenxkuebgj .gt_column_spanner_outer {
+#mlfidbnhly .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -667,15 +679,15 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#jenxkuebgj .gt_column_spanner_outer:first-child {
+#mlfidbnhly .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jenxkuebgj .gt_column_spanner_outer:last-child {
+#mlfidbnhly .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jenxkuebgj .gt_column_spanner {
+#mlfidbnhly .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -687,11 +699,11 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#jenxkuebgj .gt_spanner_row {
+#mlfidbnhly .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jenxkuebgj .gt_group_heading {
+#mlfidbnhly .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -717,7 +729,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#jenxkuebgj .gt_empty_group_heading {
+#mlfidbnhly .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -732,15 +744,15 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#jenxkuebgj .gt_from_md > :first-child {
+#mlfidbnhly .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jenxkuebgj .gt_from_md > :last-child {
+#mlfidbnhly .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jenxkuebgj .gt_row {
+#mlfidbnhly .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -759,7 +771,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#jenxkuebgj .gt_stub {
+#mlfidbnhly .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -772,7 +784,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#jenxkuebgj .gt_stub_row_group {
+#mlfidbnhly .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -786,15 +798,15 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#jenxkuebgj .gt_row_group_first td {
+#mlfidbnhly .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jenxkuebgj .gt_row_group_first th {
+#mlfidbnhly .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jenxkuebgj .gt_summary_row {
+#mlfidbnhly .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -804,16 +816,16 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#jenxkuebgj .gt_first_summary_row {
+#mlfidbnhly .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_first_summary_row.thick {
+#mlfidbnhly .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jenxkuebgj .gt_last_summary_row {
+#mlfidbnhly .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -823,7 +835,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_grand_summary_row {
+#mlfidbnhly .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -833,7 +845,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#jenxkuebgj .gt_first_grand_summary_row {
+#mlfidbnhly .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -843,7 +855,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_last_grand_summary_row_top {
+#mlfidbnhly .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -853,11 +865,11 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_striped {
+#mlfidbnhly .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jenxkuebgj .gt_table_body {
+#mlfidbnhly .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -866,7 +878,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_footnotes {
+#mlfidbnhly .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -880,7 +892,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_footnote {
+#mlfidbnhly .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -889,7 +901,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#jenxkuebgj .gt_sourcenotes {
+#mlfidbnhly .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -903,7 +915,7 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#jenxkuebgj .gt_sourcenote {
+#mlfidbnhly .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -911,72 +923,72 @@ Table&nbsp;9.1: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#jenxkuebgj .gt_left {
+#mlfidbnhly .gt_left {
   text-align: left;
 }
 
-#jenxkuebgj .gt_center {
+#mlfidbnhly .gt_center {
   text-align: center;
 }
 
-#jenxkuebgj .gt_right {
+#mlfidbnhly .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jenxkuebgj .gt_font_normal {
+#mlfidbnhly .gt_font_normal {
   font-weight: normal;
 }
 
-#jenxkuebgj .gt_font_bold {
+#mlfidbnhly .gt_font_bold {
   font-weight: bold;
 }
 
-#jenxkuebgj .gt_font_italic {
+#mlfidbnhly .gt_font_italic {
   font-style: italic;
 }
 
-#jenxkuebgj .gt_super {
+#mlfidbnhly .gt_super {
   font-size: 65%;
 }
 
-#jenxkuebgj .gt_footnote_marks {
+#mlfidbnhly .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jenxkuebgj .gt_asterisk {
+#mlfidbnhly .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jenxkuebgj .gt_indent_1 {
+#mlfidbnhly .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jenxkuebgj .gt_indent_2 {
+#mlfidbnhly .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jenxkuebgj .gt_indent_3 {
+#mlfidbnhly .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jenxkuebgj .gt_indent_4 {
+#mlfidbnhly .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jenxkuebgj .gt_indent_5 {
+#mlfidbnhly .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jenxkuebgj .katex-display {
+#mlfidbnhly .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jenxkuebgj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mlfidbnhly div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1094,23 +1106,23 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-aicc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="lzqibndwlp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lzqibndwlp table {
+<div id="ggcnpqiinr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ggcnpqiinr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lzqibndwlp thead, #lzqibndwlp tbody, #lzqibndwlp tfoot, #lzqibndwlp tr, #lzqibndwlp td, #lzqibndwlp th {
+#ggcnpqiinr thead, #ggcnpqiinr tbody, #ggcnpqiinr tfoot, #ggcnpqiinr tr, #ggcnpqiinr td, #ggcnpqiinr th {
   border-style: none;
 }
 
-#lzqibndwlp p {
+#ggcnpqiinr p {
   margin: 0;
   padding: 0;
 }
 
-#lzqibndwlp .gt_table {
+#ggcnpqiinr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1136,12 +1148,12 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_caption {
+#ggcnpqiinr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lzqibndwlp .gt_title {
+#ggcnpqiinr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1153,7 +1165,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#lzqibndwlp .gt_subtitle {
+#ggcnpqiinr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1165,7 +1177,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#lzqibndwlp .gt_heading {
+#ggcnpqiinr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1177,13 +1189,13 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_bottom_border {
+#ggcnpqiinr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_col_headings {
+#ggcnpqiinr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1198,7 +1210,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_col_heading {
+#ggcnpqiinr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1218,7 +1230,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#lzqibndwlp .gt_column_spanner_outer {
+#ggcnpqiinr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1230,15 +1242,15 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#lzqibndwlp .gt_column_spanner_outer:first-child {
+#ggcnpqiinr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lzqibndwlp .gt_column_spanner_outer:last-child {
+#ggcnpqiinr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lzqibndwlp .gt_column_spanner {
+#ggcnpqiinr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1250,11 +1262,11 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#lzqibndwlp .gt_spanner_row {
+#ggcnpqiinr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lzqibndwlp .gt_group_heading {
+#ggcnpqiinr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1280,7 +1292,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#lzqibndwlp .gt_empty_group_heading {
+#ggcnpqiinr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1295,15 +1307,15 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#lzqibndwlp .gt_from_md > :first-child {
+#ggcnpqiinr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lzqibndwlp .gt_from_md > :last-child {
+#ggcnpqiinr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lzqibndwlp .gt_row {
+#ggcnpqiinr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1322,7 +1334,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#lzqibndwlp .gt_stub {
+#ggcnpqiinr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1335,7 +1347,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lzqibndwlp .gt_stub_row_group {
+#ggcnpqiinr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1349,15 +1361,15 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#lzqibndwlp .gt_row_group_first td {
+#ggcnpqiinr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lzqibndwlp .gt_row_group_first th {
+#ggcnpqiinr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lzqibndwlp .gt_summary_row {
+#ggcnpqiinr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1367,16 +1379,16 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lzqibndwlp .gt_first_summary_row {
+#ggcnpqiinr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_first_summary_row.thick {
+#ggcnpqiinr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lzqibndwlp .gt_last_summary_row {
+#ggcnpqiinr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1386,7 +1398,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_grand_summary_row {
+#ggcnpqiinr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1396,7 +1408,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lzqibndwlp .gt_first_grand_summary_row {
+#ggcnpqiinr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1406,7 +1418,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_last_grand_summary_row_top {
+#ggcnpqiinr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1416,11 +1428,11 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_striped {
+#ggcnpqiinr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lzqibndwlp .gt_table_body {
+#ggcnpqiinr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1429,7 +1441,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_footnotes {
+#ggcnpqiinr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1443,7 +1455,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_footnote {
+#ggcnpqiinr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1452,7 +1464,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lzqibndwlp .gt_sourcenotes {
+#ggcnpqiinr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1466,7 +1478,7 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lzqibndwlp .gt_sourcenote {
+#ggcnpqiinr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1474,72 +1486,72 @@ Table&nbsp;9.2: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lzqibndwlp .gt_left {
+#ggcnpqiinr .gt_left {
   text-align: left;
 }
 
-#lzqibndwlp .gt_center {
+#ggcnpqiinr .gt_center {
   text-align: center;
 }
 
-#lzqibndwlp .gt_right {
+#ggcnpqiinr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lzqibndwlp .gt_font_normal {
+#ggcnpqiinr .gt_font_normal {
   font-weight: normal;
 }
 
-#lzqibndwlp .gt_font_bold {
+#ggcnpqiinr .gt_font_bold {
   font-weight: bold;
 }
 
-#lzqibndwlp .gt_font_italic {
+#ggcnpqiinr .gt_font_italic {
   font-style: italic;
 }
 
-#lzqibndwlp .gt_super {
+#ggcnpqiinr .gt_super {
   font-size: 65%;
 }
 
-#lzqibndwlp .gt_footnote_marks {
+#ggcnpqiinr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lzqibndwlp .gt_asterisk {
+#ggcnpqiinr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lzqibndwlp .gt_indent_1 {
+#ggcnpqiinr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lzqibndwlp .gt_indent_2 {
+#ggcnpqiinr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lzqibndwlp .gt_indent_3 {
+#ggcnpqiinr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lzqibndwlp .gt_indent_4 {
+#ggcnpqiinr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lzqibndwlp .gt_indent_5 {
+#ggcnpqiinr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lzqibndwlp .katex-display {
+#ggcnpqiinr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lzqibndwlp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ggcnpqiinr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1641,23 +1653,23 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-delta-aicc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="erkkpqsncf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#erkkpqsncf table {
+<div id="bczylgbbah" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bczylgbbah table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#erkkpqsncf thead, #erkkpqsncf tbody, #erkkpqsncf tfoot, #erkkpqsncf tr, #erkkpqsncf td, #erkkpqsncf th {
+#bczylgbbah thead, #bczylgbbah tbody, #bczylgbbah tfoot, #bczylgbbah tr, #bczylgbbah td, #bczylgbbah th {
   border-style: none;
 }
 
-#erkkpqsncf p {
+#bczylgbbah p {
   margin: 0;
   padding: 0;
 }
 
-#erkkpqsncf .gt_table {
+#bczylgbbah .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1683,12 +1695,12 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_caption {
+#bczylgbbah .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#erkkpqsncf .gt_title {
+#bczylgbbah .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1700,7 +1712,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#erkkpqsncf .gt_subtitle {
+#bczylgbbah .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1712,7 +1724,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#erkkpqsncf .gt_heading {
+#bczylgbbah .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1724,13 +1736,13 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_bottom_border {
+#bczylgbbah .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_col_headings {
+#bczylgbbah .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1745,7 +1757,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_col_heading {
+#bczylgbbah .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1765,7 +1777,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#erkkpqsncf .gt_column_spanner_outer {
+#bczylgbbah .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1777,15 +1789,15 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#erkkpqsncf .gt_column_spanner_outer:first-child {
+#bczylgbbah .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#erkkpqsncf .gt_column_spanner_outer:last-child {
+#bczylgbbah .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#erkkpqsncf .gt_column_spanner {
+#bczylgbbah .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1797,11 +1809,11 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#erkkpqsncf .gt_spanner_row {
+#bczylgbbah .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#erkkpqsncf .gt_group_heading {
+#bczylgbbah .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1827,7 +1839,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#erkkpqsncf .gt_empty_group_heading {
+#bczylgbbah .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1842,15 +1854,15 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#erkkpqsncf .gt_from_md > :first-child {
+#bczylgbbah .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#erkkpqsncf .gt_from_md > :last-child {
+#bczylgbbah .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#erkkpqsncf .gt_row {
+#bczylgbbah .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1869,7 +1881,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#erkkpqsncf .gt_stub {
+#bczylgbbah .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1882,7 +1894,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#erkkpqsncf .gt_stub_row_group {
+#bczylgbbah .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1896,15 +1908,15 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#erkkpqsncf .gt_row_group_first td {
+#bczylgbbah .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#erkkpqsncf .gt_row_group_first th {
+#bczylgbbah .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#erkkpqsncf .gt_summary_row {
+#bczylgbbah .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1914,16 +1926,16 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#erkkpqsncf .gt_first_summary_row {
+#bczylgbbah .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_first_summary_row.thick {
+#bczylgbbah .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#erkkpqsncf .gt_last_summary_row {
+#bczylgbbah .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1933,7 +1945,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_grand_summary_row {
+#bczylgbbah .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1943,7 +1955,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#erkkpqsncf .gt_first_grand_summary_row {
+#bczylgbbah .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1953,7 +1965,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_last_grand_summary_row_top {
+#bczylgbbah .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1963,11 +1975,11 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_striped {
+#bczylgbbah .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#erkkpqsncf .gt_table_body {
+#bczylgbbah .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1976,7 +1988,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_footnotes {
+#bczylgbbah .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1990,7 +2002,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_footnote {
+#bczylgbbah .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1999,7 +2011,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#erkkpqsncf .gt_sourcenotes {
+#bczylgbbah .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2013,7 +2025,7 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#erkkpqsncf .gt_sourcenote {
+#bczylgbbah .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2021,72 +2033,72 @@ Table&nbsp;9.3: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#erkkpqsncf .gt_left {
+#bczylgbbah .gt_left {
   text-align: left;
 }
 
-#erkkpqsncf .gt_center {
+#bczylgbbah .gt_center {
   text-align: center;
 }
 
-#erkkpqsncf .gt_right {
+#bczylgbbah .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#erkkpqsncf .gt_font_normal {
+#bczylgbbah .gt_font_normal {
   font-weight: normal;
 }
 
-#erkkpqsncf .gt_font_bold {
+#bczylgbbah .gt_font_bold {
   font-weight: bold;
 }
 
-#erkkpqsncf .gt_font_italic {
+#bczylgbbah .gt_font_italic {
   font-style: italic;
 }
 
-#erkkpqsncf .gt_super {
+#bczylgbbah .gt_super {
   font-size: 65%;
 }
 
-#erkkpqsncf .gt_footnote_marks {
+#bczylgbbah .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#erkkpqsncf .gt_asterisk {
+#bczylgbbah .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#erkkpqsncf .gt_indent_1 {
+#bczylgbbah .gt_indent_1 {
   text-indent: 5px;
 }
 
-#erkkpqsncf .gt_indent_2 {
+#bczylgbbah .gt_indent_2 {
   text-indent: 10px;
 }
 
-#erkkpqsncf .gt_indent_3 {
+#bczylgbbah .gt_indent_3 {
   text-indent: 15px;
 }
 
-#erkkpqsncf .gt_indent_4 {
+#bczylgbbah .gt_indent_4 {
   text-indent: 20px;
 }
 
-#erkkpqsncf .gt_indent_5 {
+#bczylgbbah .gt_indent_5 {
   text-indent: 25px;
 }
 
-#erkkpqsncf .katex-display {
+#bczylgbbah .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#erkkpqsncf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bczylgbbah div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2205,23 +2217,23 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-rel-lik-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ilifaggsou" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ilifaggsou table {
+<div id="ezghayqutq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ezghayqutq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ilifaggsou thead, #ilifaggsou tbody, #ilifaggsou tfoot, #ilifaggsou tr, #ilifaggsou td, #ilifaggsou th {
+#ezghayqutq thead, #ezghayqutq tbody, #ezghayqutq tfoot, #ezghayqutq tr, #ezghayqutq td, #ezghayqutq th {
   border-style: none;
 }
 
-#ilifaggsou p {
+#ezghayqutq p {
   margin: 0;
   padding: 0;
 }
 
-#ilifaggsou .gt_table {
+#ezghayqutq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2247,12 +2259,12 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_caption {
+#ezghayqutq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ilifaggsou .gt_title {
+#ezghayqutq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2264,7 +2276,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#ilifaggsou .gt_subtitle {
+#ezghayqutq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2276,7 +2288,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#ilifaggsou .gt_heading {
+#ezghayqutq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2288,13 +2300,13 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_bottom_border {
+#ezghayqutq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_col_headings {
+#ezghayqutq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2309,7 +2321,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_col_heading {
+#ezghayqutq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2329,7 +2341,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#ilifaggsou .gt_column_spanner_outer {
+#ezghayqutq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2341,15 +2353,15 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#ilifaggsou .gt_column_spanner_outer:first-child {
+#ezghayqutq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ilifaggsou .gt_column_spanner_outer:last-child {
+#ezghayqutq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ilifaggsou .gt_column_spanner {
+#ezghayqutq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2361,11 +2373,11 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#ilifaggsou .gt_spanner_row {
+#ezghayqutq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ilifaggsou .gt_group_heading {
+#ezghayqutq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2391,7 +2403,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#ilifaggsou .gt_empty_group_heading {
+#ezghayqutq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2406,15 +2418,15 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#ilifaggsou .gt_from_md > :first-child {
+#ezghayqutq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ilifaggsou .gt_from_md > :last-child {
+#ezghayqutq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ilifaggsou .gt_row {
+#ezghayqutq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2433,7 +2445,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#ilifaggsou .gt_stub {
+#ezghayqutq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2446,7 +2458,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#ilifaggsou .gt_stub_row_group {
+#ezghayqutq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2460,15 +2472,15 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#ilifaggsou .gt_row_group_first td {
+#ezghayqutq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ilifaggsou .gt_row_group_first th {
+#ezghayqutq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ilifaggsou .gt_summary_row {
+#ezghayqutq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2478,16 +2490,16 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#ilifaggsou .gt_first_summary_row {
+#ezghayqutq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_first_summary_row.thick {
+#ezghayqutq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ilifaggsou .gt_last_summary_row {
+#ezghayqutq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2497,7 +2509,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_grand_summary_row {
+#ezghayqutq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2507,7 +2519,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#ilifaggsou .gt_first_grand_summary_row {
+#ezghayqutq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2517,7 +2529,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_last_grand_summary_row_top {
+#ezghayqutq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2527,11 +2539,11 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_striped {
+#ezghayqutq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ilifaggsou .gt_table_body {
+#ezghayqutq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2540,7 +2552,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_footnotes {
+#ezghayqutq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2554,7 +2566,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_footnote {
+#ezghayqutq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2563,7 +2575,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#ilifaggsou .gt_sourcenotes {
+#ezghayqutq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2577,7 +2589,7 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#ilifaggsou .gt_sourcenote {
+#ezghayqutq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2585,72 +2597,72 @@ Table&nbsp;9.4: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#ilifaggsou .gt_left {
+#ezghayqutq .gt_left {
   text-align: left;
 }
 
-#ilifaggsou .gt_center {
+#ezghayqutq .gt_center {
   text-align: center;
 }
 
-#ilifaggsou .gt_right {
+#ezghayqutq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ilifaggsou .gt_font_normal {
+#ezghayqutq .gt_font_normal {
   font-weight: normal;
 }
 
-#ilifaggsou .gt_font_bold {
+#ezghayqutq .gt_font_bold {
   font-weight: bold;
 }
 
-#ilifaggsou .gt_font_italic {
+#ezghayqutq .gt_font_italic {
   font-style: italic;
 }
 
-#ilifaggsou .gt_super {
+#ezghayqutq .gt_super {
   font-size: 65%;
 }
 
-#ilifaggsou .gt_footnote_marks {
+#ezghayqutq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ilifaggsou .gt_asterisk {
+#ezghayqutq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ilifaggsou .gt_indent_1 {
+#ezghayqutq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ilifaggsou .gt_indent_2 {
+#ezghayqutq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ilifaggsou .gt_indent_3 {
+#ezghayqutq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ilifaggsou .gt_indent_4 {
+#ezghayqutq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ilifaggsou .gt_indent_5 {
+#ezghayqutq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ilifaggsou .katex-display {
+#ezghayqutq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ilifaggsou div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ezghayqutq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2799,23 +2811,23 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-model-prob-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="lkhcmsxpaa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lkhcmsxpaa table {
+<div id="efzucuzdyr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#efzucuzdyr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lkhcmsxpaa thead, #lkhcmsxpaa tbody, #lkhcmsxpaa tfoot, #lkhcmsxpaa tr, #lkhcmsxpaa td, #lkhcmsxpaa th {
+#efzucuzdyr thead, #efzucuzdyr tbody, #efzucuzdyr tfoot, #efzucuzdyr tr, #efzucuzdyr td, #efzucuzdyr th {
   border-style: none;
 }
 
-#lkhcmsxpaa p {
+#efzucuzdyr p {
   margin: 0;
   padding: 0;
 }
 
-#lkhcmsxpaa .gt_table {
+#efzucuzdyr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2841,12 +2853,12 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_caption {
+#efzucuzdyr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lkhcmsxpaa .gt_title {
+#efzucuzdyr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2858,7 +2870,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#lkhcmsxpaa .gt_subtitle {
+#efzucuzdyr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2870,7 +2882,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#lkhcmsxpaa .gt_heading {
+#efzucuzdyr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2882,13 +2894,13 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_bottom_border {
+#efzucuzdyr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_col_headings {
+#efzucuzdyr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2903,7 +2915,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_col_heading {
+#efzucuzdyr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2923,7 +2935,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#lkhcmsxpaa .gt_column_spanner_outer {
+#efzucuzdyr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2935,15 +2947,15 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#lkhcmsxpaa .gt_column_spanner_outer:first-child {
+#efzucuzdyr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lkhcmsxpaa .gt_column_spanner_outer:last-child {
+#efzucuzdyr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lkhcmsxpaa .gt_column_spanner {
+#efzucuzdyr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2955,11 +2967,11 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#lkhcmsxpaa .gt_spanner_row {
+#efzucuzdyr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lkhcmsxpaa .gt_group_heading {
+#efzucuzdyr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2985,7 +2997,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#lkhcmsxpaa .gt_empty_group_heading {
+#efzucuzdyr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3000,15 +3012,15 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#lkhcmsxpaa .gt_from_md > :first-child {
+#efzucuzdyr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lkhcmsxpaa .gt_from_md > :last-child {
+#efzucuzdyr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lkhcmsxpaa .gt_row {
+#efzucuzdyr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3027,7 +3039,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#lkhcmsxpaa .gt_stub {
+#efzucuzdyr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3040,7 +3052,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lkhcmsxpaa .gt_stub_row_group {
+#efzucuzdyr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3054,15 +3066,15 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#lkhcmsxpaa .gt_row_group_first td {
+#efzucuzdyr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lkhcmsxpaa .gt_row_group_first th {
+#efzucuzdyr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lkhcmsxpaa .gt_summary_row {
+#efzucuzdyr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3072,16 +3084,16 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lkhcmsxpaa .gt_first_summary_row {
+#efzucuzdyr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_first_summary_row.thick {
+#efzucuzdyr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lkhcmsxpaa .gt_last_summary_row {
+#efzucuzdyr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3091,7 +3103,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_grand_summary_row {
+#efzucuzdyr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3101,7 +3113,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lkhcmsxpaa .gt_first_grand_summary_row {
+#efzucuzdyr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3111,7 +3123,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_last_grand_summary_row_top {
+#efzucuzdyr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3121,11 +3133,11 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_striped {
+#efzucuzdyr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lkhcmsxpaa .gt_table_body {
+#efzucuzdyr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3134,7 +3146,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_footnotes {
+#efzucuzdyr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3148,7 +3160,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_footnote {
+#efzucuzdyr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3157,7 +3169,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lkhcmsxpaa .gt_sourcenotes {
+#efzucuzdyr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3171,7 +3183,7 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#lkhcmsxpaa .gt_sourcenote {
+#efzucuzdyr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3179,72 +3191,72 @@ Table&nbsp;9.5: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#lkhcmsxpaa .gt_left {
+#efzucuzdyr .gt_left {
   text-align: left;
 }
 
-#lkhcmsxpaa .gt_center {
+#efzucuzdyr .gt_center {
   text-align: center;
 }
 
-#lkhcmsxpaa .gt_right {
+#efzucuzdyr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lkhcmsxpaa .gt_font_normal {
+#efzucuzdyr .gt_font_normal {
   font-weight: normal;
 }
 
-#lkhcmsxpaa .gt_font_bold {
+#efzucuzdyr .gt_font_bold {
   font-weight: bold;
 }
 
-#lkhcmsxpaa .gt_font_italic {
+#efzucuzdyr .gt_font_italic {
   font-style: italic;
 }
 
-#lkhcmsxpaa .gt_super {
+#efzucuzdyr .gt_super {
   font-size: 65%;
 }
 
-#lkhcmsxpaa .gt_footnote_marks {
+#efzucuzdyr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lkhcmsxpaa .gt_asterisk {
+#efzucuzdyr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lkhcmsxpaa .gt_indent_1 {
+#efzucuzdyr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lkhcmsxpaa .gt_indent_2 {
+#efzucuzdyr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lkhcmsxpaa .gt_indent_3 {
+#efzucuzdyr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lkhcmsxpaa .gt_indent_4 {
+#efzucuzdyr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lkhcmsxpaa .gt_indent_5 {
+#efzucuzdyr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lkhcmsxpaa .katex-display {
+#efzucuzdyr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lkhcmsxpaa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#efzucuzdyr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3384,23 +3396,23 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-model-evidence-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="otlhwevhlx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#otlhwevhlx table {
+<div id="enunswqtex" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#enunswqtex table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#otlhwevhlx thead, #otlhwevhlx tbody, #otlhwevhlx tfoot, #otlhwevhlx tr, #otlhwevhlx td, #otlhwevhlx th {
+#enunswqtex thead, #enunswqtex tbody, #enunswqtex tfoot, #enunswqtex tr, #enunswqtex td, #enunswqtex th {
   border-style: none;
 }
 
-#otlhwevhlx p {
+#enunswqtex p {
   margin: 0;
   padding: 0;
 }
 
-#otlhwevhlx .gt_table {
+#enunswqtex .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3426,12 +3438,12 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_caption {
+#enunswqtex .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#otlhwevhlx .gt_title {
+#enunswqtex .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3443,7 +3455,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#otlhwevhlx .gt_subtitle {
+#enunswqtex .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3455,7 +3467,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#otlhwevhlx .gt_heading {
+#enunswqtex .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3467,13 +3479,13 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_bottom_border {
+#enunswqtex .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_col_headings {
+#enunswqtex .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3488,7 +3500,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_col_heading {
+#enunswqtex .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3508,7 +3520,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#otlhwevhlx .gt_column_spanner_outer {
+#enunswqtex .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3520,15 +3532,15 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#otlhwevhlx .gt_column_spanner_outer:first-child {
+#enunswqtex .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#otlhwevhlx .gt_column_spanner_outer:last-child {
+#enunswqtex .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#otlhwevhlx .gt_column_spanner {
+#enunswqtex .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3540,11 +3552,11 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#otlhwevhlx .gt_spanner_row {
+#enunswqtex .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#otlhwevhlx .gt_group_heading {
+#enunswqtex .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3570,7 +3582,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#otlhwevhlx .gt_empty_group_heading {
+#enunswqtex .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3585,15 +3597,15 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#otlhwevhlx .gt_from_md > :first-child {
+#enunswqtex .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#otlhwevhlx .gt_from_md > :last-child {
+#enunswqtex .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#otlhwevhlx .gt_row {
+#enunswqtex .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3612,7 +3624,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#otlhwevhlx .gt_stub {
+#enunswqtex .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3625,7 +3637,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#otlhwevhlx .gt_stub_row_group {
+#enunswqtex .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3639,15 +3651,15 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#otlhwevhlx .gt_row_group_first td {
+#enunswqtex .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#otlhwevhlx .gt_row_group_first th {
+#enunswqtex .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#otlhwevhlx .gt_summary_row {
+#enunswqtex .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3657,16 +3669,16 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#otlhwevhlx .gt_first_summary_row {
+#enunswqtex .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_first_summary_row.thick {
+#enunswqtex .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#otlhwevhlx .gt_last_summary_row {
+#enunswqtex .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3676,7 +3688,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_grand_summary_row {
+#enunswqtex .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3686,7 +3698,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#otlhwevhlx .gt_first_grand_summary_row {
+#enunswqtex .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3696,7 +3708,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_last_grand_summary_row_top {
+#enunswqtex .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3706,11 +3718,11 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_striped {
+#enunswqtex .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#otlhwevhlx .gt_table_body {
+#enunswqtex .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3719,7 +3731,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_footnotes {
+#enunswqtex .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3733,7 +3745,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_footnote {
+#enunswqtex .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3742,7 +3754,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#otlhwevhlx .gt_sourcenotes {
+#enunswqtex .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3756,7 +3768,7 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#otlhwevhlx .gt_sourcenote {
+#enunswqtex .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3764,72 +3776,72 @@ Table&nbsp;9.6: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#otlhwevhlx .gt_left {
+#enunswqtex .gt_left {
   text-align: left;
 }
 
-#otlhwevhlx .gt_center {
+#enunswqtex .gt_center {
   text-align: center;
 }
 
-#otlhwevhlx .gt_right {
+#enunswqtex .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#otlhwevhlx .gt_font_normal {
+#enunswqtex .gt_font_normal {
   font-weight: normal;
 }
 
-#otlhwevhlx .gt_font_bold {
+#enunswqtex .gt_font_bold {
   font-weight: bold;
 }
 
-#otlhwevhlx .gt_font_italic {
+#enunswqtex .gt_font_italic {
   font-style: italic;
 }
 
-#otlhwevhlx .gt_super {
+#enunswqtex .gt_super {
   font-size: 65%;
 }
 
-#otlhwevhlx .gt_footnote_marks {
+#enunswqtex .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#otlhwevhlx .gt_asterisk {
+#enunswqtex .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#otlhwevhlx .gt_indent_1 {
+#enunswqtex .gt_indent_1 {
   text-indent: 5px;
 }
 
-#otlhwevhlx .gt_indent_2 {
+#enunswqtex .gt_indent_2 {
   text-indent: 10px;
 }
 
-#otlhwevhlx .gt_indent_3 {
+#enunswqtex .gt_indent_3 {
   text-indent: 15px;
 }
 
-#otlhwevhlx .gt_indent_4 {
+#enunswqtex .gt_indent_4 {
   text-indent: 20px;
 }
 
-#otlhwevhlx .gt_indent_5 {
+#enunswqtex .gt_indent_5 {
   text-indent: 25px;
 }
 
-#otlhwevhlx .katex-display {
+#enunswqtex .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#otlhwevhlx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#enunswqtex div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3958,23 +3970,23 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
 </figcaption>
 <div aria-describedby="tbl-model-evidence-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ijpcyxwzet" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ijpcyxwzet table {
+<div id="lriohmspwg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lriohmspwg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ijpcyxwzet thead, #ijpcyxwzet tbody, #ijpcyxwzet tfoot, #ijpcyxwzet tr, #ijpcyxwzet td, #ijpcyxwzet th {
+#lriohmspwg thead, #lriohmspwg tbody, #lriohmspwg tfoot, #lriohmspwg tr, #lriohmspwg td, #lriohmspwg th {
   border-style: none;
 }
 
-#ijpcyxwzet p {
+#lriohmspwg p {
   margin: 0;
   padding: 0;
 }
 
-#ijpcyxwzet .gt_table {
+#lriohmspwg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4000,12 +4012,12 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-left-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_caption {
+#lriohmspwg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ijpcyxwzet .gt_title {
+#lriohmspwg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4017,7 +4029,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-bottom-width: 0;
 }
 
-#ijpcyxwzet .gt_subtitle {
+#lriohmspwg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4029,7 +4041,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-top-width: 0;
 }
 
-#ijpcyxwzet .gt_heading {
+#lriohmspwg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4041,13 +4053,13 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-right-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_bottom_border {
+#lriohmspwg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_col_headings {
+#lriohmspwg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4062,7 +4074,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-right-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_col_heading {
+#lriohmspwg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4082,7 +4094,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   overflow-x: hidden;
 }
 
-#ijpcyxwzet .gt_column_spanner_outer {
+#lriohmspwg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4094,15 +4106,15 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   padding-right: 4px;
 }
 
-#ijpcyxwzet .gt_column_spanner_outer:first-child {
+#lriohmspwg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ijpcyxwzet .gt_column_spanner_outer:last-child {
+#lriohmspwg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ijpcyxwzet .gt_column_spanner {
+#lriohmspwg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4114,11 +4126,11 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   width: 100%;
 }
 
-#ijpcyxwzet .gt_spanner_row {
+#lriohmspwg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ijpcyxwzet .gt_group_heading {
+#lriohmspwg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4144,7 +4156,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   text-align: left;
 }
 
-#ijpcyxwzet .gt_empty_group_heading {
+#lriohmspwg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4159,15 +4171,15 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   vertical-align: middle;
 }
 
-#ijpcyxwzet .gt_from_md > :first-child {
+#lriohmspwg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ijpcyxwzet .gt_from_md > :last-child {
+#lriohmspwg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ijpcyxwzet .gt_row {
+#lriohmspwg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4186,7 +4198,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   overflow-x: hidden;
 }
 
-#ijpcyxwzet .gt_stub {
+#lriohmspwg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4199,7 +4211,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   padding-right: 5px;
 }
 
-#ijpcyxwzet .gt_stub_row_group {
+#lriohmspwg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4213,15 +4225,15 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   vertical-align: top;
 }
 
-#ijpcyxwzet .gt_row_group_first td {
+#lriohmspwg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ijpcyxwzet .gt_row_group_first th {
+#lriohmspwg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ijpcyxwzet .gt_summary_row {
+#lriohmspwg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4231,16 +4243,16 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   padding-right: 5px;
 }
 
-#ijpcyxwzet .gt_first_summary_row {
+#lriohmspwg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_first_summary_row.thick {
+#lriohmspwg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ijpcyxwzet .gt_last_summary_row {
+#lriohmspwg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4250,7 +4262,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-bottom-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_grand_summary_row {
+#lriohmspwg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4260,7 +4272,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   padding-right: 5px;
 }
 
-#ijpcyxwzet .gt_first_grand_summary_row {
+#lriohmspwg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4270,7 +4282,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-top-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_last_grand_summary_row_top {
+#lriohmspwg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4280,11 +4292,11 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-bottom-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_striped {
+#lriohmspwg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ijpcyxwzet .gt_table_body {
+#lriohmspwg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4293,7 +4305,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-bottom-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_footnotes {
+#lriohmspwg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4307,7 +4319,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-right-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_footnote {
+#lriohmspwg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4316,7 +4328,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   padding-right: 5px;
 }
 
-#ijpcyxwzet .gt_sourcenotes {
+#lriohmspwg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4330,7 +4342,7 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   border-right-color: #D3D3D3;
 }
 
-#ijpcyxwzet .gt_sourcenote {
+#lriohmspwg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4338,72 +4350,72 @@ Table&nbsp;9.7: Models evaqluating the interaction effects rank-ordered by the a
   padding-right: 5px;
 }
 
-#ijpcyxwzet .gt_left {
+#lriohmspwg .gt_left {
   text-align: left;
 }
 
-#ijpcyxwzet .gt_center {
+#lriohmspwg .gt_center {
   text-align: center;
 }
 
-#ijpcyxwzet .gt_right {
+#lriohmspwg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ijpcyxwzet .gt_font_normal {
+#lriohmspwg .gt_font_normal {
   font-weight: normal;
 }
 
-#ijpcyxwzet .gt_font_bold {
+#lriohmspwg .gt_font_bold {
   font-weight: bold;
 }
 
-#ijpcyxwzet .gt_font_italic {
+#lriohmspwg .gt_font_italic {
   font-style: italic;
 }
 
-#ijpcyxwzet .gt_super {
+#lriohmspwg .gt_super {
   font-size: 65%;
 }
 
-#ijpcyxwzet .gt_footnote_marks {
+#lriohmspwg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ijpcyxwzet .gt_asterisk {
+#lriohmspwg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ijpcyxwzet .gt_indent_1 {
+#lriohmspwg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ijpcyxwzet .gt_indent_2 {
+#lriohmspwg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ijpcyxwzet .gt_indent_3 {
+#lriohmspwg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ijpcyxwzet .gt_indent_4 {
+#lriohmspwg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ijpcyxwzet .gt_indent_5 {
+#lriohmspwg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ijpcyxwzet .katex-display {
+#lriohmspwg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ijpcyxwzet div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lriohmspwg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4676,23 +4688,23 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
 </figcaption>
 <div aria-describedby="tbl-pretty-print-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="yxiudtdoos" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yxiudtdoos table {
+<div id="msivzrgafp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#msivzrgafp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yxiudtdoos thead, #yxiudtdoos tbody, #yxiudtdoos tfoot, #yxiudtdoos tr, #yxiudtdoos td, #yxiudtdoos th {
+#msivzrgafp thead, #msivzrgafp tbody, #msivzrgafp tfoot, #msivzrgafp tr, #msivzrgafp td, #msivzrgafp th {
   border-style: none;
 }
 
-#yxiudtdoos p {
+#msivzrgafp p {
   margin: 0;
   padding: 0;
 }
 
-#yxiudtdoos .gt_table {
+#msivzrgafp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4718,12 +4730,12 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-left-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_caption {
+#msivzrgafp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yxiudtdoos .gt_title {
+#msivzrgafp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4735,7 +4747,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-bottom-width: 0;
 }
 
-#yxiudtdoos .gt_subtitle {
+#msivzrgafp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4747,7 +4759,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-top-width: 0;
 }
 
-#yxiudtdoos .gt_heading {
+#msivzrgafp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4759,13 +4771,13 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_bottom_border {
+#msivzrgafp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_col_headings {
+#msivzrgafp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4780,7 +4792,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_col_heading {
+#msivzrgafp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4800,7 +4812,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#yxiudtdoos .gt_column_spanner_outer {
+#msivzrgafp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4812,15 +4824,15 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   padding-right: 4px;
 }
 
-#yxiudtdoos .gt_column_spanner_outer:first-child {
+#msivzrgafp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yxiudtdoos .gt_column_spanner_outer:last-child {
+#msivzrgafp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yxiudtdoos .gt_column_spanner {
+#msivzrgafp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4832,11 +4844,11 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   width: 100%;
 }
 
-#yxiudtdoos .gt_spanner_row {
+#msivzrgafp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yxiudtdoos .gt_group_heading {
+#msivzrgafp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4862,7 +4874,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   text-align: left;
 }
 
-#yxiudtdoos .gt_empty_group_heading {
+#msivzrgafp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4877,15 +4889,15 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   vertical-align: middle;
 }
 
-#yxiudtdoos .gt_from_md > :first-child {
+#msivzrgafp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yxiudtdoos .gt_from_md > :last-child {
+#msivzrgafp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yxiudtdoos .gt_row {
+#msivzrgafp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4904,7 +4916,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   overflow-x: hidden;
 }
 
-#yxiudtdoos .gt_stub {
+#msivzrgafp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4917,7 +4929,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#yxiudtdoos .gt_stub_row_group {
+#msivzrgafp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4931,15 +4943,15 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   vertical-align: top;
 }
 
-#yxiudtdoos .gt_row_group_first td {
+#msivzrgafp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yxiudtdoos .gt_row_group_first th {
+#msivzrgafp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yxiudtdoos .gt_summary_row {
+#msivzrgafp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4949,16 +4961,16 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#yxiudtdoos .gt_first_summary_row {
+#msivzrgafp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_first_summary_row.thick {
+#msivzrgafp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yxiudtdoos .gt_last_summary_row {
+#msivzrgafp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4968,7 +4980,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_grand_summary_row {
+#msivzrgafp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4978,7 +4990,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#yxiudtdoos .gt_first_grand_summary_row {
+#msivzrgafp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4988,7 +5000,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-top-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_last_grand_summary_row_top {
+#msivzrgafp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4998,11 +5010,11 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_striped {
+#msivzrgafp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yxiudtdoos .gt_table_body {
+#msivzrgafp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5011,7 +5023,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-bottom-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_footnotes {
+#msivzrgafp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5025,7 +5037,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_footnote {
+#msivzrgafp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5034,7 +5046,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#yxiudtdoos .gt_sourcenotes {
+#msivzrgafp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5048,7 +5060,7 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   border-right-color: #D3D3D3;
 }
 
-#yxiudtdoos .gt_sourcenote {
+#msivzrgafp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5056,72 +5068,72 @@ Table&nbsp;9.8: Models rank-ordered by the amount of empirical support as measur
   padding-right: 5px;
 }
 
-#yxiudtdoos .gt_left {
+#msivzrgafp .gt_left {
   text-align: left;
 }
 
-#yxiudtdoos .gt_center {
+#msivzrgafp .gt_center {
   text-align: center;
 }
 
-#yxiudtdoos .gt_right {
+#msivzrgafp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yxiudtdoos .gt_font_normal {
+#msivzrgafp .gt_font_normal {
   font-weight: normal;
 }
 
-#yxiudtdoos .gt_font_bold {
+#msivzrgafp .gt_font_bold {
   font-weight: bold;
 }
 
-#yxiudtdoos .gt_font_italic {
+#msivzrgafp .gt_font_italic {
   font-style: italic;
 }
 
-#yxiudtdoos .gt_super {
+#msivzrgafp .gt_super {
   font-size: 65%;
 }
 
-#yxiudtdoos .gt_footnote_marks {
+#msivzrgafp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yxiudtdoos .gt_asterisk {
+#msivzrgafp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yxiudtdoos .gt_indent_1 {
+#msivzrgafp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yxiudtdoos .gt_indent_2 {
+#msivzrgafp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yxiudtdoos .gt_indent_3 {
+#msivzrgafp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yxiudtdoos .gt_indent_4 {
+#msivzrgafp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yxiudtdoos .gt_indent_5 {
+#msivzrgafp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#yxiudtdoos .katex-display {
+#msivzrgafp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#yxiudtdoos div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#msivzrgafp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5727,8 +5739,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-03-logarithmic-transformations-outcome.html" class="pagination-link" aria-label="Log-Transforming the Outcome">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-03-logarithmic-transformations-predictor.html" class="pagination-link" aria-label="Log-Transforming the Predictor">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Predictor</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">

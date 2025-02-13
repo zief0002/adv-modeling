@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Statistical Reproducibility – Advanced Modeling and Reproducibility for Educational Scientists</title>
+<title>Modeling Nonindependence – Advanced Modeling and Reproducibility for Educational Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-02-project-organization.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./05-01-introduction-to-mixed-effects-models.html" rel="next">
+<link href="./03-05-rule-of-the-bulge.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-00-reproducibility.html">Introduction to Statistical Reproducibility</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-00-modeling-nonindependence.html">Modeling Nonindependence</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./01-00-reproducibility.html" class="sidebar-item-text sidebar-link active">
+            <a href="./01-00-reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Statistical Reproducibility</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Modeling Nonindependence</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -302,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Introduction to Statistical Reproducibility</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Quarto Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Modeling Nonindependence</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Quarto Code</button></div></div>
 </div>
 
 
@@ -319,24 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The first set of tools we will discuss will be related to reproducibility. Reproducibility, the idea that same results from a study should be obtained if the study is repeated, is a key part of the scientific process. Here, we are particularly concerned with <em>statistical reproducibility</em>. That is, given the same data and same code, two analysts should get the exact same results.</p>
-<p>In practice, reproducibility means making your data and syntax available to other researchers. There are many ways to do this, but the <a href="https://osf.io/">Open Science Framework website</a> is a fantastic option for making resources from research projects openly accessible to other researchers. Aside from the obvious advantages of minimizing fraud and bias, making research artifacts openly available also improves trust in the scientific process.</p>
-<div class="protip">
-<p><strong>PROTIP</strong></p>
-<p>Making your data and syntax available is something to consider duing the planning phases of a study so that you can make this transparent in the IRB proposal.</p>
-</div>
-<p>The initial chapters of this book will address:</p>
-<ul>
-<li>Installing Quarto and other computational tools;</li>
-<li>Project organization; and</li>
-<li>Using Quarto to integrate text and computation.</li>
-</ul>
-<!-- ```{r} -->
-<!-- #| echo: false -->
-<!-- #| out-width: "100%" -->
-<!-- knitr::include_graphics("figs/01-00-stat-computing.png") -->
-<!-- ``` -->
-<p><br><br></p>
+<p>The assumption of independence is important for using the general linear model (i.e., regression). When that assumption is not met, we need to use a different analytic method. In this section you will learn about linear mixed-effects models and how to fit, interpret, and evaluate these models using R.</p>
 
 
 <!-- -->
@@ -813,44 +796,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Front Matter">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Front Matter</span>
+      <a href="./03-05-rule-of-the-bulge.html" class="pagination-link" aria-label="Rule of the Bulge---An Example&quot;">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rule of the Bulge—An Example”</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-02-project-organization.html" class="pagination-link" aria-label="Project Organization">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Project Organization</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-01-introduction-to-mixed-effects-models.html" class="pagination-link" aria-label="Introduction to Mixed-Effects Models">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction to Statistical Reproducibility</span></span>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Modeling Nonindependence</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>The first set of tools we will discuss will be related to reproducibility. Reproducibility, the idea that same results from a study should be obtained if the study is repeated, is a key part of the scientific process. Here, we are particularly concerned with *statistical reproducibility*. That is, given the same data and same code, two analysts should get the exact same results.</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>In practice, reproducibility means making your data and syntax available to other researchers. There are many ways to do this, but the <span class="co">[</span><span class="ot">Open Science Framework website</span><span class="co">](https://osf.io/)</span> is a fantastic option for making resources from research projects openly accessible to other researchers. Aside from the obvious advantages of minimizing fraud and bias, making research artifacts openly available also improves trust in the scientific process.</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>:::protip</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**PROTIP**</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Making your data and syntax available is something to consider duing the planning phases of a study so that you can make this transparent in the IRB proposal. </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>The initial chapters of this book will address:</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Installing Quarto and other computational tools;</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Project organization; and</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Using Quarto to integrate text and computation.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ```{r} --&gt;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- #| echo: false --&gt;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- #| out-width: "100%" --&gt;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- knitr::include_graphics("figs/01-00-stat-computing.png") --&gt;</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ``` --&gt;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>&lt;br /&gt;&lt;br /&gt;</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>The assumption of independence is important for using the general linear model (i.e., regression). When that assumption is not met, we need to use a different analytic method. In this section you will learn about linear mixed-effects models and how to fit, interpret, and evaluate these models using R.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

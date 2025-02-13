@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Introduction to Mixed-Effects Models – Advanced Modeling and Reproducibility for Educational Scientists</title>
+<title>13&nbsp; Introduction to Mixed-Effects Models – Advanced Modeling and Reproducibility for Educational Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./05-02-lmer-average-change-over-time.html" rel="next">
-<link href="./03-03-logarithmic-transformations-outcome.html" rel="prev">
+<link href="./05-00-modeling-nonindependence.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -149,7 +149,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html">05-00-modeling-nonindependece.qmd</a></li><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-00-modeling-nonindependence.html">Modeling Nonindependence</a></li><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -267,16 +267,28 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-03-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  <a href="./03-03-logarithmic-transformations-predictor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Predictor</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-04-logarithmic-transformations-outcome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-05-rule-of-the-bulge.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Rule of the Bulge—An Example”</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">05-00-modeling-nonindependece.qmd</span></a>
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonindependence</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -285,25 +297,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -317,9 +329,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html">05-00-modeling-nonindependece.qmd</a></li><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-00-modeling-nonindependence.html">Modeling Nonindependence</a></li><li class="breadcrumb-item"><a href="./05-01-introduction-to-mixed-effects-models.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Quarto Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Quarto Code</button></div></div>
 </div>
 
 
@@ -369,8 +381,8 @@ window.Quarto = {
 </div>
 </div>
 <p><br></p>
-<section id="fixed-effects-regression-model" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="fixed-effects-regression-model"><span class="header-section-number">11.1</span> Fixed-Effects Regression Model</h2>
+<section id="fixed-effects-regression-model" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="fixed-effects-regression-model"><span class="header-section-number">13.1</span> Fixed-Effects Regression Model</h2>
 <p>To examine the research question of whether students’ reading achivement scores are changing over time, we might try regressing reading achievement scores on grade-level predict using the <code>lm()</code> function. The <code>lm()</code> function fits a <em>fixed-effects regression model</em>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit fixed-effects model</span></span>
@@ -401,8 +413,8 @@ window.Quarto = {
 \]</span></p>
 <p>The intercept suggests that the reading achievement score for students in the 0th grade (<code>grade</code>=0) is 184, on average. The slope indicates that each one-grade difference is associated with a change in reading achievement of 4.36 points, on average. To have faith in the analytic results from this model, we need to evaluate whether the assumptions are satisfied.</p>
 <p><br></p>
-<section id="residual-analysis" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="residual-analysis"><span class="header-section-number">11.1.1</span> Residual Analysis</h3>
+<section id="residual-analysis" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="residual-analysis"><span class="header-section-number">13.1.1</span> Residual Analysis</h3>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Augment the model</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>out <span class="ot">=</span> <span class="fu">augment</span>(lm<span class="fl">.1</span>)</span>
@@ -427,13 +439,13 @@ window.Quarto = {
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Output plots</span></span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-residuals-fixed" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Residual plots for the fixed-effects regression model." data-fig-align="center">
+<div id="fig-residuals-fixed" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Residual plots for the fixed-effects regression model.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuals-fixed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-01-introduction-to-mixed-effects-models_files/figure-html/fig-residuals-fixed-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Residual plots for the fixed-effects regression model.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuals-fixed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.1: Residual plots for the fixed-effects regression model.
+Figure&nbsp;13.1: Residual plots for the fixed-effects regression model.
 </figcaption>
 </figure>
 </div>
@@ -458,13 +470,13 @@ Figure&nbsp;11.1: Residual plots for the fixed-effects regression model.
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Studentized residuals"</span>) <span class="sc">+</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>student_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-residuals-by-student" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatterplots of the standardized residuals versus the fitted values for 22 students." data-fig-align="center">
+<div id="fig-residuals-by-student" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Scatterplots of the standardized residuals versus the fitted values for 22 students.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuals-by-student-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-01-introduction-to-mixed-effects-models_files/figure-html/fig-residuals-by-student-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Scatterplots of the standardized residuals versus the fitted values for 22 students.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-residuals-by-student-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.2: Scatterplots of the standardized residuals versus the fitted values for 22 students.
+Figure&nbsp;13.2: Scatterplots of the standardized residuals versus the fitted values for 22 students.
 </figcaption>
 </figure>
 </div>
@@ -484,8 +496,8 @@ Figure&nbsp;11.2: Scatterplots of the standardized residuals versus the fitted v
 <p><br></p>
 </section>
 </section>
-<section id="conceptual-idea-of-mixed-effects-models" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="conceptual-idea-of-mixed-effects-models"><span class="header-section-number">11.2</span> Conceptual Idea of Mixed-Effects Models</h2>
+<section id="conceptual-idea-of-mixed-effects-models" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="conceptual-idea-of-mixed-effects-models"><span class="header-section-number">13.2</span> Conceptual Idea of Mixed-Effects Models</h2>
 <p>In this section we will outline the conceptual ideas behind mixed-effects models by linking the ideas behind these models to the conventional, fixed-effects regression model. <em>It is important to realize that this is just conceptual in nature. Its purpose is only to help you understand the output you get from a mixed-effects model analysis. It is NOT how we carry out a mixed-effects analysis.</em></p>
 <p>To begin, we remind you of the fitted equation we obtained earlier from the fixed-effects regression:</p>
 <p><span class="math display">\[
@@ -562,8 +574,8 @@ Figure&nbsp;11.2: Scatterplots of the standardized residuals versus the fitted v
 <p>The fixed-effects (effects from the global model) are the same across all students. The random-effects, which represent the deviation between the global effects and the effects in a particular student’s equation, vary across students. That is, each student could potentially have a different random-effect for intercept and slope.</p>
 <p><br></p>
 </section>
-<section id="fitting-the-mixed-effects-regression-model-in-practice" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="fitting-the-mixed-effects-regression-model-in-practice"><span class="header-section-number">11.3</span> Fitting the Mixed-Effects Regression Model in Practice</h2>
+<section id="fitting-the-mixed-effects-regression-model-in-practice" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="fitting-the-mixed-effects-regression-model-in-practice"><span class="header-section-number">13.3</span> Fitting the Mixed-Effects Regression Model in Practice</h2>
 <p>In practice, we use the <code>lmer()</code> function from the <code>{lme4}</code> library to fit mixed-effect regression models. This function will essentially do what we did in the previous section, but rather than independently fitting the student-specific models, it will fit all these models simultaneously and make use of the information in all the clusters (students) to do this. This will result in better estimates for both the fixed- and random-effects.</p>
 <p>The syntax looks similar to the syntax we use in <code>lm()</code> except now we split it into two parts. The first part of the syntax gives a model formula to specify the outcome and fixed-effects included in the model. This is identical to the syntax we used in the <code>lm()</code> function. In our example: <code>reading_score ~ 1 + grade</code> indicating that we want to fit a model that includes fixed-effects for both the intercept and the effect of grade level.</p>
 <p>We also have to declare that we want to fit a model for each student. To do this, we will include a random-effect for intercept. (We could also include a random-effect of grade, but to keep it simpler right now, we only include the RE of intercept.) The second part of the syntax declares this: <code>(1 | student_id)</code>. This says to fit student-specific models that vary in their intercepts. This is literally added to the fixed-effects formula using <code>+</code>. The complete syntax is:</p>
@@ -631,8 +643,8 @@ Figure&nbsp;11.2: Scatterplots of the standardized residuals versus the fitted v
 <p>These interpretations are the interpretations of the random-effects.</p>
 <p><br></p>
 </section>
-<section id="random-effects-for-intercept-and-grade-level" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="random-effects-for-intercept-and-grade-level"><span class="header-section-number">11.4</span> Random Effects for Intercept and Grade Level</h2>
+<section id="random-effects-for-intercept-and-grade-level" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="random-effects-for-intercept-and-grade-level"><span class="header-section-number">13.4</span> Random Effects for Intercept and Grade Level</h2>
 <p>If we want to include both a random effect for intercept and grade level (i.e., allow the student-specific equations to have different intercept and slopes), we need to specify this in the random-effects part of the syntax: <code>(1 + grade | student_id)</code>. This says to fit student-specific models that vary in their intercepts and in their effects for grade level. The complete syntax is:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit mixed-effects regression model</span></span>
@@ -690,8 +702,8 @@ Figure&nbsp;11.2: Scatterplots of the standardized residuals versus the fitted v
 \]</span></p>
 <p><br></p>
 </section>
-<section id="looking-forward" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="looking-forward"><span class="header-section-number">11.5</span> Looking Forward</h2>
+<section id="looking-forward" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="looking-forward"><span class="header-section-number">13.5</span> Looking Forward</h2>
 <p>The mixed-effects model accounts for non-independence by including one or more random effects into the regression model. Over the next several sets of notes, we will learn how to determine whether we should include only a random effect of intercept, or whether we should also allow other effects in the model (e.g., grade level?) to also have a random effect. You will also learn how to do the decomposition of variation into within- and between-subjects components.</p>
 <p>As with any other statistical model, the mixed-effects model has a set of assumptions that we need to evaluate. You will learn what those assumptions are, and how to evaluate them. We will also learn about different ways of mathematically expressing this model, and how to present the results from our fitted equations.</p>
 
@@ -1177,13 +1189,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03-03-logarithmic-transformations-outcome.html" class="pagination-link" aria-label="Log-Transforming the Outcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Log-Transforming the Outcome</span></span>
+      <a href="./05-00-modeling-nonindependence.html" class="pagination-link" aria-label="Modeling Nonindependence">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Modeling Nonindependence</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./05-02-lmer-average-change-over-time.html" class="pagination-link" aria-label="LMER: Average Change Over Time">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
