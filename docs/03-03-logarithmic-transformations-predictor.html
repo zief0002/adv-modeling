@@ -406,7 +406,7 @@ window.Quarto = {
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-scatterplot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="LEFT: Six-year graduation rate as a function of median SAT score. The loess smoother (blue line) is also displayed. RIGHT: Scatterplot of the standardized residuals versus the fitted values for a model using median SAT scores to predict variation in six-year graduation rates. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
+<div id="fig-scatterplot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="LEFT: Six-year graduation rate as a function of median SAT score. The loess smoother (blue line) is also displayed. RIGHT: Scatterplot of the standardized residuals versus the fitted values for a model using median SAT scores to predict variation in six-year graduation rates. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-scatterplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-scatterplot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="LEFT: Six-year graduation rate as a function of median SAT score. The loess smoother (blue line) is also displayed. RIGHT: Scatterplot of the standardized residuals versus the fitted values for a model using median SAT scores to predict variation in six-year graduation rates. The reference line of Y=0 is also displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) shows the empirical relationship betwen the residuals and fitted values.">
@@ -641,7 +641,7 @@ Y = \log(X)
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout</span></span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">/</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-resid-compare" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Scatterplot of the standardized residuals versus the fitted values for the model fitted using the base-2 log-transformed median SAT values (LEFT) and the base-10 log-transformed median SAT values (RIGHT). In both plots the reference line of Y=0 is displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) showing the empirical relationship is also displayed.">
+<div id="fig-resid-compare" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatterplot of the standardized residuals versus the fitted values for the model fitted using the base-2 log-transformed median SAT values (LEFT) and the base-10 log-transformed median SAT values (RIGHT). In both plots the reference line of Y=0 is displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) showing the empirical relationship is also displayed." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resid-compare-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-resid-compare-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Scatterplot of the standardized residuals versus the fitted values for the model fitted using the base-2 log-transformed median SAT values (LEFT) and the base-10 log-transformed median SAT values (RIGHT). In both plots the reference line of Y=0 is displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) showing the empirical relationship is also displayed.">
@@ -717,7 +717,7 @@ Figure&nbsp;10.3: Scatterplot of the standardized residuals versus the fitted va
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain residuals for base-2 log-transformed SAT</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">residual_plots</span>(lm.ln)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-residuals-ln" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of the standardized residuals versus the fitted values for a model fitted using the natural log-transformed median SAT scores. The reference line of Y=0 is displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) showing the empirical relationship is also displayed.">
+<div id="fig-residuals-ln" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of the standardized residuals versus the fitted values for a model fitted using the natural log-transformed median SAT scores. The reference line of Y=0 is displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) showing the empirical relationship is also displayed." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuals-ln-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-residuals-ln-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Plot of the standardized residuals versus the fitted values for a model fitted using the natural log-transformed median SAT scores. The reference line of Y=0 is displayed along with the 95% confidence envelope (grey shaded area). The loess smoother (solid, blue line) showing the empirical relationship is also displayed.">
@@ -771,23 +771,23 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
 </figcaption>
 <div aria-describedby="tbl-pred-grad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="tfsyvimqld" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tfsyvimqld table {
+<div id="apnsuhlhku" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#apnsuhlhku table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tfsyvimqld thead, #tfsyvimqld tbody, #tfsyvimqld tfoot, #tfsyvimqld tr, #tfsyvimqld td, #tfsyvimqld th {
+#apnsuhlhku thead, #apnsuhlhku tbody, #apnsuhlhku tfoot, #apnsuhlhku tr, #apnsuhlhku td, #apnsuhlhku th {
   border-style: none;
 }
 
-#tfsyvimqld p {
+#apnsuhlhku p {
   margin: 0;
   padding: 0;
 }
 
-#tfsyvimqld .gt_table {
+#apnsuhlhku .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -813,12 +813,12 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-left-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_caption {
+#apnsuhlhku .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tfsyvimqld .gt_title {
+#apnsuhlhku .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -830,7 +830,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-bottom-width: 0;
 }
 
-#tfsyvimqld .gt_subtitle {
+#apnsuhlhku .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -842,7 +842,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-top-width: 0;
 }
 
-#tfsyvimqld .gt_heading {
+#apnsuhlhku .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -854,13 +854,13 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-right-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_bottom_border {
+#apnsuhlhku .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_col_headings {
+#apnsuhlhku .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -875,7 +875,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-right-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_col_heading {
+#apnsuhlhku .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -895,7 +895,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   overflow-x: hidden;
 }
 
-#tfsyvimqld .gt_column_spanner_outer {
+#apnsuhlhku .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -907,15 +907,15 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   padding-right: 4px;
 }
 
-#tfsyvimqld .gt_column_spanner_outer:first-child {
+#apnsuhlhku .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tfsyvimqld .gt_column_spanner_outer:last-child {
+#apnsuhlhku .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tfsyvimqld .gt_column_spanner {
+#apnsuhlhku .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -927,11 +927,11 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   width: 100%;
 }
 
-#tfsyvimqld .gt_spanner_row {
+#apnsuhlhku .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tfsyvimqld .gt_group_heading {
+#apnsuhlhku .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -957,7 +957,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   text-align: left;
 }
 
-#tfsyvimqld .gt_empty_group_heading {
+#apnsuhlhku .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -972,15 +972,15 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   vertical-align: middle;
 }
 
-#tfsyvimqld .gt_from_md > :first-child {
+#apnsuhlhku .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tfsyvimqld .gt_from_md > :last-child {
+#apnsuhlhku .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tfsyvimqld .gt_row {
+#apnsuhlhku .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -999,7 +999,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   overflow-x: hidden;
 }
 
-#tfsyvimqld .gt_stub {
+#apnsuhlhku .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1012,7 +1012,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   padding-right: 5px;
 }
 
-#tfsyvimqld .gt_stub_row_group {
+#apnsuhlhku .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1026,15 +1026,15 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   vertical-align: top;
 }
 
-#tfsyvimqld .gt_row_group_first td {
+#apnsuhlhku .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tfsyvimqld .gt_row_group_first th {
+#apnsuhlhku .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tfsyvimqld .gt_summary_row {
+#apnsuhlhku .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1044,16 +1044,16 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   padding-right: 5px;
 }
 
-#tfsyvimqld .gt_first_summary_row {
+#apnsuhlhku .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_first_summary_row.thick {
+#apnsuhlhku .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tfsyvimqld .gt_last_summary_row {
+#apnsuhlhku .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1063,7 +1063,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-bottom-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_grand_summary_row {
+#apnsuhlhku .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1073,7 +1073,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   padding-right: 5px;
 }
 
-#tfsyvimqld .gt_first_grand_summary_row {
+#apnsuhlhku .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1083,7 +1083,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-top-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_last_grand_summary_row_top {
+#apnsuhlhku .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1093,11 +1093,11 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-bottom-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_striped {
+#apnsuhlhku .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tfsyvimqld .gt_table_body {
+#apnsuhlhku .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1106,7 +1106,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-bottom-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_footnotes {
+#apnsuhlhku .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1120,7 +1120,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-right-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_footnote {
+#apnsuhlhku .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1129,7 +1129,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   padding-right: 5px;
 }
 
-#tfsyvimqld .gt_sourcenotes {
+#apnsuhlhku .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1143,7 +1143,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   border-right-color: #D3D3D3;
 }
 
-#tfsyvimqld .gt_sourcenote {
+#apnsuhlhku .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1151,72 +1151,72 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
   padding-right: 5px;
 }
 
-#tfsyvimqld .gt_left {
+#apnsuhlhku .gt_left {
   text-align: left;
 }
 
-#tfsyvimqld .gt_center {
+#apnsuhlhku .gt_center {
   text-align: center;
 }
 
-#tfsyvimqld .gt_right {
+#apnsuhlhku .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tfsyvimqld .gt_font_normal {
+#apnsuhlhku .gt_font_normal {
   font-weight: normal;
 }
 
-#tfsyvimqld .gt_font_bold {
+#apnsuhlhku .gt_font_bold {
   font-weight: bold;
 }
 
-#tfsyvimqld .gt_font_italic {
+#apnsuhlhku .gt_font_italic {
   font-style: italic;
 }
 
-#tfsyvimqld .gt_super {
+#apnsuhlhku .gt_super {
   font-size: 65%;
 }
 
-#tfsyvimqld .gt_footnote_marks {
+#apnsuhlhku .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tfsyvimqld .gt_asterisk {
+#apnsuhlhku .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tfsyvimqld .gt_indent_1 {
+#apnsuhlhku .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tfsyvimqld .gt_indent_2 {
+#apnsuhlhku .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tfsyvimqld .gt_indent_3 {
+#apnsuhlhku .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tfsyvimqld .gt_indent_4 {
+#apnsuhlhku .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tfsyvimqld .gt_indent_5 {
+#apnsuhlhku .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tfsyvimqld .katex-display {
+#apnsuhlhku .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tfsyvimqld div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#apnsuhlhku div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1340,7 +1340,7 @@ Table&nbsp;10.1: Median SAT Values and Graduation Rates for Three Hypothetical S
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Estimated median SAT score (in hundreds)"</span>) <span class="sc">+</span></span>
 <span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Six-year graduation rate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-plot-model-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of the predicted graduation rate as a function of median SAT score. The non-linearity in the plot indicates that there is a diminishing positive effect of SAT on graduation rates.">
+<div id="fig-plot-model-01" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of the predicted graduation rate as a function of median SAT score. The non-linearity in the plot indicates that there is a diminishing positive effect of SAT on graduation rates." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-plot-model-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-plot-model-01-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of the predicted graduation rate as a function of median SAT score. The non-linearity in the plot indicates that there is a diminishing positive effect of SAT on graduation rates.">
@@ -1401,7 +1401,7 @@ Y_i=\ln\bigg(e^{\hat\beta_0} \times X_i^{\hat\beta_1}\bigg) ~~\equiv~~ Y_i =\bet
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(quad <span class="sc">~</span> x, <span class="at">data =</span> new, <span class="at">col =</span> <span class="st">"#6d92ee"</span>, <span class="at">lty =</span> <span class="st">"dashed"</span>, <span class="at">lwd =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-quad-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Comparison of the quadratic polynomial (blue, dashed line) and logarithmic (red, solid line) functions of *X*.">
+<div id="fig-quad-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparison of the quadratic polynomial (blue, dashed line) and logarithmic (red, solid line) functions of *X*." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-quad-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-quad-02-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Comparison of the quadratic polynomial (blue, dashed line) and logarithmic (red, solid line) functions of *X*.">
@@ -1456,7 +1456,7 @@ Log-transformed SAT  3 230.39       1.85   0.28   1.00 -111.78</code></pre>
 <span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">/</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-resid-compare-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Residual plots for the log model (TOP) and quadratic model (BOTTOM).">
+<div id="fig-resid-compare-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Residual plots for the log model (TOP) and quadratic model (BOTTOM)." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resid-compare-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-resid-compare-02-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Residual plots for the log model (TOP) and quadratic model (BOTTOM).">
@@ -1548,7 +1548,7 @@ Figure&nbsp;10.7: Residual plots for the log model (TOP) and quadratic model (BO
 <span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Estimated median SAT score (in hundreds)"</span>) <span class="sc">+</span></span>
 <span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Six-year graduation rate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-model-02" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of predicted graduation rate as a function of median SAT score for public (blue, solid line) and private (orange, dashed line) institutions.">
+<div id="fig-model-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of predicted graduation rate as a function of median SAT score for public (blue, solid line) and private (orange, dashed line) institutions." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-model-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="03-03-logarithmic-transformations-predictor_files/figure-html/fig-model-02-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Plot of predicted graduation rate as a function of median SAT score for public (blue, solid line) and private (orange, dashed line) institutions.">

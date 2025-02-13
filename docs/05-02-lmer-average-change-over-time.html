@@ -490,7 +490,7 @@ window.Quarto = {
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-ind-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line.">
+<div id="fig-ind-profiles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ind-profiles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-ind-profiles-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is displayed as a thicker line.">
@@ -626,7 +626,7 @@ Figure&nbsp;14.1: Plot showing the change in vocabulary score over time for 64 s
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-fitted-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
+<div id="fig-fitted-1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line)." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fitted-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-fitted-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
@@ -646,7 +646,7 @@ Figure&nbsp;14.2: Predicted change in vocabulary score over time based on the un
 <p>To see this graphically, we show Student 1’s data along with the global “growth” curve and Student 1’s specific “growth” curves. The between-student variation is akin to the average of the squared deviations between each student-specific “growth” curve and the global “growth” curve. The left-hand plot below shows these residuals for Student 1, referred to as <em>Level-2 residuals</em>. The within-student variation is akin to the average of the squared deviations between each student’s outcome (vocabulary scores) and that student’s specific “growth” curve. The right-hand plot below shows these residuals for Student 1, referred to as <em>Level-1 residuals</em>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-between-and-within-variation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Student 1's vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed.">
+<div id="fig-between-and-within-variation" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Student 1's vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-between-and-within-variation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figs/lmer-sources-of-variation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Student 1's vocabulary scores at each time point along with the predicted change in vocabulary score over time based on the unconditional random intercepts model for all students (solid, black line) and Student 1 (blue, dashed line). The between-student variation (LEFT) and within-student variation (RIGHT) based on the residuals for Student 1 are also displayed.">
@@ -1007,7 +1007,7 @@ Figure&nbsp;14.3: Student 1’s vocabulary scores at each time point along with 
 <span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-fitted-lmer" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots.">
+<div id="fig-fitted-lmer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fitted-lmer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-fitted-lmer-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Plot showing the change in vocabulary score over time for 64 students. The average growth profile is also displayed. This is shown for the non-centered (left) and 8th-grade centered (right) grade-level. A large blue point is shown at the intercept value in both plots.">
@@ -1095,7 +1095,7 @@ Figure&nbsp;14.4: Plot showing the change in vocabulary score over time for 64 s
 <span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-lmer-students" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
+<div id="fig-lmer-students" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line)." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lmer-students-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-lmer-students-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score over time based on the linear (centered) unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
@@ -1244,7 +1244,7 @@ No change         3 1015.35     151.06   0.00   1.00 -504.63</code></pre>
 <span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-lmer-log" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score as a function of grade-level.">
+<div id="fig-lmer-log" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score as a function of grade-level." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lmer-log-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-lmer-log-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score as a function of grade-level.">
@@ -1318,7 +1318,7 @@ Figure&nbsp;14.6: Predicted change in vocabulary score as a function of grade-le
 <span id="cb71-24"><a href="#cb71-24" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
 <span id="cb71-25"><a href="#cb71-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Vocabulary score"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-lmer-log-students" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
+<div id="fig-lmer-log-students" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line)." data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lmer-log-students-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="05-02-lmer-average-change-over-time_files/figure-html/fig-lmer-log-students-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Predicted change in vocabulary score over time based on the log-linear unconditional growth model for all students (solid, black line), Student 1 (blue, dashed line), and Student 2 (orange, dashed line).">
