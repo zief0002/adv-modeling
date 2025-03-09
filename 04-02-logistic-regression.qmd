@@ -1,29 +1,18 @@
----
-title: "Logistic Regression"
-format:
-  html:
-    code-copy: true
-    code-fold: false
-    highlight-style: zenburn
-    df-print: paged
-    css: ["../assets/sticky-notes.css"]
-date: "`r format(Sys.Date(), '%B %d %Y')`"
-bibliography: "../assets/epsy8252.bib"
-csl: "../assets/apa.csl"
----
+# Logistic Regression
+
 
 ```{r}
 #| echo: false
-source("../assets/notes-setup.R")
+source("scripts/_common.R")
 ```
 
 
-# Preparation
+## Preparation
 
-In this set of notes, you will learn how to use logistic regression models to model dichotomous categorical outcome variables (e.g., dummy coded outcome). We will use data from the file *graduation.csv* to explore predictors of college graduation. 
+In this chapter, you will learn how to use logistic regression models to model dichotomous categorical outcome variables (e.g., dummy coded outcome). We will use data from the file *graduation.csv* to explore predictors of college graduation. 
 
-- [CSV File](https://raw.githubusercontent.com/zief0002/benevolent-anteater/main/data/graduation.csv)
-- [Data Codebook](http://zief0002.github.io/benevolent-anteater/codebooks/graduation.html)
+- [CSV File](https://raw.githubusercontent.com/zief0002/fluffy-ants/main/data/graduation.csv)
+- [Data Codebook](http://zief0002.github.io/fluffy-ants/codebooks/graduation.html)
 
 
 ```{r}
@@ -37,7 +26,7 @@ library(performance)
 library(tidyverse)
 
 # Read in data and create dummy variable for outcome
-grad = read_csv(file = "https://raw.githubusercontent.com/zief0002/benevolent-anteater/main/data/graduation.csv") |>
+grad = read_csv(file = "https://raw.githubusercontent.com/zief0002/fluffy-ants/main/data/graduation.csv") |>
   mutate(
     got_degree = if_else(degree == "Yes", 1, 0)
   )
@@ -51,6 +40,7 @@ We will also examine the empirical proportions of students who obtain a degree a
 ```{r}
 #| label: fig-scatterplot-proportion
 #| fig-cap: "Proportion of students who obtain a degree conditional on ACT score. Size of the dot is proportional to sample size. The loess smoother is based on the raw data."
+#| fig-alt: "Proportion of students who obtain a degree conditional on ACT score. Size of the dot is proportional to sample size. The loess smoother is based on the raw data."
 # Obtain the proportion who obtain a degree for each ACT score
 prop_grad = grad |> 
   group_by(act, degree) |> 
@@ -77,13 +67,14 @@ In the last set of notes, we saw that using the linear probability model leads t
 <br />
 
 
-# Alternative Models to the Linear Probability Model
+## Alternative Models to the Linear Probability Model
 
 Many of the non-linear models that are typically used to model dichotomous outcome data are "S"-shaped models. Below is a plot of one-such "S"-shaped model.
 
 ```{r}
 #| label: fig-s-shape
 #| fig-cap: "An 'S'-shaped model."
+#| fig-alt: "An 'S'-shaped model."
 #| echo: false
 x = seq(from = -4, to = 4, by = .01)
 y = 1 / (1 + exp(-(0 + 4*x)))
@@ -98,7 +89,7 @@ In our student example, the empirical data maps well to this curve. Higher ACT s
 <br />
 
 
-## A Transformation to Fit the "S"-shaped Curve
+### A Transformation to Fit the "S"-shaped Curve
 
 We need to identify a mathematical function that relates *X* to *Y* in such a way that we produce this "S"-shaped curve. To do this we apply a transformation function, call it $\Lambda$ (Lambda), that fits the criteria for such a function (monotonic, nonlinear, maps to $[0,~1]$ space). There are several mathematical functions that do this. One commonly used function that meets these specifications is the **logistic function**. Mathematically, the logistic function is:
 
@@ -121,6 +112,7 @@ Below we show how to transform many such values using R.
 ```{r}
 #| label: fig-logistic
 #| fig-cap: "Plot of the logistically transformed values for a sequence of values from -4 to 4."
+#| fig-alt: "Plot of the logistically transformed values for a sequence of values from -4 to 4."
 # Create w values and transformed values
 example = tibble(
   x = seq(from = -4, to = 4, by = 0.01)  # Set up values
@@ -143,7 +135,7 @@ You can see that by using this transformation we get a monotonic "S"-shaped curv
 <br />
 
 
-# Using the Logistic Function in Regression
+## Using the Logistic Function in Regression
 
 How does this work in a regression? There, we are relating the *predicted values*, that is, the $\beta_0 + \beta_1(X_i)$ values, to the probability of *Y*. So we need to apply the "S"-shaped logistic transformation to convert those predicted values:
 
@@ -162,7 +154,7 @@ Since we took a linear model ($\beta_0 + \beta_1(X_i)$) and applied a logistic t
 <br />
 
 
-## Re-Expressing a Logistic Transformation
+### Re-Expressing a Logistic Transformation
 
 The logistic model expresses the proportion of 1s ($\pi_i$) as a function of the predictor $X$. It can be mathematically expressed as:
 
@@ -193,13 +185,15 @@ $$
 $$
 
 :::fyi
+**FYI**
+
 The logistic model expresses the natural logarithm of $\frac{\pi_i}{1 - \pi_i}$ as a linear function of *X*. Note that there is no error term on this model. This is because the model is for the mean structure only (the proportions), we are not modeling the actual $Y_i$ values (i.e., the 0s and 1s) with the logistic regression model.
 :::
 
 <br />
 
 
-# Odds: A Ratio of Probabilities
+## Odds: A Ratio of Probabilities
 
 The ratio that we are taking the logarithm of, $\frac{\pi_i}{1 - \pi_i}$, is referred to as *odds*. Odds are the ratio of two probabilities. Namely the chance an event occurs ($\pi_i$) versus the chance that same event does not occur ($1 - \pi_i$). As such, it gives the *relative probability* of that event occurring. To understand this better, we will look at a couple examples.
 
@@ -220,13 +214,15 @@ $$
 The probability that the Minnesota Wild win the Stanley Cup is 0.0204 times as likely them NOT winning the Stanley Cup. (Odds less than 1 indicate that is is more likely for an event NOT to occur than to occur. Invert the fraction to compute how much more like the event is not to occur.)
 
 :::fyi
+**FYI**
+
 In the logistic model, we are predicting the log-odds (also referred to as the *logit*. When we get these values, we typically transform the logits to odds by inverting the log-transformation (take *e* to that power.)
 :::
 
 <br />
 
 
-# Relationship between X and Different Transformations
+## Relationship between X and Different Transformations
 
 Odds are a re-expression of the probabilities, and similarly log-odds (or logits) is a transformation of the odds onto the log scale. While the logistic regression is performed on the logits of Y, like any model where we have transformed variables to work in the model, we can back-transform when we present the results. In logistic regression we can present our results in logits, odds, or probabilities. Because of the transformations, each of these will have a different relationship with the predictor.
 
@@ -247,6 +243,7 @@ example
 ```{r}
 #| label: fig-prob-odds-logits
 #| fig-cap: "Plot showing the relationship between the probability of *Y* versus *X* (LEFT), the odds of *Y* versus *X* (CENTER), and the log-odds of *Y* versus *X* (RIGHT)."
+#| fig-alt: "Plot showing the relationship between the probability of *Y* versus *X* (LEFT), the odds of *Y* versus *X* (CENTER), and the log-odds of *Y* versus *X* (RIGHT)."
 #| fig-width: 12
 #| fig-height: 4
 #| out-width: "90%"
@@ -278,7 +275,7 @@ Note that by transforming the probabilities into odds, we have changed the "S"-s
 <br />
 
 
-# Binomially Distributed Errors
+## Binomially Distributed Errors
 
 The logistic transformation fixed two problems: (1) the non-linearity in the conditional mean function, and (2) bounding any predicted values between 0 and 1. However, just fitting this transformation does not fix the problem of non-normality. Remember from the previous notes we learned that at each $X_i$ there were only two potential values for $Y_i$; 0 or 1. Rather than use a normal (or Gaussian) distribution to model the conditional distribution of $Y_i$, we will use the *binomial distribution*.
 
@@ -287,7 +284,7 @@ The binomial distribution is a discrete probability distribution that gives the 
 <br />
 
 
-# Fitting the Binomial Logistic Model in R
+## Fitting the Binomial Logistic Model in R
 
 To fit a logistic regression model with binomial errors, we use the `glm()` function.^[The logistic regression model is from a family of models referred to as *Generalized Linear Regression* models. The General Linear Model (i.e., fixed-effects regression model) is also a member of the Generalized Linear Model family.] The syntax to fit the logistic model using `glm()` is:
 
@@ -300,6 +297,7 @@ The formula depicting the model and the `data=` arguments are specified in the s
 For our example,
 
 ```{r}
+# Fit logistic model
 glm.1 = glm(got_degree ~ 1 + act, data = grad, family = binomial(link = "logit"))
 ```
 
@@ -317,6 +315,8 @@ $$
 $$
 
 :::interpret
+**INTERPRETATION**
+
 We interpret the coefficients in the same manner as we interpret coefficients from a linear model, with the caveat that the outcome is now in log-odds (or logits):
 
 - The predicted log-odds of obtaining a degree for students with an ACT score of 0 are $-1.61$.
@@ -326,7 +326,7 @@ We interpret the coefficients in the same manner as we interpret coefficients fr
 <br />
 
 
-## Back-Transforming to Odds
+### Back-Transforming to Odds
 
 For better interpretations, we can back-transform log-odds to odds. This is typically a better metric for interpretation of the coefficients. To back-transform to odds, we exponentiate both sides of the fitted equation and use the rules of exponents to simplify:
 
@@ -371,10 +371,13 @@ These students odds of obtaining a degree are $e^{0.11}$ times greater than stud
 We can obtain these values in R by using the `coef()` function to obtain the fitted model's coefficients and then exponentiating them using the `exp()` function.
 
 ```{r}
+# Exponentiate the coefficients
 exp(coef(glm.1))
 ```
 
 :::interpret
+**INTERPRETATION**
+
 From these values, we interpret the coefficients in the odds metric as:
 
 - The predicted odds of obtaining a degree for students with an ACT score of 0 are 0.20.
@@ -401,6 +404,7 @@ We include the right-side of this in the argument `fun=` of the `geom_function()
 ```{r}
 #| label: fig-predicted-odds
 #| fig-cap: "Predicted odds of obtaining a degree as a function of ACT score."
+#| fig-alt: "Predicted odds of obtaining a degree as a function of ACT score."
 # Plot the fitted equation
 ggplot(data = grad, aes(x = act, y = got_degree)) +
   geom_point(alpha = 0) +
@@ -418,7 +422,7 @@ The monotonic increase in the curve indicates the positive effect of ACT score o
 <br />
 
 
-## Back-Transforming to Probability
+### Back-Transforming to Probability
 
 We can also back-transform from odds to probability. To do this, we will again start with the logistic fitted equation and use algebra to isolate the probability of obtaining a degree ($\pi_i$) on the left-hand side of the equation.
 
@@ -438,6 +442,7 @@ $$
 That is, to obtain the probability of obtaining a degree, we can transform the fitted values (i.e., the predicted log-odds) from the logistic model. For example, the intercept from the logistic fitted equation, $-1.61$ was the predicted log-odds of obtaining a degree for students with an ACT of 0. To obtain the predicted probability of obtaining a degree for students with an ACT of 0:
 
 ```{r}
+# Predicted probability of obtaining a degree; ACT=0
 exp(-1.61) / (1 + exp(-1.61))
 ```
 
@@ -452,6 +457,7 @@ $$
 ```{r}
 #| label: fig-predicted-probability
 #| fig-cap: "Predicted probability of obtaining a degree as a function of ACT score."
+#| fig-alt: "Predicted probability of obtaining a degree as a function of ACT score."
 # Plot the fitted equation
 ggplot(data = grad, aes(x = act, y = got_degree)) +
   geom_point(alpha = 0) +
@@ -470,7 +476,7 @@ One interesting point on the plot is the ACT score where the probability of obta
 
 <br />
 
-### Rough Interpretation of the Slope
+#### Rough Interpretation of the Slope
 
 One rough interpretation that is often used is to divide the slope coefficient by 4 to get an upper bound of the predictive difference in probability of *Y* per unit increase in *X*. In our example, each one-point difference in ACT score is associated with, at most, a $0.108/4=.027$ difference in the probability of obtaining a degree, on average.
 
@@ -504,7 +510,7 @@ Thus the maximum rate-of-change is the based on the slope coefficient divided by
 <br />
 
 
-# Model-Level Summaries
+## Model-Level Summaries
 
 The `glance()` output for the GLM model also included model-level information. For the model we fitted, the model-level output was:
 
@@ -539,7 +545,7 @@ The deviance values or log-likelihoods are often reported in a table of regressi
 <br />
 
 
-# Evaluating the Effect of ACT Acore
+## Evaluating the Effect of ACT Acore
 
 To evaluate the effect of ACT we compute the AICc values and other metrics in out table of model evidence.
 
@@ -579,7 +585,7 @@ The null hypothesis of this test is that there is NO improvement in the deviance
 
 <br />
 
-# Pseudo R-Squared Values
+## Pseudo R-Squared Values
 
 When we fitted linear regression models, we computed an $R^2$ value for the model as a summary measure of the model. This value quantified the amount of variation in the outcome that was explainable by the predictors included in the model. To compute this, we computed:
 
@@ -607,14 +613,15 @@ This measure is referred to as a pseudo-$R^2$ value. To compute this measure for
 
 Interpreting pseudo $R^2$ values are somewhat problematic. A naive interpretation is that differences in ACT scores explains 3.28% of the variation in graduation status. However, this interpretation is a bit sketchy. Pseudo $R^2$ values mimic $R^2$ values in that they are generally on a similar scale, ranging from 0 to 1 (though remember pseudo $R^2$ values can be negative). Moreover, higher pseudo $R^2$ values, like $R^2$ values, indicate better model fit. So while I wouldn't offer the earlier interpretation of the value of 0.0328 in a paper, the value close to 0 does suggest that ACT scores are not perhaps incredibly predictive of the log-odds (or odds or probability) of obtaining a degree.
 
-:::note
+:::fyi
+**FYI**
 In logistic regression, several other pseudo $R^2$ values have also been proposed. See https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faq-what-are-pseudo-r-squareds/ for more information.
 :::
 
 <br />
 
 
-# Assumptions of the Logistic Model
+## Assumptions of the Logistic Model
 
 The assumptions for the logistic model are quite different than those for the linear model. The three major assumptions are:
 
@@ -639,6 +646,7 @@ as.data.frame(out.1)
 ```{r}
 #| label: fig-resid
 #| fig-cap: "Binned residuals versus the binned fitted values for the model that includes the linear effect of ACT to predict the log-odds of obtaining a degree."
+#| fig-alt: "Binned residuals versus the binned fitted values for the model that includes the linear effect of ACT to predict the log-odds of obtaining a degree."
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "80%"

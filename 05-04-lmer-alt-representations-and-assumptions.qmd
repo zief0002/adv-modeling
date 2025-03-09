@@ -1,4 +1,4 @@
-# Linear Mixed-Effects Models: Alternative Representations and Assumptions
+# LMER: Alternative Representations and Assumptions
 
 
 ```{r}

@@ -1,28 +1,17 @@
----
-title: "More Logistic Regression"
-format:
-  html:
-    code-copy: true
-    code-fold: false
-    highlight-style: zenburn
-    df-print: paged
-    css: ["../assets/sticky-notes.css"]
-date: "`r format(Sys.Date(), '%B %d %Y')`"
-bibliography: "../assets/epsy8252.bib"
-csl: "../assets/apa.csl"
----
+# More Logistic Regression
+
 
 ```{r}
 #| echo: false
-source("../assets/notes-setup.R")
+source("scripts/_common.R")
 ```
 
-# Preparation
+## Preparation
 
-In this set of notes, you will expand your knowledge of the logistic regression model to include categorical predictors, non-linear predictor effects, covariates, and interaction terms. We will again use data from the file *graduation.csv* to explore predictors of college graduation. 
+In this chapter, you will expand your knowledge of the logistic regression model to include categorical predictors, non-linear predictor effects, covariates, and interaction terms. We will again use data from the file *graduation.csv* to explore predictors of college graduation. 
 
-- [CSV File](https://raw.githubusercontent.com/zief0002/benevolent-anteater/main/data/graduation.csv)
-- [Data Codebook](http://zief0002.github.io/benevolent-anteater/codebooks/graduation.html)
+- [CSV File](https://raw.githubusercontent.com/zief0002/fluffy-ants/main/data/graduation.csv)
+- [Data Codebook](http://zief0002.github.io/fluffy-ants/codebooks/graduation.html)
 
 
 Within the analysis, we will focus on the research question of whether the probability of obtaining a degree differs for first and non-first generation students. We will use information criteria as the framework of evidence to adopt different models, along with an evaluation of the models' residuals.
@@ -39,7 +28,7 @@ library(texreg)
 library(tidyverse)
 
 # Read in data and create dummy variable for categorical variables
-grad = read_csv(file = "https://raw.githubusercontent.com/zief0002/benevolent-anteater/main/data/graduation.csv") |>
+grad = read_csv(file = "https://raw.githubusercontent.com/zief0002/fluffy-ants/main/data/graduation.csv") |>
   mutate(
     got_degree = if_else(degree == "Yes", 1, 0),
     is_firstgen = if_else(first_gen == "Yes", 1, 0),
@@ -54,7 +43,9 @@ glm.0 = glm(got_degree ~ 1, data = grad, family = binomial(link = "logit"))
 glm.1 = glm(got_degree ~ 1 + act, data = grad, family = binomial(link = "logit"))
 ```
 
-# Categorical Predictors
+<br />
+
+## Categorical Predictors
 
 We will next turn to evaluating whether first generation students have a different predicted probability of obtaining a degree than non-first generation students. As always, we start with computing summary statistics and plots. Because both the predictor and outcome are categorical, we will again focus on counts and proportions.
 
@@ -69,7 +60,7 @@ grad |>
 
 <br />
 
-## Contingency Tables
+### Contingency Tables
 
 The primary method of displaying summary information when both the predictor and outcome are categorical is via a **contingency table**. In our two-way table, we will display counts from the four different combinations of first generation and degree obtainment status. Since each of those variables includes two levels (degree/no degree and first gen/non-first gen), this is referred to as a 2x2 table; each number refers to the number of levels in one of the variables being displayed.
 
@@ -128,7 +119,7 @@ The three different totals (row total, column total, grand total) means that we 
 
 <br />
 
-## Computing Proportions: Order in `group_by()` Matters
+### Computing Proportions: Order in `group_by()` Matters
 
 We can compute proportions using the row and column totals in the denominator by using the same set of dplyr operations we used previously, namely grouping by the predictor and outcome, summarizing to compute the sample size, and then mutating to find the proportion. The key is the order in which we include the variables in `group_by()`.
 
@@ -144,7 +135,7 @@ grad |>
     )
 ```
 
-To compute proprtions based on the number of students who obtained a degree and the number who did not obtain a degree, we need to include `degree` in the `group_by()` function prior to `first_gen`.
+To compute proportions based on the number of students who obtained a degree and the number who did not obtain a degree, we need to include `degree` in the `group_by()` function prior to `first_gen`.
 
 
 ```{r}
@@ -172,13 +163,15 @@ grad |>
 
 
 :::fyi
+**FYI**
+
 You need to select the the denominator to compute your proportions based on your research questions. You also need to make sure that if you are using R (or another software) to compute proportions that the proportions you want are being outputted.
 :::
 
 <br />
 
 
-## Back to the RQ
+### Back to the RQ
 
 We wanted to know whether first generation students have a different predicted probability of obtaining a degree than non-first generation students. Thus, we want to use the row totals in our denominator. So we are comparing the proportion of all first generation students who got a degree to the proportion of all non-first generation students who got a degree.
 
@@ -200,6 +193,7 @@ Based on the sample proportions, the proportion of first generation students who
 ```{r}
 #| label: side-by-side-bar-chart
 #| fig-cap: "Side-by-side barplot showing the proportion of first generation and non-first generation students in the sample who obtained and did not obtain a degree."
+#| fig-alt: "Side-by-side barplot showing the proportion of first generation and non-first generation students in the sample who obtained and did not obtain a degree."
 # Side-by-side bar chart
 grad |>
   group_by(first_gen, degree) |>
@@ -248,6 +242,7 @@ Given the data and candidate models, the model that includes first generation st
 The pseudo-$R^2$ value of 0.022 is close to 0, which suggests that first generation status although statistically relevant, is not incredibly predictive of the log-odds (or odds or probability) of obtaining a degree. Next we turn to the fitted equation:
 
 ```{r}
+# Get coefficients
 coef(glm.2)
 ```
 
@@ -314,7 +309,8 @@ In the probability metric we just compute the predicted probabilities and report
 
 <br />
 
-## Evaluating Assumptions
+
+### Evaluating Assumptions
 
 When the only predictor in a logistic model is categorical, the only thing we need to pay attention to is whether the average residual for each level of the predictor is close to 0. We can again use the `binned_residuals()` function to evaluate this. When the predictor is categorical, the binning will be done on the levels of the predictor.
 
@@ -322,6 +318,7 @@ When the only predictor in a logistic model is categorical, the only thing we ne
 ```{r}
 #| label: fig-resid-lm2
 #| fig-cap: "Binned residuals versus the binned fitted values for the model that includes the effect of first generation status to predict the log-odds of obtaining a degree."
+#| fig-alt: "Binned residuals versus the binned fitted values for the model that includes the effect of first generation status to predict the log-odds of obtaining a degree."
 #| message: true
 # Obtain average fitted values and average residuals
 out.2 = binned_residuals(glm.2)
@@ -333,9 +330,6 @@ as.data.frame(out.2)
 Here we see the average residual (`ybar`) for both groups is near zero. This satisfies the linearity assumption. If you examined the binned residual plot, you would also see this, albeit in a graphical form.
 
 
-
-
-
 The results from `glm.2` indicated that there were differences between first and non-first generation students in the probability of obtaining a degree. Based on this model's result, we found that the predicted probability of obtaining a degre for first generation students was 0.780 while that for non-first generation students was 0.622. Does this difference persist after controlling for other covariates? 
 
 To examine this, we want to fit a set of models that systematically include potential covariates along with first generation status. Our strategy for this is to start with the most important covariate. We can compare the model that includes first generation status and this covariate to a model that just includes first generation status. If the evidence indicates that the model with only first generation status is important we are done. If the evidence points toward the model that also includes the most important covariate, then we will continue by comparing that model to one that includes first generation status and the two most important covariates. We will continue with these comparisons until we adopt a final model or models.
@@ -343,6 +337,7 @@ To examine this, we want to fit a set of models that systematically include pote
 To determine the order of importance, we can compute the correlations between each covariate and the dummy-coded outcome.
 
 ```{r}
+# Correlations
 grad |>
   select(got_degree, act, scholarship, ap_courses,is_nontrad) |>
   correlate()
@@ -358,7 +353,7 @@ The rank ordering of covariates (based on the absolute value of the correlation 
 <br />
 
 
-# Non-Linear Effect of ACT
+## Non-Linear Effect of ACT
 
 To begin the analysis, we will include ACT scores as a covariate in the model. Since the `act` variable is continuous, we need to use the "correct" functional form when we include it in the model. In the previous set of notes, we saw some misfit when we examined the binned residual plot for the logistic regression model that included ACT as a predictor of the probability of obtaining a degree. One possibility is that this may be because the effect of ACT on these probabilities is non-linear. To examine this, we can plot the empirical log-odds of obtaining a degree versus ACT scores, and examine the functional form of the relationship.
 
@@ -366,6 +361,7 @@ To begin the analysis, we will include ACT scores as a covariate in the model. S
 ```{r}
 #| label: fig-ln-odds-act
 #| fig-cap: "Log-odds of obtaining a degree conditional on ACT score. Size of the dot is proportional to sample size. The loess smoother is also weighted based on the sample size."
+#| fig-alt: "Log-odds of obtaining a degree conditional on ACT score. Size of the dot is proportional to sample size. The loess smoother is also weighted based on the sample size."
 #| fig-width: 8
 #| fig-height: 6
 #| out-width: "60%"
@@ -401,6 +397,7 @@ This suggests a non-linear relationship between ACT score and the log-odds of ob
 ```{r}
 #| label: fig-residuals
 #| fig-cap: "Binned residual plots for two models that include non-linear effects of ACT. The quadratic model (LEFT) and the log-linear model (RIGHT)."
+#| fig-alt: "Binned residual plots for two models that include non-linear effects of ACT. The quadratic model (LEFT) and the log-linear model (RIGHT)."
 #| fig-width: 10
 #| fig-height: 4
 #| out-width: "100%"
@@ -430,11 +427,12 @@ Here the most empirically supported model (given the data and the candidate mode
 <br />
 
 
-## Quadratic Effect of ACT
+### Quadratic Effect of ACT
 
 We will start our interpretation by examining the `coef()` output.
 
 ```{r}
+# Get coefficients
 coef(glm.1_quad)
 ```
 
@@ -457,6 +455,7 @@ Because changing ACT now impacts two exponent terms, one of which includes the q
 ```{r}
 #| label: fig-quad-fitted
 #| fig-cap: "Predicted odds of obtaining a degree as a function of ACT score."
+#| fig-alt: "Predicted odds of obtaining a degree as a function of ACT score."
 # Plot the fitted equation
 ggplot(data = grad, aes(x = act, y = got_degree)) +
   geom_point(alpha = 0) +
@@ -481,6 +480,7 @@ Again, it is worthwhile to create a plot to interpret the effects of ACT on the 
 ```{r}
 #| label: fig-quad-fitted-prob
 #| fig-cap: "Predicted probability of obtaining a degree as a function of ACT score."
+#| fig-alt: "Predicted probability of obtaining a degree as a function of ACT score."
 # Plot the fitted equation
 ggplot(data = grad, aes(x = act, y = got_degree)) +
   geom_point(alpha = 0) +
@@ -498,11 +498,12 @@ The probability curve is "S"-shaped and constrained between 0 and 1. The left-ha
 <br />
 
 
-## Log-Linear Effect of ACT
+### Log-Linear Effect of ACT
 
 We will again start our interpretation by examining the `coef()` output.
 
 ```{r}
+# Get coefficients
 coef(glm.1_log)
 ```
 
@@ -525,6 +526,7 @@ It is again easier to interpret the effects of ACT on the odds of obtaining a de
 ```{r}
 #| label: fig-ln-fitted
 #| fig-cap: "Predicted odds of obtaining a degree as a function of ACT score."
+#| fig-alt: "Predicted odds of obtaining a degree as a function of ACT score."
 # Plot the fitted equation
 ggplot(data = grad, aes(x = act, y = got_degree)) +
   geom_point(alpha = 0) +
@@ -549,6 +551,7 @@ Again, it is worthwhile to create a plot to interpret the effects of ACT on the 
 ```{r}
 #| label: fig-ln-fitted-prob
 #| fig-cap: "Predicted probability of obtaining a degree as a function of ACT score."
+#| fig-alt: "Predicted probability of obtaining a degree as a function of ACT score."
 # Plot the fitted equation
 ggplot(data = grad, aes(x = act, y = got_degree)) +
   geom_point(alpha = 0) +
@@ -562,7 +565,9 @@ ggplot(data = grad, aes(x = act, y = got_degree)) +
 
 The effect of ACT on the probability of obtaining a degree is positive and non-linear. ACT has a larger effect on the probability of obtaining a degree for smaller ACT scores and this effect, while still positive, diminishes for higher ACT scores.
 
-:::protip
+:::fyi
+**PROTIP**
+
 Once you include non-linear effects in the model, always create a plot of the fitted equation to try and interpret odds or probabilities.
 :::
 
@@ -570,7 +575,7 @@ Once you include non-linear effects in the model, always create a plot of the fi
 <br />
 
 
-# Adding Covariates: Main Effects Models
+## Adding Covariates: Main Effects Models
 
 Now that we have settled on a functional form for the effect of ACT, we can include it as a covariate in a model with first generation status. Including covariates in the logistic model is done the same way as for `lm()` models. We fit that model with the following syntax:
 
@@ -612,7 +617,7 @@ Using the logit/log-odds metric, we interpret the coefficients as:
 <br />
 
 
-## Back-Transforming to Odds
+### Back-Transforming to Odds
 
 If we back-transform the coefficients to facilitate interpretations using the odds metric, the fitted equation is:
 
@@ -646,6 +651,7 @@ $$
 ```{r}
 #| label: fig-main-effects-fitted
 #| fig-cap: "Predicted odds of obtaining a degree as a function of ACT score first generation (solid, red line) and non-first generation (dashed, blue line) students."
+#| fig-alt: "Predicted odds of obtaining a degree as a function of ACT score first generation (solid, red line) and non-first generation (dashed, blue line) students."
 #| fig-width: 8
 #| fig-height: 6
 # Plot the fitted equation
@@ -673,7 +679,7 @@ Here we see that the odds of graduating increase exponentially at higher ACT sco
 <br />
 
 
-## Back-Transforming to Probability
+### Back-Transforming to Probability
 
 Again, while not related to the research question, we can also plot the predicted probability of graduating as a function of ACT score. Algebraically manipulating the fitted equation,
 
@@ -707,6 +713,7 @@ We can include each of these in a `geom_function()` layer in our plot.
 ```{r}
 #| label: fig-main-effects-fitted-prob
 #| fig-cap: "Predicted probabilities of obtaining a degree as a function of ACT score first generation (solid, red line) and non-first generation (dashed, blue line) students."
+#| fig-alt: "Predicted probabilities of obtaining a degree as a function of ACT score first generation (solid, red line) and non-first generation (dashed, blue line) students."
 #| fig-width: 8
 #| fig-height: 6
 # Plot the fitted equations
@@ -735,7 +742,7 @@ Here we see that the probability of graduatingobtaining a degree is positively a
 <br />
 
 
-# Including Other Covariates in the Model
+## Including Other Covariates in the Model
 
 We will now fit a series of models that systematically include the remainder of the potential covariates based on their importance. We will have to adopt the correct functional form for ALL continuous variables by examining the plots of the data and residuals from potential transformations. (NOTE: This work is not shown here, but you should undertake it.)
 
@@ -778,7 +785,7 @@ Here the empirical evidence supports the model that includes all the covariates.
 <br />
 
 
-# Interaction Between ACT Score and First Generation Status
+## Interaction Between ACT Score and First Generation Status
 
 Since this is an exploratory analysis, we should only fit first-order interactions, and only with the focal predictor (i.e., first generation status). We will adopt the same modeling strategy as before, building up interaction terms in the order of covariate importance.
 
@@ -827,7 +834,7 @@ $$
 <br />
 
 
-# Interpreting the Results from the Adopted Model
+## Interpreting the Results from the Adopted Model
 
 To interpret these results, we will plot results freom the fitted model. In thinking about what needs to be displayed:
 
@@ -864,6 +871,7 @@ We will plot these two equations using the probability metric.
 ```{r fig.cap=''}
 #| label: fig-interaction-fitted-prob
 #| fig-cap: "Predicted probability of obtaining a degree as a function of ACT score for first generation (solid, red line) and non-first generation (dashed, blue line) who ar 18 years old at the time of enrollment. The effects for the number of AP credits and scholarship amount (in thousands of dollars) were controlled by setting them to their mean values of 3.28 and 0.18, respectively."
+#| fig-alt: "Predicted probability of obtaining a degree as a function of ACT score for first generation (solid, red line) and non-first generation (dashed, blue line) who ar 18 years old at the time of enrollment. The effects for the number of AP credits and scholarship amount (in thousands of dollars) were controlled by setting them to their mean values of 3.28 and 0.18, respectively."
 #| fig-width: 8
 #| fig-height: 6
 # Plot the fitted equations
@@ -891,9 +899,10 @@ Because our research question is about the effect of first generation status, we
 
 Here we see that first generation status and ACT score interact on the probability of obtaining a degree. For students with lower ACT scores the probability of obtaining a degree is smaller for first generation students than for non-first generation students. However, this difference diminishes for students with higher ACT scores.
 
+<br />
 
 
-# Presenting a Table of Logistic Regression Results
+## Presenting a Table of Logistic Regression Results
 
 We can present selected fitted models from the analysis in a table similar to those we have created for OLS models. In this analysis I would present `glm.0`, `glm.2`, `glm.3`, `glm.6`, and `glm.7`. *Note that we do not have to present ALL the models we fitted in the table, only those that tell a coherent story about the analysis.* (If you are worried about transparency, you can always link to our script file or RMD document which includes all the models fitted in the paper, or include some prose that indicates there were other models fitted.) For these models, we want to report:
 
@@ -939,7 +948,9 @@ htmlreg(
 ```
 
 
-:::protip
+:::fyi
+**FYI**
+
 Pseudo-$R^2$ values are commonly reported in applied research. Because there are many potential pseudo-$R^2$ values, you should always indicate the method used to calculate this metric.
 :::
 

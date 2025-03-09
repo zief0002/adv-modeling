@@ -1,0 +1,6 @@
+# Modeling Dichotomous Outcomes
+
+
+Educational scientists are often interested in outcomes that are categorical. In this section, you will be introduced to several methods for modeling relationships when the outcome of interest is dichotmous (e.g., predicting whether or not students graduate). Modeling a dichotomous categorical outcome violates many of the assumptions underlying the general linear model. Because of this educational scientists use logistic regression, one of the varieties of what is referred to as the *generalized linear model*. 
+
+
