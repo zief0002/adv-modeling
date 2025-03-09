@@ -307,8 +307,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modeling Nonindependence</span></a>
+            <a href="./04-00-modeling-dichotomous-outcomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Dichotomous Outcomes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -316,26 +316,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./04-01-linear-probability-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Linear Probability Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-02-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logistic Regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-03-more-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">More Logistic Regression</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonindependence</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LMER: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -895,7 +924,7 @@ H_A:&amp; \theta_1 = \{\beta_0,~\beta_{\mathrm{News~Exposure}},~\sigma^2_{\epsil
 <span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> shaded, <span class="at">ymin =</span> <span class="sc">-</span><span class="dv">10</span>, <span class="fu">aes</span>(<span class="at">ymax =</span> Y), <span class="at">color =</span> <span class="st">"#bbbbbb"</span>, <span class="at">alpha =</span> <span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div id="fig-01" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of the probability density function (PDF) for a $\chi^2(1)$ distribution. The grey shaded area represents the *p*-value based on $\chi^2=12.66$." data-fig-align="center">
+<div id="fig-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Plot of the probability density function (PDF) for a $\chi^2(1)$ distribution. The grey shaded area represents the *p*-value based on $\chi^2=12.66$.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="02-03-likelihood-framework-for-evidence_files/figure-html/fig-01-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Plot of the probability density function (PDF) for a $\chi^2(1)$ distribution. The grey shaded area represents the *p*-value based on $\chi^2=12.66$.">
@@ -1048,7 +1077,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create residual plots</span></span>
 <span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">residual_plots</span>(lm<span class="fl">.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-residuals-linear" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two residual plots for Model 4." data-fig-align="center">
+<div id="fig-residuals-linear" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Two residual plots for Model 4.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-residuals-linear-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="02-03-likelihood-framework-for-evidence_files/figure-html/fig-residuals-linear-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Two residual plots for Model 4.">
@@ -1106,23 +1135,23 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
 </figcaption>
 <div aria-describedby="tbl-model-likelihood-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ydtidzdnly" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ydtidzdnly table {
+<div id="mavtfdyjnd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mavtfdyjnd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ydtidzdnly thead, #ydtidzdnly tbody, #ydtidzdnly tfoot, #ydtidzdnly tr, #ydtidzdnly td, #ydtidzdnly th {
+#mavtfdyjnd thead, #mavtfdyjnd tbody, #mavtfdyjnd tfoot, #mavtfdyjnd tr, #mavtfdyjnd td, #mavtfdyjnd th {
   border-style: none;
 }
 
-#ydtidzdnly p {
+#mavtfdyjnd p {
   margin: 0;
   padding: 0;
 }
 
-#ydtidzdnly .gt_table {
+#mavtfdyjnd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1148,12 +1177,12 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-left-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_caption {
+#mavtfdyjnd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ydtidzdnly .gt_title {
+#mavtfdyjnd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1165,7 +1194,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-width: 0;
 }
 
-#ydtidzdnly .gt_subtitle {
+#mavtfdyjnd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1177,7 +1206,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-top-width: 0;
 }
 
-#ydtidzdnly .gt_heading {
+#mavtfdyjnd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1189,13 +1218,13 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_bottom_border {
+#mavtfdyjnd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_col_headings {
+#mavtfdyjnd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1210,7 +1239,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_col_heading {
+#mavtfdyjnd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1230,7 +1259,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   overflow-x: hidden;
 }
 
-#ydtidzdnly .gt_column_spanner_outer {
+#mavtfdyjnd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1242,15 +1271,15 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 4px;
 }
 
-#ydtidzdnly .gt_column_spanner_outer:first-child {
+#mavtfdyjnd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ydtidzdnly .gt_column_spanner_outer:last-child {
+#mavtfdyjnd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ydtidzdnly .gt_column_spanner {
+#mavtfdyjnd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1262,11 +1291,11 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   width: 100%;
 }
 
-#ydtidzdnly .gt_spanner_row {
+#mavtfdyjnd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ydtidzdnly .gt_group_heading {
+#mavtfdyjnd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1292,7 +1321,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   text-align: left;
 }
 
-#ydtidzdnly .gt_empty_group_heading {
+#mavtfdyjnd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1307,15 +1336,15 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   vertical-align: middle;
 }
 
-#ydtidzdnly .gt_from_md > :first-child {
+#mavtfdyjnd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ydtidzdnly .gt_from_md > :last-child {
+#mavtfdyjnd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ydtidzdnly .gt_row {
+#mavtfdyjnd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1334,7 +1363,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   overflow-x: hidden;
 }
 
-#ydtidzdnly .gt_stub {
+#mavtfdyjnd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1347,7 +1376,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#ydtidzdnly .gt_stub_row_group {
+#mavtfdyjnd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1361,15 +1390,15 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   vertical-align: top;
 }
 
-#ydtidzdnly .gt_row_group_first td {
+#mavtfdyjnd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ydtidzdnly .gt_row_group_first th {
+#mavtfdyjnd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ydtidzdnly .gt_summary_row {
+#mavtfdyjnd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1379,16 +1408,16 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#ydtidzdnly .gt_first_summary_row {
+#mavtfdyjnd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_first_summary_row.thick {
+#mavtfdyjnd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ydtidzdnly .gt_last_summary_row {
+#mavtfdyjnd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1398,7 +1427,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_grand_summary_row {
+#mavtfdyjnd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1408,7 +1437,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#ydtidzdnly .gt_first_grand_summary_row {
+#mavtfdyjnd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1418,7 +1447,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-top-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_last_grand_summary_row_top {
+#mavtfdyjnd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1428,11 +1457,11 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_striped {
+#mavtfdyjnd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ydtidzdnly .gt_table_body {
+#mavtfdyjnd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1441,7 +1470,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-bottom-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_footnotes {
+#mavtfdyjnd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1455,7 +1484,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_footnote {
+#mavtfdyjnd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1464,7 +1493,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#ydtidzdnly .gt_sourcenotes {
+#mavtfdyjnd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1478,7 +1507,7 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   border-right-color: #D3D3D3;
 }
 
-#ydtidzdnly .gt_sourcenote {
+#mavtfdyjnd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1486,72 +1515,72 @@ Table&nbsp;6.1: Results from a set of likelihood ratio tests (LRT) to compare se
   padding-right: 5px;
 }
 
-#ydtidzdnly .gt_left {
+#mavtfdyjnd .gt_left {
   text-align: left;
 }
 
-#ydtidzdnly .gt_center {
+#mavtfdyjnd .gt_center {
   text-align: center;
 }
 
-#ydtidzdnly .gt_right {
+#mavtfdyjnd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ydtidzdnly .gt_font_normal {
+#mavtfdyjnd .gt_font_normal {
   font-weight: normal;
 }
 
-#ydtidzdnly .gt_font_bold {
+#mavtfdyjnd .gt_font_bold {
   font-weight: bold;
 }
 
-#ydtidzdnly .gt_font_italic {
+#mavtfdyjnd .gt_font_italic {
   font-style: italic;
 }
 
-#ydtidzdnly .gt_super {
+#mavtfdyjnd .gt_super {
   font-size: 65%;
 }
 
-#ydtidzdnly .gt_footnote_marks {
+#mavtfdyjnd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ydtidzdnly .gt_asterisk {
+#mavtfdyjnd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ydtidzdnly .gt_indent_1 {
+#mavtfdyjnd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ydtidzdnly .gt_indent_2 {
+#mavtfdyjnd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ydtidzdnly .gt_indent_3 {
+#mavtfdyjnd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ydtidzdnly .gt_indent_4 {
+#mavtfdyjnd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ydtidzdnly .gt_indent_5 {
+#mavtfdyjnd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ydtidzdnly .katex-display {
+#mavtfdyjnd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ydtidzdnly div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mavtfdyjnd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1798,23 +1827,23 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
 </figcaption>
 <div aria-describedby="tbl-model-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="gwztpwsnzn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gwztpwsnzn table {
+<div id="kmvkcvysgo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kmvkcvysgo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gwztpwsnzn thead, #gwztpwsnzn tbody, #gwztpwsnzn tfoot, #gwztpwsnzn tr, #gwztpwsnzn td, #gwztpwsnzn th {
+#kmvkcvysgo thead, #kmvkcvysgo tbody, #kmvkcvysgo tfoot, #kmvkcvysgo tr, #kmvkcvysgo td, #kmvkcvysgo th {
   border-style: none;
 }
 
-#gwztpwsnzn p {
+#kmvkcvysgo p {
   margin: 0;
   padding: 0;
 }
 
-#gwztpwsnzn .gt_table {
+#kmvkcvysgo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1840,12 +1869,12 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-left-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_caption {
+#kmvkcvysgo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gwztpwsnzn .gt_title {
+#kmvkcvysgo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1857,7 +1886,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-width: 0;
 }
 
-#gwztpwsnzn .gt_subtitle {
+#kmvkcvysgo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1869,7 +1898,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-top-width: 0;
 }
 
-#gwztpwsnzn .gt_heading {
+#kmvkcvysgo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1881,13 +1910,13 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_bottom_border {
+#kmvkcvysgo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_col_headings {
+#kmvkcvysgo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1902,7 +1931,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_col_heading {
+#kmvkcvysgo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1922,7 +1951,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   overflow-x: hidden;
 }
 
-#gwztpwsnzn .gt_column_spanner_outer {
+#kmvkcvysgo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1934,15 +1963,15 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 4px;
 }
 
-#gwztpwsnzn .gt_column_spanner_outer:first-child {
+#kmvkcvysgo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gwztpwsnzn .gt_column_spanner_outer:last-child {
+#kmvkcvysgo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gwztpwsnzn .gt_column_spanner {
+#kmvkcvysgo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1954,11 +1983,11 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   width: 100%;
 }
 
-#gwztpwsnzn .gt_spanner_row {
+#kmvkcvysgo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gwztpwsnzn .gt_group_heading {
+#kmvkcvysgo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1984,7 +2013,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   text-align: left;
 }
 
-#gwztpwsnzn .gt_empty_group_heading {
+#kmvkcvysgo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1999,15 +2028,15 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   vertical-align: middle;
 }
 
-#gwztpwsnzn .gt_from_md > :first-child {
+#kmvkcvysgo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gwztpwsnzn .gt_from_md > :last-child {
+#kmvkcvysgo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gwztpwsnzn .gt_row {
+#kmvkcvysgo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2026,7 +2055,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   overflow-x: hidden;
 }
 
-#gwztpwsnzn .gt_stub {
+#kmvkcvysgo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2039,7 +2068,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#gwztpwsnzn .gt_stub_row_group {
+#kmvkcvysgo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2053,15 +2082,15 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   vertical-align: top;
 }
 
-#gwztpwsnzn .gt_row_group_first td {
+#kmvkcvysgo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gwztpwsnzn .gt_row_group_first th {
+#kmvkcvysgo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gwztpwsnzn .gt_summary_row {
+#kmvkcvysgo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2071,16 +2100,16 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#gwztpwsnzn .gt_first_summary_row {
+#kmvkcvysgo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_first_summary_row.thick {
+#kmvkcvysgo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gwztpwsnzn .gt_last_summary_row {
+#kmvkcvysgo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2090,7 +2119,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_grand_summary_row {
+#kmvkcvysgo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2100,7 +2129,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#gwztpwsnzn .gt_first_grand_summary_row {
+#kmvkcvysgo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2110,7 +2139,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-top-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_last_grand_summary_row_top {
+#kmvkcvysgo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2120,11 +2149,11 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_striped {
+#kmvkcvysgo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gwztpwsnzn .gt_table_body {
+#kmvkcvysgo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2133,7 +2162,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-bottom-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_footnotes {
+#kmvkcvysgo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2147,7 +2176,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_footnote {
+#kmvkcvysgo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2156,7 +2185,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#gwztpwsnzn .gt_sourcenotes {
+#kmvkcvysgo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2170,7 +2199,7 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   border-right-color: #D3D3D3;
 }
 
-#gwztpwsnzn .gt_sourcenote {
+#kmvkcvysgo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2178,72 +2207,72 @@ Table&nbsp;6.2: Coefficients and standard errors for Model 4. The <span class="m
   padding-right: 5px;
 }
 
-#gwztpwsnzn .gt_left {
+#kmvkcvysgo .gt_left {
   text-align: left;
 }
 
-#gwztpwsnzn .gt_center {
+#kmvkcvysgo .gt_center {
   text-align: center;
 }
 
-#gwztpwsnzn .gt_right {
+#kmvkcvysgo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gwztpwsnzn .gt_font_normal {
+#kmvkcvysgo .gt_font_normal {
   font-weight: normal;
 }
 
-#gwztpwsnzn .gt_font_bold {
+#kmvkcvysgo .gt_font_bold {
   font-weight: bold;
 }
 
-#gwztpwsnzn .gt_font_italic {
+#kmvkcvysgo .gt_font_italic {
   font-style: italic;
 }
 
-#gwztpwsnzn .gt_super {
+#kmvkcvysgo .gt_super {
   font-size: 65%;
 }
 
-#gwztpwsnzn .gt_footnote_marks {
+#kmvkcvysgo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gwztpwsnzn .gt_asterisk {
+#kmvkcvysgo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gwztpwsnzn .gt_indent_1 {
+#kmvkcvysgo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gwztpwsnzn .gt_indent_2 {
+#kmvkcvysgo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gwztpwsnzn .gt_indent_3 {
+#kmvkcvysgo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gwztpwsnzn .gt_indent_4 {
+#kmvkcvysgo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gwztpwsnzn .gt_indent_5 {
+#kmvkcvysgo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gwztpwsnzn .katex-display {
+#kmvkcvysgo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gwztpwsnzn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kmvkcvysgo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

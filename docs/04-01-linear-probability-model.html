@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05-00-modeling-nonindependence.html" rel="next">
+<link href="./04-02-logistic-regression.html" rel="next">
 <link href="./04-00-modeling-dichotomous-outcomes.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -300,6 +300,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Linear Probability Model</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-02-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logistic Regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-03-more-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">More Logistic Regression</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -314,25 +326,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LMER: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -441,7 +453,7 @@ window.Quarto = {
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Graduated"</span>) <span class="sc">+</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Prop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-barplot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Barplot showing graduation status for the sample." data-fig-align="center">
+<div id="fig-barplot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Barplot showing graduation status for the sample.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-01-linear-probability-model_files/figure-html/fig-barplot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Barplot showing graduation status for the sample.">
@@ -503,7 +515,7 @@ Figure&nbsp;13.1: Barplot showing graduation status for the sample.
 1  24.8  4.15</code></pre>
 </div>
 <div class="cell-output-display">
-<div id="fig-act-scores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Density plot of the ACT scores." data-fig-align="center">
+<div id="fig-act-scores" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Density plot of the ACT scores.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-act-scores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-01-linear-probability-model_files/figure-html/fig-act-scores-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Density plot of the ACT scores.">
@@ -578,7 +590,7 @@ Figure&nbsp;13.2: Density plot of the ACT scores.
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"ACT score"</span>) <span class="sc">+</span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Proportion of students who obtained a degree"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-scatterplot-proportion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Proportion of students who graduate conditional on ACT score. Size of the dot is proportional to sample size. The regression smoother (solid, blue line) and loess smoother (dashed, red line) are based on the raw data." data-fig-align="center">
+<div id="fig-scatterplot-proportion" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Proportion of students who graduate conditional on ACT score. Size of the dot is proportional to sample size. The regression smoother (solid, blue line) and loess smoother (dashed, red line) are based on the raw data.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-scatterplot-proportion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-01-linear-probability-model_files/figure-html/fig-scatterplot-proportion-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Proportion of students who graduate conditional on ACT score. Size of the dot is proportional to sample size. The regression smoother (solid, blue line) and loess smoother (dashed, red line) are based on the raw data.">
@@ -609,7 +621,7 @@ Figure&nbsp;13.3: Proportion of students who graduate conditional on ACT score. 
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"ACT score"</span>) <span class="sc">+</span></span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Graduated"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-scatterplot-raw-data" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Scatterplot of whether a student graduated versus ACT score. The regression smoother (blue, solid line) and loess smoother (red, dashed line) shows the positive relationship between ACT score and the proportion of students who obtain their degree." data-fig-align="center">
+<div id="fig-scatterplot-raw-data" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Scatterplot of whether a student graduated versus ACT score. The regression smoother (blue, solid line) and loess smoother (red, dashed line) shows the positive relationship between ACT score and the proportion of students who obtain their degree.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-scatterplot-raw-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-01-linear-probability-model_files/figure-html/fig-scatterplot-raw-data-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="Scatterplot of whether a student graduated versus ACT score. The regression smoother (blue, solid line) and loess smoother (red, dashed line) shows the positive relationship between ACT score and the proportion of students who obtain their degree.">
@@ -683,7 +695,7 @@ Figure&nbsp;13.4: Scatterplot of whether a student graduated versus ACT score. T
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine residual plots</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">residual_plots</span>(lm<span class="fl">.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-assumptions" class="quarto-float quarto-figure quarto-figure-center anchored" alt="LEFT: Density plot of the standardized residuals from the linear probability model. The confidence envelope shows where we might expect the density to be if the population of residuals were normally distributed. RIGHT: Scatterplot of the standardized residuals versus the fitted values from the linear probability model. The loess smoother along with the confidence envelope is also displayed." data-fig-align="center">
+<div id="fig-assumptions" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="LEFT: Density plot of the standardized residuals from the linear probability model. The confidence envelope shows where we might expect the density to be if the population of residuals were normally distributed. RIGHT: Scatterplot of the standardized residuals versus the fitted values from the linear probability model. The loess smoother along with the confidence envelope is also displayed.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-assumptions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="04-01-linear-probability-model_files/figure-html/fig-assumptions-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="LEFT: Density plot of the standardized residuals from the linear probability model. The confidence envelope shows where we might expect the density to be if the population of residuals were normally distributed. RIGHT: Scatterplot of the standardized residuals versus the fitted values from the linear probability model. The loess smoother along with the confidence envelope is also displayed.">
@@ -1210,8 +1222,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05-00-modeling-nonindependence.html" class="pagination-link" aria-label="Modeling Nonindependence">
-        <span class="nav-page-text">Modeling Nonindependence</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04-02-logistic-regression.html" class="pagination-link" aria-label="Logistic Regression">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logistic Regression</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">

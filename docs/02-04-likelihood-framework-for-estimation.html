@@ -287,8 +287,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modeling Nonindependence</span></a>
+            <a href="./04-00-modeling-dichotomous-outcomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Dichotomous Outcomes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -296,26 +296,55 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./04-01-linear-probability-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Linear Probability Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-02-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logistic Regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-03-more-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">More Logistic Regression</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonindependence</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LMER: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -697,23 +726,23 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
 </figcaption>
 <div aria-describedby="tbl-example-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="rnflskhzvl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rnflskhzvl table {
+<div id="smqrhqyzoy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#smqrhqyzoy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rnflskhzvl thead, #rnflskhzvl tbody, #rnflskhzvl tfoot, #rnflskhzvl tr, #rnflskhzvl td, #rnflskhzvl th {
+#smqrhqyzoy thead, #smqrhqyzoy tbody, #smqrhqyzoy tfoot, #smqrhqyzoy tr, #smqrhqyzoy td, #smqrhqyzoy th {
   border-style: none;
 }
 
-#rnflskhzvl p {
+#smqrhqyzoy p {
   margin: 0;
   padding: 0;
 }
 
-#rnflskhzvl .gt_table {
+#smqrhqyzoy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -739,12 +768,12 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-left-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_caption {
+#smqrhqyzoy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rnflskhzvl .gt_title {
+#smqrhqyzoy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -756,7 +785,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-bottom-width: 0;
 }
 
-#rnflskhzvl .gt_subtitle {
+#smqrhqyzoy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -768,7 +797,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-top-width: 0;
 }
 
-#rnflskhzvl .gt_heading {
+#smqrhqyzoy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -780,13 +809,13 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-right-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_bottom_border {
+#smqrhqyzoy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_col_headings {
+#smqrhqyzoy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -801,7 +830,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-right-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_col_heading {
+#smqrhqyzoy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -821,7 +850,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   overflow-x: hidden;
 }
 
-#rnflskhzvl .gt_column_spanner_outer {
+#smqrhqyzoy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -833,15 +862,15 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   padding-right: 4px;
 }
 
-#rnflskhzvl .gt_column_spanner_outer:first-child {
+#smqrhqyzoy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rnflskhzvl .gt_column_spanner_outer:last-child {
+#smqrhqyzoy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rnflskhzvl .gt_column_spanner {
+#smqrhqyzoy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -853,11 +882,11 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   width: 100%;
 }
 
-#rnflskhzvl .gt_spanner_row {
+#smqrhqyzoy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rnflskhzvl .gt_group_heading {
+#smqrhqyzoy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -883,7 +912,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   text-align: left;
 }
 
-#rnflskhzvl .gt_empty_group_heading {
+#smqrhqyzoy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -898,15 +927,15 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   vertical-align: middle;
 }
 
-#rnflskhzvl .gt_from_md > :first-child {
+#smqrhqyzoy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rnflskhzvl .gt_from_md > :last-child {
+#smqrhqyzoy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rnflskhzvl .gt_row {
+#smqrhqyzoy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -925,7 +954,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   overflow-x: hidden;
 }
 
-#rnflskhzvl .gt_stub {
+#smqrhqyzoy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -938,7 +967,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   padding-right: 5px;
 }
 
-#rnflskhzvl .gt_stub_row_group {
+#smqrhqyzoy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -952,15 +981,15 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   vertical-align: top;
 }
 
-#rnflskhzvl .gt_row_group_first td {
+#smqrhqyzoy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rnflskhzvl .gt_row_group_first th {
+#smqrhqyzoy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rnflskhzvl .gt_summary_row {
+#smqrhqyzoy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -970,16 +999,16 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   padding-right: 5px;
 }
 
-#rnflskhzvl .gt_first_summary_row {
+#smqrhqyzoy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_first_summary_row.thick {
+#smqrhqyzoy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rnflskhzvl .gt_last_summary_row {
+#smqrhqyzoy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -989,7 +1018,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-bottom-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_grand_summary_row {
+#smqrhqyzoy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -999,7 +1028,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   padding-right: 5px;
 }
 
-#rnflskhzvl .gt_first_grand_summary_row {
+#smqrhqyzoy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1009,7 +1038,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-top-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_last_grand_summary_row_top {
+#smqrhqyzoy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1019,11 +1048,11 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-bottom-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_striped {
+#smqrhqyzoy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rnflskhzvl .gt_table_body {
+#smqrhqyzoy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1032,7 +1061,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-bottom-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_footnotes {
+#smqrhqyzoy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1046,7 +1075,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-right-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_footnote {
+#smqrhqyzoy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1055,7 +1084,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   padding-right: 5px;
 }
 
-#rnflskhzvl .gt_sourcenotes {
+#smqrhqyzoy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1069,7 +1098,7 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   border-right-color: #D3D3D3;
 }
 
-#rnflskhzvl .gt_sourcenote {
+#smqrhqyzoy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1077,72 +1106,72 @@ Table&nbsp;7.1: Toy data set that includes predictor (x) and outcome (y) values.
   padding-right: 5px;
 }
 
-#rnflskhzvl .gt_left {
+#smqrhqyzoy .gt_left {
   text-align: left;
 }
 
-#rnflskhzvl .gt_center {
+#smqrhqyzoy .gt_center {
   text-align: center;
 }
 
-#rnflskhzvl .gt_right {
+#smqrhqyzoy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rnflskhzvl .gt_font_normal {
+#smqrhqyzoy .gt_font_normal {
   font-weight: normal;
 }
 
-#rnflskhzvl .gt_font_bold {
+#smqrhqyzoy .gt_font_bold {
   font-weight: bold;
 }
 
-#rnflskhzvl .gt_font_italic {
+#smqrhqyzoy .gt_font_italic {
   font-style: italic;
 }
 
-#rnflskhzvl .gt_super {
+#smqrhqyzoy .gt_super {
   font-size: 65%;
 }
 
-#rnflskhzvl .gt_footnote_marks {
+#smqrhqyzoy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rnflskhzvl .gt_asterisk {
+#smqrhqyzoy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rnflskhzvl .gt_indent_1 {
+#smqrhqyzoy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rnflskhzvl .gt_indent_2 {
+#smqrhqyzoy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rnflskhzvl .gt_indent_3 {
+#smqrhqyzoy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rnflskhzvl .gt_indent_4 {
+#smqrhqyzoy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rnflskhzvl .gt_indent_5 {
+#smqrhqyzoy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rnflskhzvl .katex-display {
+#smqrhqyzoy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rnflskhzvl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#smqrhqyzoy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1419,23 +1448,23 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
 </figcaption>
 <div aria-describedby="tbl-compare-ests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="dzzjplwhcn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dzzjplwhcn table {
+<div id="rfksaeetmz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rfksaeetmz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dzzjplwhcn thead, #dzzjplwhcn tbody, #dzzjplwhcn tfoot, #dzzjplwhcn tr, #dzzjplwhcn td, #dzzjplwhcn th {
+#rfksaeetmz thead, #rfksaeetmz tbody, #rfksaeetmz tfoot, #rfksaeetmz tr, #rfksaeetmz td, #rfksaeetmz th {
   border-style: none;
 }
 
-#dzzjplwhcn p {
+#rfksaeetmz p {
   margin: 0;
   padding: 0;
 }
 
-#dzzjplwhcn .gt_table {
+#rfksaeetmz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1461,12 +1490,12 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-left-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_caption {
+#rfksaeetmz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dzzjplwhcn .gt_title {
+#rfksaeetmz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1478,7 +1507,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-bottom-width: 0;
 }
 
-#dzzjplwhcn .gt_subtitle {
+#rfksaeetmz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1490,7 +1519,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-top-width: 0;
 }
 
-#dzzjplwhcn .gt_heading {
+#rfksaeetmz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1502,13 +1531,13 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-right-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_bottom_border {
+#rfksaeetmz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_col_headings {
+#rfksaeetmz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1523,7 +1552,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-right-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_col_heading {
+#rfksaeetmz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1543,7 +1572,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   overflow-x: hidden;
 }
 
-#dzzjplwhcn .gt_column_spanner_outer {
+#rfksaeetmz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1555,15 +1584,15 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   padding-right: 4px;
 }
 
-#dzzjplwhcn .gt_column_spanner_outer:first-child {
+#rfksaeetmz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dzzjplwhcn .gt_column_spanner_outer:last-child {
+#rfksaeetmz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dzzjplwhcn .gt_column_spanner {
+#rfksaeetmz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1575,11 +1604,11 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   width: 100%;
 }
 
-#dzzjplwhcn .gt_spanner_row {
+#rfksaeetmz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dzzjplwhcn .gt_group_heading {
+#rfksaeetmz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1605,7 +1634,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   text-align: left;
 }
 
-#dzzjplwhcn .gt_empty_group_heading {
+#rfksaeetmz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1620,15 +1649,15 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   vertical-align: middle;
 }
 
-#dzzjplwhcn .gt_from_md > :first-child {
+#rfksaeetmz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dzzjplwhcn .gt_from_md > :last-child {
+#rfksaeetmz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dzzjplwhcn .gt_row {
+#rfksaeetmz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1647,7 +1676,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   overflow-x: hidden;
 }
 
-#dzzjplwhcn .gt_stub {
+#rfksaeetmz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1660,7 +1689,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   padding-right: 5px;
 }
 
-#dzzjplwhcn .gt_stub_row_group {
+#rfksaeetmz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1674,15 +1703,15 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   vertical-align: top;
 }
 
-#dzzjplwhcn .gt_row_group_first td {
+#rfksaeetmz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dzzjplwhcn .gt_row_group_first th {
+#rfksaeetmz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dzzjplwhcn .gt_summary_row {
+#rfksaeetmz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1692,16 +1721,16 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   padding-right: 5px;
 }
 
-#dzzjplwhcn .gt_first_summary_row {
+#rfksaeetmz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_first_summary_row.thick {
+#rfksaeetmz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dzzjplwhcn .gt_last_summary_row {
+#rfksaeetmz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1711,7 +1740,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-bottom-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_grand_summary_row {
+#rfksaeetmz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1721,7 +1750,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   padding-right: 5px;
 }
 
-#dzzjplwhcn .gt_first_grand_summary_row {
+#rfksaeetmz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1731,7 +1760,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-top-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_last_grand_summary_row_top {
+#rfksaeetmz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1741,11 +1770,11 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-bottom-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_striped {
+#rfksaeetmz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dzzjplwhcn .gt_table_body {
+#rfksaeetmz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1754,7 +1783,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-bottom-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_footnotes {
+#rfksaeetmz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1768,7 +1797,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-right-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_footnote {
+#rfksaeetmz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1777,7 +1806,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   padding-right: 5px;
 }
 
-#dzzjplwhcn .gt_sourcenotes {
+#rfksaeetmz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1791,7 +1820,7 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   border-right-color: #D3D3D3;
 }
 
-#dzzjplwhcn .gt_sourcenote {
+#rfksaeetmz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1799,72 +1828,72 @@ Table&nbsp;7.2: Parameter estimates using maximum likelihood (ML) and ordinary l
   padding-right: 5px;
 }
 
-#dzzjplwhcn .gt_left {
+#rfksaeetmz .gt_left {
   text-align: left;
 }
 
-#dzzjplwhcn .gt_center {
+#rfksaeetmz .gt_center {
   text-align: center;
 }
 
-#dzzjplwhcn .gt_right {
+#rfksaeetmz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dzzjplwhcn .gt_font_normal {
+#rfksaeetmz .gt_font_normal {
   font-weight: normal;
 }
 
-#dzzjplwhcn .gt_font_bold {
+#rfksaeetmz .gt_font_bold {
   font-weight: bold;
 }
 
-#dzzjplwhcn .gt_font_italic {
+#rfksaeetmz .gt_font_italic {
   font-style: italic;
 }
 
-#dzzjplwhcn .gt_super {
+#rfksaeetmz .gt_super {
   font-size: 65%;
 }
 
-#dzzjplwhcn .gt_footnote_marks {
+#rfksaeetmz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dzzjplwhcn .gt_asterisk {
+#rfksaeetmz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dzzjplwhcn .gt_indent_1 {
+#rfksaeetmz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dzzjplwhcn .gt_indent_2 {
+#rfksaeetmz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dzzjplwhcn .gt_indent_3 {
+#rfksaeetmz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dzzjplwhcn .gt_indent_4 {
+#rfksaeetmz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dzzjplwhcn .gt_indent_5 {
+#rfksaeetmz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dzzjplwhcn .katex-display {
+#rfksaeetmz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dzzjplwhcn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rfksaeetmz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

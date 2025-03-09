@@ -258,8 +258,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modeling Nonindependence</span></a>
+            <a href="./04-00-modeling-dichotomous-outcomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Dichotomous Outcomes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -267,26 +267,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./04-01-linear-probability-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Linear Probability Model</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-02-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Logistic Regression</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-03-more-logistic-regression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">More Logistic Regression</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./05-00-modeling-nonindependence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling Nonindependence</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./05-01-introduction-to-mixed-effects-models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Introduction to Mixed-Effects Models</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-02-lmer-average-change-over-time.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">LMER: Average Change Over Time</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-03-lmer-other-random-effects-and-covariates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LMER: Other Random-Effects and Covariates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./05-04-lmer-alt-representations-and-assumptions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Linear Mixed-Effects Models: Alternative Representations and Assumptions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">LMER: Alternative Representations and Assumptions</span></span></a>
   </div>
 </li>
       </ul>
@@ -401,23 +430,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tab_01 <span class="sc">|&gt;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="knfuackktr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#knfuackktr table {
+<div id="vsjzpuzbcg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vsjzpuzbcg table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#knfuackktr thead, #knfuackktr tbody, #knfuackktr tfoot, #knfuackktr tr, #knfuackktr td, #knfuackktr th {
+#vsjzpuzbcg thead, #vsjzpuzbcg tbody, #vsjzpuzbcg tfoot, #vsjzpuzbcg tr, #vsjzpuzbcg td, #vsjzpuzbcg th {
   border-style: none;
 }
 
-#knfuackktr p {
+#vsjzpuzbcg p {
   margin: 0;
   padding: 0;
 }
 
-#knfuackktr .gt_table {
+#vsjzpuzbcg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -443,12 +472,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#knfuackktr .gt_caption {
+#vsjzpuzbcg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#knfuackktr .gt_title {
+#vsjzpuzbcg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -460,7 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#knfuackktr .gt_subtitle {
+#vsjzpuzbcg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -472,7 +501,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#knfuackktr .gt_heading {
+#vsjzpuzbcg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -484,13 +513,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#knfuackktr .gt_bottom_border {
+#vsjzpuzbcg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#knfuackktr .gt_col_headings {
+#vsjzpuzbcg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -505,7 +534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#knfuackktr .gt_col_heading {
+#vsjzpuzbcg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -525,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#knfuackktr .gt_column_spanner_outer {
+#vsjzpuzbcg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -537,15 +566,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#knfuackktr .gt_column_spanner_outer:first-child {
+#vsjzpuzbcg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#knfuackktr .gt_column_spanner_outer:last-child {
+#vsjzpuzbcg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#knfuackktr .gt_column_spanner {
+#vsjzpuzbcg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -557,11 +586,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#knfuackktr .gt_spanner_row {
+#vsjzpuzbcg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#knfuackktr .gt_group_heading {
+#vsjzpuzbcg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -587,7 +616,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#knfuackktr .gt_empty_group_heading {
+#vsjzpuzbcg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -602,15 +631,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#knfuackktr .gt_from_md > :first-child {
+#vsjzpuzbcg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#knfuackktr .gt_from_md > :last-child {
+#vsjzpuzbcg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#knfuackktr .gt_row {
+#vsjzpuzbcg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -629,7 +658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#knfuackktr .gt_stub {
+#vsjzpuzbcg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -642,7 +671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#knfuackktr .gt_stub_row_group {
+#vsjzpuzbcg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -656,15 +685,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#knfuackktr .gt_row_group_first td {
+#vsjzpuzbcg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#knfuackktr .gt_row_group_first th {
+#vsjzpuzbcg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#knfuackktr .gt_summary_row {
+#vsjzpuzbcg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -674,16 +703,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#knfuackktr .gt_first_summary_row {
+#vsjzpuzbcg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#knfuackktr .gt_first_summary_row.thick {
+#vsjzpuzbcg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#knfuackktr .gt_last_summary_row {
+#vsjzpuzbcg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -693,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#knfuackktr .gt_grand_summary_row {
+#vsjzpuzbcg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -703,7 +732,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#knfuackktr .gt_first_grand_summary_row {
+#vsjzpuzbcg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -713,7 +742,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#knfuackktr .gt_last_grand_summary_row_top {
+#vsjzpuzbcg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -723,11 +752,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#knfuackktr .gt_striped {
+#vsjzpuzbcg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#knfuackktr .gt_table_body {
+#vsjzpuzbcg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -736,7 +765,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#knfuackktr .gt_footnotes {
+#vsjzpuzbcg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -750,7 +779,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#knfuackktr .gt_footnote {
+#vsjzpuzbcg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -759,7 +788,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#knfuackktr .gt_sourcenotes {
+#vsjzpuzbcg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -773,7 +802,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#knfuackktr .gt_sourcenote {
+#vsjzpuzbcg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -781,72 +810,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#knfuackktr .gt_left {
+#vsjzpuzbcg .gt_left {
   text-align: left;
 }
 
-#knfuackktr .gt_center {
+#vsjzpuzbcg .gt_center {
   text-align: center;
 }
 
-#knfuackktr .gt_right {
+#vsjzpuzbcg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#knfuackktr .gt_font_normal {
+#vsjzpuzbcg .gt_font_normal {
   font-weight: normal;
 }
 
-#knfuackktr .gt_font_bold {
+#vsjzpuzbcg .gt_font_bold {
   font-weight: bold;
 }
 
-#knfuackktr .gt_font_italic {
+#vsjzpuzbcg .gt_font_italic {
   font-style: italic;
 }
 
-#knfuackktr .gt_super {
+#vsjzpuzbcg .gt_super {
   font-size: 65%;
 }
 
-#knfuackktr .gt_footnote_marks {
+#vsjzpuzbcg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#knfuackktr .gt_asterisk {
+#vsjzpuzbcg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#knfuackktr .gt_indent_1 {
+#vsjzpuzbcg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#knfuackktr .gt_indent_2 {
+#vsjzpuzbcg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#knfuackktr .gt_indent_3 {
+#vsjzpuzbcg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#knfuackktr .gt_indent_4 {
+#vsjzpuzbcg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#knfuackktr .gt_indent_5 {
+#vsjzpuzbcg .gt_indent_5 {
   text-indent: 25px;
 }
 
-#knfuackktr .katex-display {
+#vsjzpuzbcg .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#knfuackktr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vsjzpuzbcg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -937,23 +966,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="st">"Max."</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="zjdcdxmntv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zjdcdxmntv table {
+<div id="uyouorjufs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uyouorjufs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zjdcdxmntv thead, #zjdcdxmntv tbody, #zjdcdxmntv tfoot, #zjdcdxmntv tr, #zjdcdxmntv td, #zjdcdxmntv th {
+#uyouorjufs thead, #uyouorjufs tbody, #uyouorjufs tfoot, #uyouorjufs tr, #uyouorjufs td, #uyouorjufs th {
   border-style: none;
 }
 
-#zjdcdxmntv p {
+#uyouorjufs p {
   margin: 0;
   padding: 0;
 }
 
-#zjdcdxmntv .gt_table {
+#uyouorjufs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -979,12 +1008,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_caption {
+#uyouorjufs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zjdcdxmntv .gt_title {
+#uyouorjufs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -996,7 +1025,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#zjdcdxmntv .gt_subtitle {
+#uyouorjufs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1008,7 +1037,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#zjdcdxmntv .gt_heading {
+#uyouorjufs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1020,13 +1049,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_bottom_border {
+#uyouorjufs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_col_headings {
+#uyouorjufs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1041,7 +1070,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_col_heading {
+#uyouorjufs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1061,7 +1090,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zjdcdxmntv .gt_column_spanner_outer {
+#uyouorjufs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1073,15 +1102,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#zjdcdxmntv .gt_column_spanner_outer:first-child {
+#uyouorjufs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zjdcdxmntv .gt_column_spanner_outer:last-child {
+#uyouorjufs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zjdcdxmntv .gt_column_spanner {
+#uyouorjufs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1093,11 +1122,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#zjdcdxmntv .gt_spanner_row {
+#uyouorjufs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zjdcdxmntv .gt_group_heading {
+#uyouorjufs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1123,7 +1152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#zjdcdxmntv .gt_empty_group_heading {
+#uyouorjufs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1138,15 +1167,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#zjdcdxmntv .gt_from_md > :first-child {
+#uyouorjufs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zjdcdxmntv .gt_from_md > :last-child {
+#uyouorjufs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zjdcdxmntv .gt_row {
+#uyouorjufs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1165,7 +1194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zjdcdxmntv .gt_stub {
+#uyouorjufs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1178,7 +1207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zjdcdxmntv .gt_stub_row_group {
+#uyouorjufs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1192,15 +1221,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#zjdcdxmntv .gt_row_group_first td {
+#uyouorjufs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zjdcdxmntv .gt_row_group_first th {
+#uyouorjufs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zjdcdxmntv .gt_summary_row {
+#uyouorjufs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1210,16 +1239,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zjdcdxmntv .gt_first_summary_row {
+#uyouorjufs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_first_summary_row.thick {
+#uyouorjufs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zjdcdxmntv .gt_last_summary_row {
+#uyouorjufs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1229,7 +1258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_grand_summary_row {
+#uyouorjufs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1239,7 +1268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zjdcdxmntv .gt_first_grand_summary_row {
+#uyouorjufs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1249,7 +1278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_last_grand_summary_row_top {
+#uyouorjufs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1259,11 +1288,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_striped {
+#uyouorjufs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zjdcdxmntv .gt_table_body {
+#uyouorjufs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1272,7 +1301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_footnotes {
+#uyouorjufs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1286,7 +1315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_footnote {
+#uyouorjufs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1295,7 +1324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zjdcdxmntv .gt_sourcenotes {
+#uyouorjufs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1309,7 +1338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zjdcdxmntv .gt_sourcenote {
+#uyouorjufs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1317,72 +1346,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zjdcdxmntv .gt_left {
+#uyouorjufs .gt_left {
   text-align: left;
 }
 
-#zjdcdxmntv .gt_center {
+#uyouorjufs .gt_center {
   text-align: center;
 }
 
-#zjdcdxmntv .gt_right {
+#uyouorjufs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zjdcdxmntv .gt_font_normal {
+#uyouorjufs .gt_font_normal {
   font-weight: normal;
 }
 
-#zjdcdxmntv .gt_font_bold {
+#uyouorjufs .gt_font_bold {
   font-weight: bold;
 }
 
-#zjdcdxmntv .gt_font_italic {
+#uyouorjufs .gt_font_italic {
   font-style: italic;
 }
 
-#zjdcdxmntv .gt_super {
+#uyouorjufs .gt_super {
   font-size: 65%;
 }
 
-#zjdcdxmntv .gt_footnote_marks {
+#uyouorjufs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zjdcdxmntv .gt_asterisk {
+#uyouorjufs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zjdcdxmntv .gt_indent_1 {
+#uyouorjufs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zjdcdxmntv .gt_indent_2 {
+#uyouorjufs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zjdcdxmntv .gt_indent_3 {
+#uyouorjufs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zjdcdxmntv .gt_indent_4 {
+#uyouorjufs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zjdcdxmntv .gt_indent_5 {
+#uyouorjufs .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zjdcdxmntv .katex-display {
+#uyouorjufs .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zjdcdxmntv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uyouorjufs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1467,7 +1496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div id="fsbjqsbjpi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jxyufwpgpn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   
   
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false" data-bgcolor="#FFFFFF">
@@ -1563,7 +1592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div id="hppwhrsgqg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vljveinwps" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   
   
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false" data-bgcolor="#FFFFFF">
@@ -1676,23 +1705,23 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
 </figcaption>
 <div aria-describedby="tbl-summary-measures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="jrieyawmbg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jrieyawmbg table {
+<div id="cnjfxygfgh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cnjfxygfgh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jrieyawmbg thead, #jrieyawmbg tbody, #jrieyawmbg tfoot, #jrieyawmbg tr, #jrieyawmbg td, #jrieyawmbg th {
+#cnjfxygfgh thead, #cnjfxygfgh tbody, #cnjfxygfgh tfoot, #cnjfxygfgh tr, #cnjfxygfgh td, #cnjfxygfgh th {
   border-style: none;
 }
 
-#jrieyawmbg p {
+#cnjfxygfgh p {
   margin: 0;
   padding: 0;
 }
 
-#jrieyawmbg .gt_table {
+#cnjfxygfgh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1718,12 +1747,12 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-left-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_caption {
+#cnjfxygfgh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jrieyawmbg .gt_title {
+#cnjfxygfgh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1735,7 +1764,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-bottom-width: 0;
 }
 
-#jrieyawmbg .gt_subtitle {
+#cnjfxygfgh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1747,7 +1776,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-top-width: 0;
 }
 
-#jrieyawmbg .gt_heading {
+#cnjfxygfgh .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1759,13 +1788,13 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-right-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_bottom_border {
+#cnjfxygfgh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_col_headings {
+#cnjfxygfgh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1780,7 +1809,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-right-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_col_heading {
+#cnjfxygfgh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1800,7 +1829,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   overflow-x: hidden;
 }
 
-#jrieyawmbg .gt_column_spanner_outer {
+#cnjfxygfgh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1812,15 +1841,15 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   padding-right: 4px;
 }
 
-#jrieyawmbg .gt_column_spanner_outer:first-child {
+#cnjfxygfgh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jrieyawmbg .gt_column_spanner_outer:last-child {
+#cnjfxygfgh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jrieyawmbg .gt_column_spanner {
+#cnjfxygfgh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1832,11 +1861,11 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   width: 100%;
 }
 
-#jrieyawmbg .gt_spanner_row {
+#cnjfxygfgh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jrieyawmbg .gt_group_heading {
+#cnjfxygfgh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1862,7 +1891,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   text-align: left;
 }
 
-#jrieyawmbg .gt_empty_group_heading {
+#cnjfxygfgh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1877,15 +1906,15 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   vertical-align: middle;
 }
 
-#jrieyawmbg .gt_from_md > :first-child {
+#cnjfxygfgh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jrieyawmbg .gt_from_md > :last-child {
+#cnjfxygfgh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jrieyawmbg .gt_row {
+#cnjfxygfgh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1904,7 +1933,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   overflow-x: hidden;
 }
 
-#jrieyawmbg .gt_stub {
+#cnjfxygfgh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1917,7 +1946,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   padding-right: 5px;
 }
 
-#jrieyawmbg .gt_stub_row_group {
+#cnjfxygfgh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1931,15 +1960,15 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   vertical-align: top;
 }
 
-#jrieyawmbg .gt_row_group_first td {
+#cnjfxygfgh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jrieyawmbg .gt_row_group_first th {
+#cnjfxygfgh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jrieyawmbg .gt_summary_row {
+#cnjfxygfgh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1949,16 +1978,16 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   padding-right: 5px;
 }
 
-#jrieyawmbg .gt_first_summary_row {
+#cnjfxygfgh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_first_summary_row.thick {
+#cnjfxygfgh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jrieyawmbg .gt_last_summary_row {
+#cnjfxygfgh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1968,7 +1997,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-bottom-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_grand_summary_row {
+#cnjfxygfgh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1978,7 +2007,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   padding-right: 5px;
 }
 
-#jrieyawmbg .gt_first_grand_summary_row {
+#cnjfxygfgh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1988,7 +2017,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-top-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_last_grand_summary_row_top {
+#cnjfxygfgh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1998,11 +2027,11 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-bottom-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_striped {
+#cnjfxygfgh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jrieyawmbg .gt_table_body {
+#cnjfxygfgh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2011,7 +2040,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-bottom-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_footnotes {
+#cnjfxygfgh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2025,7 +2054,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-right-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_footnote {
+#cnjfxygfgh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2034,7 +2063,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   padding-right: 5px;
 }
 
-#jrieyawmbg .gt_sourcenotes {
+#cnjfxygfgh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2048,7 +2077,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   border-right-color: #D3D3D3;
 }
 
-#jrieyawmbg .gt_sourcenote {
+#cnjfxygfgh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2056,72 +2085,72 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
   padding-right: 5px;
 }
 
-#jrieyawmbg .gt_left {
+#cnjfxygfgh .gt_left {
   text-align: left;
 }
 
-#jrieyawmbg .gt_center {
+#cnjfxygfgh .gt_center {
   text-align: center;
 }
 
-#jrieyawmbg .gt_right {
+#cnjfxygfgh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jrieyawmbg .gt_font_normal {
+#cnjfxygfgh .gt_font_normal {
   font-weight: normal;
 }
 
-#jrieyawmbg .gt_font_bold {
+#cnjfxygfgh .gt_font_bold {
   font-weight: bold;
 }
 
-#jrieyawmbg .gt_font_italic {
+#cnjfxygfgh .gt_font_italic {
   font-style: italic;
 }
 
-#jrieyawmbg .gt_super {
+#cnjfxygfgh .gt_super {
   font-size: 65%;
 }
 
-#jrieyawmbg .gt_footnote_marks {
+#cnjfxygfgh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jrieyawmbg .gt_asterisk {
+#cnjfxygfgh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jrieyawmbg .gt_indent_1 {
+#cnjfxygfgh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jrieyawmbg .gt_indent_2 {
+#cnjfxygfgh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jrieyawmbg .gt_indent_3 {
+#cnjfxygfgh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jrieyawmbg .gt_indent_4 {
+#cnjfxygfgh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jrieyawmbg .gt_indent_5 {
+#cnjfxygfgh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jrieyawmbg .katex-display {
+#cnjfxygfgh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jrieyawmbg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cnjfxygfgh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2241,7 +2270,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
 <span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_align_table_header</span>(<span class="st">"left"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div id="arveighhgv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="njamblxszh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   
   
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false" data-bgcolor="#FFFFFF">
@@ -2359,7 +2388,7 @@ Table&nbsp;6.1: Summary statistics for the unstandardized outcome, focal predict
 <span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
-<div id="buyrnocmij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ftxolibtoa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   
   
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false" data-bgcolor="#FFFFFF">
@@ -2484,23 +2513,23 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
 </figcaption>
 <div aria-describedby="tbl-tidy-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="iacspzjtuq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iacspzjtuq table {
+<div id="tgbsgrwpol" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tgbsgrwpol table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iacspzjtuq thead, #iacspzjtuq tbody, #iacspzjtuq tfoot, #iacspzjtuq tr, #iacspzjtuq td, #iacspzjtuq th {
+#tgbsgrwpol thead, #tgbsgrwpol tbody, #tgbsgrwpol tfoot, #tgbsgrwpol tr, #tgbsgrwpol td, #tgbsgrwpol th {
   border-style: none;
 }
 
-#iacspzjtuq p {
+#tgbsgrwpol p {
   margin: 0;
   padding: 0;
 }
 
-#iacspzjtuq .gt_table {
+#tgbsgrwpol .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2526,12 +2555,12 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-left-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_caption {
+#tgbsgrwpol .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iacspzjtuq .gt_title {
+#tgbsgrwpol .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2543,7 +2572,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-bottom-width: 0;
 }
 
-#iacspzjtuq .gt_subtitle {
+#tgbsgrwpol .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2555,7 +2584,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-top-width: 0;
 }
 
-#iacspzjtuq .gt_heading {
+#tgbsgrwpol .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2567,13 +2596,13 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_bottom_border {
+#tgbsgrwpol .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_col_headings {
+#tgbsgrwpol .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2588,7 +2617,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_col_heading {
+#tgbsgrwpol .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2608,7 +2637,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#iacspzjtuq .gt_column_spanner_outer {
+#tgbsgrwpol .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2620,15 +2649,15 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   padding-right: 4px;
 }
 
-#iacspzjtuq .gt_column_spanner_outer:first-child {
+#tgbsgrwpol .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iacspzjtuq .gt_column_spanner_outer:last-child {
+#tgbsgrwpol .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iacspzjtuq .gt_column_spanner {
+#tgbsgrwpol .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2640,11 +2669,11 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   width: 100%;
 }
 
-#iacspzjtuq .gt_spanner_row {
+#tgbsgrwpol .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iacspzjtuq .gt_group_heading {
+#tgbsgrwpol .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2670,7 +2699,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   text-align: left;
 }
 
-#iacspzjtuq .gt_empty_group_heading {
+#tgbsgrwpol .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2685,15 +2714,15 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   vertical-align: middle;
 }
 
-#iacspzjtuq .gt_from_md > :first-child {
+#tgbsgrwpol .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iacspzjtuq .gt_from_md > :last-child {
+#tgbsgrwpol .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iacspzjtuq .gt_row {
+#tgbsgrwpol .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2712,7 +2741,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#iacspzjtuq .gt_stub {
+#tgbsgrwpol .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2725,7 +2754,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#iacspzjtuq .gt_stub_row_group {
+#tgbsgrwpol .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2739,15 +2768,15 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   vertical-align: top;
 }
 
-#iacspzjtuq .gt_row_group_first td {
+#tgbsgrwpol .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iacspzjtuq .gt_row_group_first th {
+#tgbsgrwpol .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iacspzjtuq .gt_summary_row {
+#tgbsgrwpol .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2757,16 +2786,16 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#iacspzjtuq .gt_first_summary_row {
+#tgbsgrwpol .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_first_summary_row.thick {
+#tgbsgrwpol .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iacspzjtuq .gt_last_summary_row {
+#tgbsgrwpol .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2776,7 +2805,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_grand_summary_row {
+#tgbsgrwpol .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2786,7 +2815,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#iacspzjtuq .gt_first_grand_summary_row {
+#tgbsgrwpol .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2796,7 +2825,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-top-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_last_grand_summary_row_top {
+#tgbsgrwpol .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2806,11 +2835,11 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_striped {
+#tgbsgrwpol .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iacspzjtuq .gt_table_body {
+#tgbsgrwpol .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2819,7 +2848,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_footnotes {
+#tgbsgrwpol .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2833,7 +2862,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_footnote {
+#tgbsgrwpol .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2842,7 +2871,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#iacspzjtuq .gt_sourcenotes {
+#tgbsgrwpol .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2856,7 +2885,7 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#iacspzjtuq .gt_sourcenote {
+#tgbsgrwpol .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2864,72 +2893,72 @@ Table&nbsp;7.1: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#iacspzjtuq .gt_left {
+#tgbsgrwpol .gt_left {
   text-align: left;
 }
 
-#iacspzjtuq .gt_center {
+#tgbsgrwpol .gt_center {
   text-align: center;
 }
 
-#iacspzjtuq .gt_right {
+#tgbsgrwpol .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iacspzjtuq .gt_font_normal {
+#tgbsgrwpol .gt_font_normal {
   font-weight: normal;
 }
 
-#iacspzjtuq .gt_font_bold {
+#tgbsgrwpol .gt_font_bold {
   font-weight: bold;
 }
 
-#iacspzjtuq .gt_font_italic {
+#tgbsgrwpol .gt_font_italic {
   font-style: italic;
 }
 
-#iacspzjtuq .gt_super {
+#tgbsgrwpol .gt_super {
   font-size: 65%;
 }
 
-#iacspzjtuq .gt_footnote_marks {
+#tgbsgrwpol .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iacspzjtuq .gt_asterisk {
+#tgbsgrwpol .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iacspzjtuq .gt_indent_1 {
+#tgbsgrwpol .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iacspzjtuq .gt_indent_2 {
+#tgbsgrwpol .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iacspzjtuq .gt_indent_3 {
+#tgbsgrwpol .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iacspzjtuq .gt_indent_4 {
+#tgbsgrwpol .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iacspzjtuq .gt_indent_5 {
+#tgbsgrwpol .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iacspzjtuq .katex-display {
+#tgbsgrwpol .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iacspzjtuq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tgbsgrwpol div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3011,23 +3040,23 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
 </figcaption>
 <div aria-describedby="tbl-tidy-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="fjqcbifokl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fjqcbifokl table {
+<div id="fpdomptmaz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fpdomptmaz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fjqcbifokl thead, #fjqcbifokl tbody, #fjqcbifokl tfoot, #fjqcbifokl tr, #fjqcbifokl td, #fjqcbifokl th {
+#fpdomptmaz thead, #fpdomptmaz tbody, #fpdomptmaz tfoot, #fpdomptmaz tr, #fpdomptmaz td, #fpdomptmaz th {
   border-style: none;
 }
 
-#fjqcbifokl p {
+#fpdomptmaz p {
   margin: 0;
   padding: 0;
 }
 
-#fjqcbifokl .gt_table {
+#fpdomptmaz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3053,12 +3082,12 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-left-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_caption {
+#fpdomptmaz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fjqcbifokl .gt_title {
+#fpdomptmaz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3070,7 +3099,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-bottom-width: 0;
 }
 
-#fjqcbifokl .gt_subtitle {
+#fpdomptmaz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3082,7 +3111,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-top-width: 0;
 }
 
-#fjqcbifokl .gt_heading {
+#fpdomptmaz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3094,13 +3123,13 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_bottom_border {
+#fpdomptmaz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_col_headings {
+#fpdomptmaz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3115,7 +3144,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_col_heading {
+#fpdomptmaz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3135,7 +3164,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#fjqcbifokl .gt_column_spanner_outer {
+#fpdomptmaz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3147,15 +3176,15 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   padding-right: 4px;
 }
 
-#fjqcbifokl .gt_column_spanner_outer:first-child {
+#fpdomptmaz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fjqcbifokl .gt_column_spanner_outer:last-child {
+#fpdomptmaz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fjqcbifokl .gt_column_spanner {
+#fpdomptmaz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3167,11 +3196,11 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   width: 100%;
 }
 
-#fjqcbifokl .gt_spanner_row {
+#fpdomptmaz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fjqcbifokl .gt_group_heading {
+#fpdomptmaz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3197,7 +3226,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   text-align: left;
 }
 
-#fjqcbifokl .gt_empty_group_heading {
+#fpdomptmaz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3212,15 +3241,15 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   vertical-align: middle;
 }
 
-#fjqcbifokl .gt_from_md > :first-child {
+#fpdomptmaz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fjqcbifokl .gt_from_md > :last-child {
+#fpdomptmaz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fjqcbifokl .gt_row {
+#fpdomptmaz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3239,7 +3268,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#fjqcbifokl .gt_stub {
+#fpdomptmaz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3252,7 +3281,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#fjqcbifokl .gt_stub_row_group {
+#fpdomptmaz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3266,15 +3295,15 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   vertical-align: top;
 }
 
-#fjqcbifokl .gt_row_group_first td {
+#fpdomptmaz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fjqcbifokl .gt_row_group_first th {
+#fpdomptmaz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fjqcbifokl .gt_summary_row {
+#fpdomptmaz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3284,16 +3313,16 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#fjqcbifokl .gt_first_summary_row {
+#fpdomptmaz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_first_summary_row.thick {
+#fpdomptmaz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fjqcbifokl .gt_last_summary_row {
+#fpdomptmaz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3303,7 +3332,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_grand_summary_row {
+#fpdomptmaz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3313,7 +3342,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#fjqcbifokl .gt_first_grand_summary_row {
+#fpdomptmaz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3323,7 +3352,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-top-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_last_grand_summary_row_top {
+#fpdomptmaz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3333,11 +3362,11 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_striped {
+#fpdomptmaz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fjqcbifokl .gt_table_body {
+#fpdomptmaz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3346,7 +3375,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_footnotes {
+#fpdomptmaz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3360,7 +3389,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_footnote {
+#fpdomptmaz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3369,7 +3398,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#fjqcbifokl .gt_sourcenotes {
+#fpdomptmaz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3383,7 +3412,7 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#fjqcbifokl .gt_sourcenote {
+#fpdomptmaz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3391,72 +3420,72 @@ Table&nbsp;7.2: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#fjqcbifokl .gt_left {
+#fpdomptmaz .gt_left {
   text-align: left;
 }
 
-#fjqcbifokl .gt_center {
+#fpdomptmaz .gt_center {
   text-align: center;
 }
 
-#fjqcbifokl .gt_right {
+#fpdomptmaz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fjqcbifokl .gt_font_normal {
+#fpdomptmaz .gt_font_normal {
   font-weight: normal;
 }
 
-#fjqcbifokl .gt_font_bold {
+#fpdomptmaz .gt_font_bold {
   font-weight: bold;
 }
 
-#fjqcbifokl .gt_font_italic {
+#fpdomptmaz .gt_font_italic {
   font-style: italic;
 }
 
-#fjqcbifokl .gt_super {
+#fpdomptmaz .gt_super {
   font-size: 65%;
 }
 
-#fjqcbifokl .gt_footnote_marks {
+#fpdomptmaz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fjqcbifokl .gt_asterisk {
+#fpdomptmaz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fjqcbifokl .gt_indent_1 {
+#fpdomptmaz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fjqcbifokl .gt_indent_2 {
+#fpdomptmaz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fjqcbifokl .gt_indent_3 {
+#fpdomptmaz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fjqcbifokl .gt_indent_4 {
+#fpdomptmaz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fjqcbifokl .gt_indent_5 {
+#fpdomptmaz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fjqcbifokl .katex-display {
+#fpdomptmaz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fjqcbifokl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fpdomptmaz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3540,23 +3569,23 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
 </figcaption>
 <div aria-describedby="tbl-tidy-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="hskvtkyvqq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hskvtkyvqq table {
+<div id="oyjtfmwlhi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oyjtfmwlhi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hskvtkyvqq thead, #hskvtkyvqq tbody, #hskvtkyvqq tfoot, #hskvtkyvqq tr, #hskvtkyvqq td, #hskvtkyvqq th {
+#oyjtfmwlhi thead, #oyjtfmwlhi tbody, #oyjtfmwlhi tfoot, #oyjtfmwlhi tr, #oyjtfmwlhi td, #oyjtfmwlhi th {
   border-style: none;
 }
 
-#hskvtkyvqq p {
+#oyjtfmwlhi p {
   margin: 0;
   padding: 0;
 }
 
-#hskvtkyvqq .gt_table {
+#oyjtfmwlhi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3582,12 +3611,12 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-left-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_caption {
+#oyjtfmwlhi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hskvtkyvqq .gt_title {
+#oyjtfmwlhi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3599,7 +3628,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-bottom-width: 0;
 }
 
-#hskvtkyvqq .gt_subtitle {
+#oyjtfmwlhi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3611,7 +3640,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-top-width: 0;
 }
 
-#hskvtkyvqq .gt_heading {
+#oyjtfmwlhi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3623,13 +3652,13 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_bottom_border {
+#oyjtfmwlhi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_col_headings {
+#oyjtfmwlhi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3644,7 +3673,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_col_heading {
+#oyjtfmwlhi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3664,7 +3693,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#hskvtkyvqq .gt_column_spanner_outer {
+#oyjtfmwlhi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3676,15 +3705,15 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   padding-right: 4px;
 }
 
-#hskvtkyvqq .gt_column_spanner_outer:first-child {
+#oyjtfmwlhi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hskvtkyvqq .gt_column_spanner_outer:last-child {
+#oyjtfmwlhi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hskvtkyvqq .gt_column_spanner {
+#oyjtfmwlhi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3696,11 +3725,11 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   width: 100%;
 }
 
-#hskvtkyvqq .gt_spanner_row {
+#oyjtfmwlhi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hskvtkyvqq .gt_group_heading {
+#oyjtfmwlhi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3726,7 +3755,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   text-align: left;
 }
 
-#hskvtkyvqq .gt_empty_group_heading {
+#oyjtfmwlhi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3741,15 +3770,15 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   vertical-align: middle;
 }
 
-#hskvtkyvqq .gt_from_md > :first-child {
+#oyjtfmwlhi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hskvtkyvqq .gt_from_md > :last-child {
+#oyjtfmwlhi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hskvtkyvqq .gt_row {
+#oyjtfmwlhi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3768,7 +3797,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#hskvtkyvqq .gt_stub {
+#oyjtfmwlhi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3781,7 +3810,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#hskvtkyvqq .gt_stub_row_group {
+#oyjtfmwlhi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3795,15 +3824,15 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   vertical-align: top;
 }
 
-#hskvtkyvqq .gt_row_group_first td {
+#oyjtfmwlhi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hskvtkyvqq .gt_row_group_first th {
+#oyjtfmwlhi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hskvtkyvqq .gt_summary_row {
+#oyjtfmwlhi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3813,16 +3842,16 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#hskvtkyvqq .gt_first_summary_row {
+#oyjtfmwlhi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_first_summary_row.thick {
+#oyjtfmwlhi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hskvtkyvqq .gt_last_summary_row {
+#oyjtfmwlhi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3832,7 +3861,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_grand_summary_row {
+#oyjtfmwlhi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3842,7 +3871,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#hskvtkyvqq .gt_first_grand_summary_row {
+#oyjtfmwlhi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3852,7 +3881,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-top-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_last_grand_summary_row_top {
+#oyjtfmwlhi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3862,11 +3891,11 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_striped {
+#oyjtfmwlhi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hskvtkyvqq .gt_table_body {
+#oyjtfmwlhi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3875,7 +3904,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_footnotes {
+#oyjtfmwlhi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3889,7 +3918,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_footnote {
+#oyjtfmwlhi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3898,7 +3927,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#hskvtkyvqq .gt_sourcenotes {
+#oyjtfmwlhi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3912,7 +3941,7 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#hskvtkyvqq .gt_sourcenote {
+#oyjtfmwlhi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3920,72 +3949,72 @@ Table&nbsp;7.3: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#hskvtkyvqq .gt_left {
+#oyjtfmwlhi .gt_left {
   text-align: left;
 }
 
-#hskvtkyvqq .gt_center {
+#oyjtfmwlhi .gt_center {
   text-align: center;
 }
 
-#hskvtkyvqq .gt_right {
+#oyjtfmwlhi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hskvtkyvqq .gt_font_normal {
+#oyjtfmwlhi .gt_font_normal {
   font-weight: normal;
 }
 
-#hskvtkyvqq .gt_font_bold {
+#oyjtfmwlhi .gt_font_bold {
   font-weight: bold;
 }
 
-#hskvtkyvqq .gt_font_italic {
+#oyjtfmwlhi .gt_font_italic {
   font-style: italic;
 }
 
-#hskvtkyvqq .gt_super {
+#oyjtfmwlhi .gt_super {
   font-size: 65%;
 }
 
-#hskvtkyvqq .gt_footnote_marks {
+#oyjtfmwlhi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hskvtkyvqq .gt_asterisk {
+#oyjtfmwlhi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hskvtkyvqq .gt_indent_1 {
+#oyjtfmwlhi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hskvtkyvqq .gt_indent_2 {
+#oyjtfmwlhi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hskvtkyvqq .gt_indent_3 {
+#oyjtfmwlhi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hskvtkyvqq .gt_indent_4 {
+#oyjtfmwlhi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hskvtkyvqq .gt_indent_5 {
+#oyjtfmwlhi .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hskvtkyvqq .katex-display {
+#oyjtfmwlhi .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hskvtkyvqq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oyjtfmwlhi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4069,23 +4098,23 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
 </figcaption>
 <div aria-describedby="tbl-tidy-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="lhekhdmkxa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lhekhdmkxa table {
+<div id="vopzbccqxp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vopzbccqxp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lhekhdmkxa thead, #lhekhdmkxa tbody, #lhekhdmkxa tfoot, #lhekhdmkxa tr, #lhekhdmkxa td, #lhekhdmkxa th {
+#vopzbccqxp thead, #vopzbccqxp tbody, #vopzbccqxp tfoot, #vopzbccqxp tr, #vopzbccqxp td, #vopzbccqxp th {
   border-style: none;
 }
 
-#lhekhdmkxa p {
+#vopzbccqxp p {
   margin: 0;
   padding: 0;
 }
 
-#lhekhdmkxa .gt_table {
+#vopzbccqxp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4111,12 +4140,12 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-left-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_caption {
+#vopzbccqxp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lhekhdmkxa .gt_title {
+#vopzbccqxp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4128,7 +4157,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-bottom-width: 0;
 }
 
-#lhekhdmkxa .gt_subtitle {
+#vopzbccqxp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4140,7 +4169,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-top-width: 0;
 }
 
-#lhekhdmkxa .gt_heading {
+#vopzbccqxp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4152,13 +4181,13 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_bottom_border {
+#vopzbccqxp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_col_headings {
+#vopzbccqxp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4173,7 +4202,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_col_heading {
+#vopzbccqxp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4193,7 +4222,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#lhekhdmkxa .gt_column_spanner_outer {
+#vopzbccqxp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4205,15 +4234,15 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   padding-right: 4px;
 }
 
-#lhekhdmkxa .gt_column_spanner_outer:first-child {
+#vopzbccqxp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lhekhdmkxa .gt_column_spanner_outer:last-child {
+#vopzbccqxp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lhekhdmkxa .gt_column_spanner {
+#vopzbccqxp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4225,11 +4254,11 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   width: 100%;
 }
 
-#lhekhdmkxa .gt_spanner_row {
+#vopzbccqxp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lhekhdmkxa .gt_group_heading {
+#vopzbccqxp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4255,7 +4284,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   text-align: left;
 }
 
-#lhekhdmkxa .gt_empty_group_heading {
+#vopzbccqxp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4270,15 +4299,15 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   vertical-align: middle;
 }
 
-#lhekhdmkxa .gt_from_md > :first-child {
+#vopzbccqxp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lhekhdmkxa .gt_from_md > :last-child {
+#vopzbccqxp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lhekhdmkxa .gt_row {
+#vopzbccqxp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4297,7 +4326,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#lhekhdmkxa .gt_stub {
+#vopzbccqxp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4310,7 +4339,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#lhekhdmkxa .gt_stub_row_group {
+#vopzbccqxp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4324,15 +4353,15 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   vertical-align: top;
 }
 
-#lhekhdmkxa .gt_row_group_first td {
+#vopzbccqxp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lhekhdmkxa .gt_row_group_first th {
+#vopzbccqxp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lhekhdmkxa .gt_summary_row {
+#vopzbccqxp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4342,16 +4371,16 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#lhekhdmkxa .gt_first_summary_row {
+#vopzbccqxp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_first_summary_row.thick {
+#vopzbccqxp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lhekhdmkxa .gt_last_summary_row {
+#vopzbccqxp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4361,7 +4390,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_grand_summary_row {
+#vopzbccqxp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4371,7 +4400,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#lhekhdmkxa .gt_first_grand_summary_row {
+#vopzbccqxp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4381,7 +4410,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-top-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_last_grand_summary_row_top {
+#vopzbccqxp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4391,11 +4420,11 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_striped {
+#vopzbccqxp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lhekhdmkxa .gt_table_body {
+#vopzbccqxp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4404,7 +4433,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_footnotes {
+#vopzbccqxp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4418,7 +4447,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_footnote {
+#vopzbccqxp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4427,7 +4456,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#lhekhdmkxa .gt_sourcenotes {
+#vopzbccqxp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4441,7 +4470,7 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#lhekhdmkxa .gt_sourcenote {
+#vopzbccqxp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4449,72 +4478,72 @@ Table&nbsp;7.4: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#lhekhdmkxa .gt_left {
+#vopzbccqxp .gt_left {
   text-align: left;
 }
 
-#lhekhdmkxa .gt_center {
+#vopzbccqxp .gt_center {
   text-align: center;
 }
 
-#lhekhdmkxa .gt_right {
+#vopzbccqxp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lhekhdmkxa .gt_font_normal {
+#vopzbccqxp .gt_font_normal {
   font-weight: normal;
 }
 
-#lhekhdmkxa .gt_font_bold {
+#vopzbccqxp .gt_font_bold {
   font-weight: bold;
 }
 
-#lhekhdmkxa .gt_font_italic {
+#vopzbccqxp .gt_font_italic {
   font-style: italic;
 }
 
-#lhekhdmkxa .gt_super {
+#vopzbccqxp .gt_super {
   font-size: 65%;
 }
 
-#lhekhdmkxa .gt_footnote_marks {
+#vopzbccqxp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lhekhdmkxa .gt_asterisk {
+#vopzbccqxp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lhekhdmkxa .gt_indent_1 {
+#vopzbccqxp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lhekhdmkxa .gt_indent_2 {
+#vopzbccqxp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lhekhdmkxa .gt_indent_3 {
+#vopzbccqxp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lhekhdmkxa .gt_indent_4 {
+#vopzbccqxp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lhekhdmkxa .gt_indent_5 {
+#vopzbccqxp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lhekhdmkxa .katex-display {
+#vopzbccqxp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lhekhdmkxa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vopzbccqxp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4610,23 +4639,23 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
 </figcaption>
 <div aria-describedby="tbl-tidy-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="cwrmjzernl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cwrmjzernl table {
+<div id="eaakmucsvi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eaakmucsvi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cwrmjzernl thead, #cwrmjzernl tbody, #cwrmjzernl tfoot, #cwrmjzernl tr, #cwrmjzernl td, #cwrmjzernl th {
+#eaakmucsvi thead, #eaakmucsvi tbody, #eaakmucsvi tfoot, #eaakmucsvi tr, #eaakmucsvi td, #eaakmucsvi th {
   border-style: none;
 }
 
-#cwrmjzernl p {
+#eaakmucsvi p {
   margin: 0;
   padding: 0;
 }
 
-#cwrmjzernl .gt_table {
+#eaakmucsvi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4652,12 +4681,12 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-left-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_caption {
+#eaakmucsvi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cwrmjzernl .gt_title {
+#eaakmucsvi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4669,7 +4698,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-bottom-width: 0;
 }
 
-#cwrmjzernl .gt_subtitle {
+#eaakmucsvi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4681,7 +4710,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-top-width: 0;
 }
 
-#cwrmjzernl .gt_heading {
+#eaakmucsvi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4693,13 +4722,13 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_bottom_border {
+#eaakmucsvi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_col_headings {
+#eaakmucsvi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4714,7 +4743,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_col_heading {
+#eaakmucsvi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4734,7 +4763,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#cwrmjzernl .gt_column_spanner_outer {
+#eaakmucsvi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4746,15 +4775,15 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   padding-right: 4px;
 }
 
-#cwrmjzernl .gt_column_spanner_outer:first-child {
+#eaakmucsvi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cwrmjzernl .gt_column_spanner_outer:last-child {
+#eaakmucsvi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cwrmjzernl .gt_column_spanner {
+#eaakmucsvi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4766,11 +4795,11 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   width: 100%;
 }
 
-#cwrmjzernl .gt_spanner_row {
+#eaakmucsvi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cwrmjzernl .gt_group_heading {
+#eaakmucsvi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4796,7 +4825,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   text-align: left;
 }
 
-#cwrmjzernl .gt_empty_group_heading {
+#eaakmucsvi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4811,15 +4840,15 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   vertical-align: middle;
 }
 
-#cwrmjzernl .gt_from_md > :first-child {
+#eaakmucsvi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cwrmjzernl .gt_from_md > :last-child {
+#eaakmucsvi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cwrmjzernl .gt_row {
+#eaakmucsvi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4838,7 +4867,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   overflow-x: hidden;
 }
 
-#cwrmjzernl .gt_stub {
+#eaakmucsvi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4851,7 +4880,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#cwrmjzernl .gt_stub_row_group {
+#eaakmucsvi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4865,15 +4894,15 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   vertical-align: top;
 }
 
-#cwrmjzernl .gt_row_group_first td {
+#eaakmucsvi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cwrmjzernl .gt_row_group_first th {
+#eaakmucsvi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cwrmjzernl .gt_summary_row {
+#eaakmucsvi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4883,16 +4912,16 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#cwrmjzernl .gt_first_summary_row {
+#eaakmucsvi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_first_summary_row.thick {
+#eaakmucsvi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cwrmjzernl .gt_last_summary_row {
+#eaakmucsvi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4902,7 +4931,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_grand_summary_row {
+#eaakmucsvi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4912,7 +4941,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#cwrmjzernl .gt_first_grand_summary_row {
+#eaakmucsvi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4922,7 +4951,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-top-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_last_grand_summary_row_top {
+#eaakmucsvi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4932,11 +4961,11 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_striped {
+#eaakmucsvi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cwrmjzernl .gt_table_body {
+#eaakmucsvi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4945,7 +4974,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-bottom-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_footnotes {
+#eaakmucsvi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4959,7 +4988,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_footnote {
+#eaakmucsvi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4968,7 +4997,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#cwrmjzernl .gt_sourcenotes {
+#eaakmucsvi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4982,7 +5011,7 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   border-right-color: #D3D3D3;
 }
 
-#cwrmjzernl .gt_sourcenote {
+#eaakmucsvi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4990,72 +5019,72 @@ Table&nbsp;7.5: Unstandardized regression coefficients for a model to predict va
   padding-right: 5px;
 }
 
-#cwrmjzernl .gt_left {
+#eaakmucsvi .gt_left {
   text-align: left;
 }
 
-#cwrmjzernl .gt_center {
+#eaakmucsvi .gt_center {
   text-align: center;
 }
 
-#cwrmjzernl .gt_right {
+#eaakmucsvi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cwrmjzernl .gt_font_normal {
+#eaakmucsvi .gt_font_normal {
   font-weight: normal;
 }
 
-#cwrmjzernl .gt_font_bold {
+#eaakmucsvi .gt_font_bold {
   font-weight: bold;
 }
 
-#cwrmjzernl .gt_font_italic {
+#eaakmucsvi .gt_font_italic {
   font-style: italic;
 }
 
-#cwrmjzernl .gt_super {
+#eaakmucsvi .gt_super {
   font-size: 65%;
 }
 
-#cwrmjzernl .gt_footnote_marks {
+#eaakmucsvi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cwrmjzernl .gt_asterisk {
+#eaakmucsvi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cwrmjzernl .gt_indent_1 {
+#eaakmucsvi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cwrmjzernl .gt_indent_2 {
+#eaakmucsvi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cwrmjzernl .gt_indent_3 {
+#eaakmucsvi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cwrmjzernl .gt_indent_4 {
+#eaakmucsvi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cwrmjzernl .gt_indent_5 {
+#eaakmucsvi .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cwrmjzernl .katex-display {
+#eaakmucsvi .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cwrmjzernl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#eaakmucsvi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
